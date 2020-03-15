@@ -1,0 +1,34 @@
+name: onboarding_flutter
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.3.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  curved_navigation_bar: ^0.3.2
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  fonts: 
+  - family: RockSalt
+    fonts: 
+    - asset: assets/fonts/RockSalt-Regular.ttf
+  - family: OpenSans
+    fonts: 
+    - asset: assets/fonts/OpenSans-Regular.ttf
+    - asset: assets/fonts/OpenSans-Bold.ttf
+
+  uses-material-design: true
+
+  assets:
+      - assets/images/
+
