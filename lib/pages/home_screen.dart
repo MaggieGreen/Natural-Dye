@@ -22,58 +22,64 @@ class _HomeScreen extends State<HomeScreen> {
                   image: AssetImage('assets/images/background.jpg'),
                   fit: BoxFit.cover)),
                   ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Daily for you",
-                      textScaleFactor: 1,
-                      style: TextStyle(
-                        fontSize: 24, height: 1.5, fontFamily: 'OpenSans'
-                      ),
-                    ),
-                    SizedBox(
-                        height: 15,
-                      ),
-                    Text(
-                      "View More",
-                      textScaleFactor: 1,
-                      style: TextStyle(
-                        fontSize: 16, height: 1.5, fontFamily: 'OpenSans'
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 40),
+                // Column(
+                //   mainAxisAlignment: MainAxisAlignment.start,
+                //   children: <Widget>[
+                //     Text(
+                //       "Daily for you",
+                //       textScaleFactor: 1,
+                //       style: TextStyle(
+                //         fontSize: 24, height: 1.5, fontFamily: 'OpenSans'
+                //       ),
+                //     ),
+                //     SizedBox(
+                //         height: 15,
+                //       ),
+                //     Text(
+                //       "View More",
+                //       textScaleFactor: 1,
+                //       style: TextStyle(
+                //         fontSize: 16, height: 1.5, fontFamily: 'OpenSans'
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                // SizedBox(height: 40),
                 Text(
                       'Explore Natural Dye',
                       style: TextStyle(
                           fontSize: 24, height: 1.5, fontFamily: 'OpenSans'),
                     ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(60),
-                      color: Colors.amber,
-                      child: Text('1'),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(60),
-                      color: Colors.blue,
-                      child: Text('2'),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(60),
-                      color: Colors.red,
-                      child: Text('3'),
-                    ),
-                  ],
-                ),
+                
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //   children: <Widget>[
+                //     Container(
+                //       padding: EdgeInsets.all(60),
+                //       color: Colors.amber,
+                //       child: Text('1'),
+                //     ),
+                //     Container(
+                //       padding: EdgeInsets.all(60),
+                //       color: Colors.blue,
+                //       child: Text('2'),
+                //     ),
+                //     Container(
+                //       padding: EdgeInsets.all(60),
+                //       color: Colors.red,
+                //       child: Text('3'),
+                //     ),
+                //   ],
+                // ),
                 RaisedButton(
                 onPressed: () => {Navigator.pushNamed(context, '/scrolllist')},
-                child: Text('click me'),
+                child: Text('Color Source'),
+                color: Colors.blueGrey,
+               ),
+               RaisedButton(
+                onPressed: () => {Navigator.pushNamed(context, '/cardlist')},
+                child: Text('Card list'),
                 color: Colors.blueGrey,
                ),
               ];

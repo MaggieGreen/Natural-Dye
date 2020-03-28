@@ -90,7 +90,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       ),
       bottomSheet: _currentPage != 2
           ? Container(
-              color: Colors.amber,
+              // color: Colors.amber,
               margin: EdgeInsets.symmetric(vertical: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -158,6 +158,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     String image,
   }) {
     return Container(
+      color: Color(0xFFDEDFD4),
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -180,7 +181,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           ),
           SizedBox(height: 30),
           Container(
-            color: Colors.amber,
+            // color: Colors.amber,
             child: Image.asset(image),
           ),
         ],

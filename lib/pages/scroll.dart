@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class Scroll extends StatelessWidget {
   @override
@@ -9,11 +10,11 @@ class Scroll extends StatelessWidget {
     }
 
     return new DefaultTabController(
-      length: 3,
+      length: 2,
       child: new Scaffold(
         appBar: new AppBar(
           title: new Text(
-            "Gallery",
+            "Color Source",
             style: TextStyle(color: Color(0XFFFFFFFF)),
           ),
           backgroundColor: Color(0xFF777E65),
@@ -21,42 +22,56 @@ class Scroll extends StatelessWidget {
           bottom: new TabBar(
             tabs: <Widget>[
               new Tab(
-                text: "History",
+                text: "Inspiration",
               ),
+              // new Tab(
+              //   text: "Modern Art",
+              // ),
               new Tab(
-                text: "Modern Art",
-              ),
-              new Tab(
-                text: "Fashion",
+                text: "Dye plant library",
               ),
             ],
           ),
         ),
         body: new TabBarView(
           children: <Widget>[
-            new Container(
-              color: Colors.deepOrangeAccent,
-              child: new Center(
-                child: Image.asset('assets/images/art_1.png'),
-              ),
-            ),
-            new Container(
-              color: Colors.blueGrey,
-              child: new Center(
-                child: new Text(
-                  "Second",
-                  style: textStyle(),
+            new StaggeredGridView.countBuilder(
+              padding: EdgeInsets.fromLTRB(24, 20, 24, 0),
+              crossAxisCount: 4,
+              itemCount: 8,
+              itemBuilder: (BuildContext context, int index) => new Container(
+                // color: Colors.green,
+                decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                border: Border.all(
+                    color: Colors.grey,
+                    width: 2.0
+                    )
                 ),
-              ),
+                child: new Center(
+                  child: new CircleAvatar(
+                    backgroundColor: Colors.grey,
+                    child: new Text('$index'),
+                  ),
+                )),
+              staggeredTileBuilder: (int index) =>
+                new StaggeredTile.count(2, index.isEven ? 3 : 2),
+              mainAxisSpacing: 6.0,
+              crossAxisSpacing: 6.0,
             ),
-            new Container(
-              color: Colors.teal,
-              child: new Center(
-                child: new Text(
-                  "Third",
-                  style: textStyle(),
-                ),
-              ),
+            // new Container(
+            //   color: Colors.blueGrey,
+            //   child: new Center(
+            //     child: new Text(
+            //       "Second",
+            //       style: textStyle(),
+            //     ),
+            //   ),
+            // ),
+            new ListView(
+              children: <Widget>[
+                
+              ],
             ),
           ],
         ),
