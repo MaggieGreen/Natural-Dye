@@ -29,7 +29,7 @@ class _CardListState extends State<CardList> {
                       fontFamily: 'OpenSans', 
                       fontWeight: FontWeight.w600, 
                       color: Colors.white
-                      ),),
+                      ),), 
                     ),
                   height: 400,
                   width: double.infinity,
@@ -39,36 +39,37 @@ class _CardListState extends State<CardList> {
                     fit: BoxFit.cover)),
                   ),
             Container(
-              child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: 3,
-                // controller: ScrollController,
-                itemBuilder: (context, position) {
-                  return GestureDetector(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        child: Container(
-                          width: 250.0,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Padding(padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
+              
+              // child: ListView.builder(
+              //   physics: NeverScrollableScrollPhysics(),
+              //   itemCount: 3,
+              //   // controller: ScrollController,
+              //   itemBuilder: (context, position) {
+              //     return GestureDetector(
+              //       child: Padding(
+              //         padding: const EdgeInsets.all(8.0),
+              //         child: Card(
+              //           child: Container(
+              //             width: 250.0,
+              //             child: Column(
+              //               crossAxisAlignment: CrossAxisAlignment.start,
+              //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //               children: <Widget>[
+              //                 Padding(padding: const EdgeInsets.all(8.0),
+              //                 child: Row(
+              //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //                   children: <Widget>[
                                   
-                                ],
-                              ),
-                              )
-                            ],
-                          ),
-                        )),
-                      ),
-                  );
-                },
-              ),
+              //                   ],
+              //                 ),
+              //                 )
+              //               ],
+              //             ),
+              //           )),
+              //         ),
+              //     );
+              //   },
+              // ),
             ),
           ],
           ),
