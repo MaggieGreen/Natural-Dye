@@ -3,37 +3,50 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class TileSimle extends StatelessWidget {
+TileSimle({
+  Key key, 
+  this.title, 
+  this.image,
+}) : super(key : key);
+
+  final String title;
+  final String image;
+
   @override
   Widget build(BuildContext context) {
     // Card list
     return Container(
       // color: Color.fromARGB(255, 66, 165, 245),
       alignment: AlignmentDirectional(0.0, 0.0),
+      padding: EdgeInsets.only(bottom: 20.0),
       child: Card(
-          color: Colors.white,
+          color: Color(0xFFEDEDED),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
           ),
           // antiAlias 抗锯齿
           clipBehavior: Clip.antiAlias,
-          elevation: 5,
+          // elevation: 5,
           // Shadow
           child: new Container(
             height: 120,
             alignment: Alignment.center,
-
             // ListTile
             child: new ListTile(
-              title: new Text("Plant Name"),
+              title: new Text(this.title),
               subtitle: new Text("Plant describe"),
-
               // Plant image
               leading: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/background.jpg"), // no matter how big it is, it won't overflow
+                radius: 30.0,
+                backgroundImage: AssetImage(this.image), // no matter how big it is, it won't overflow
               ),
 
               // Go to detail page
-              trailing: new Icon(Icons.chevron_right),
+              trailing: new IconButton(
+                icon: Icon(Icons.chevron_right),
+                onPressed: () {Navigator.pushNamed(context,'/plantdetail');},
+                // Icons.chevron_right
+                ),
             ),
           )),
     );
@@ -51,6 +64,7 @@ class Scroll extends StatelessWidget {
       length: 2,
       child: new Scaffold(
         appBar: new AppBar(
+          leading: new Container(),
           title: new Text(
             "Color Source",
             style: TextStyle(color: Color(0XFFFFFFFF)),
@@ -101,16 +115,16 @@ class Scroll extends StatelessWidget {
             new ListView(
                   //vertical
                   scrollDirection: Axis.vertical,
-                  padding: EdgeInsets.fromLTRB(24, 20, 24, 0),
+                  padding: EdgeInsets.fromLTRB(24, 20, 24, 20),
                   children: <Widget>[
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
-                    TileSimle(),
+                    TileSimle(title: "1", image: "assets/images/background.jpg",),
+                    TileSimle(title: "2", image: "assets/images/gallery.jpg",),
+                    TileSimle(title: "3", image: "assets/images/background.jpg",),
+                    TileSimle(title: "4", image: "assets/images/background.jpg",),
+                    TileSimle(title: "5", image: "assets/images/background.jpg",),
+                    TileSimle(title: "5", image: "assets/images/background.jpg",),
+                    TileSimle(title: "5", image: "assets/images/background.jpg",),
+                    TileSimle(title: "5", image: "assets/images/background.jpg",),
                   ],
                 ) 
 

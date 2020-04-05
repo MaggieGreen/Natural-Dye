@@ -8,7 +8,10 @@ class Gallery extends StatefulWidget {
 class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+      body: Column(
+
+      ),
       
     );
   }

@@ -26,9 +26,13 @@ flutter:
     fonts: 
     - asset: assets/fonts/OpenSans-Regular.ttf
     - asset: assets/fonts/OpenSans-Bold.ttf
+  - family: CantataOne
+    fonts: 
+    - asset: assets/fonts/CantataOne-Regular.ttf
 
   uses-material-design: true
 
   assets:
       - assets/images/
+      
 
