@@ -10,7 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreen extends State<HomeScreen> {
-
   int _currentIndex = 0;
   final List<Widget> _children = [
     CardList(),
@@ -23,7 +22,6 @@ class _HomeScreen extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       // backgroundColor: Colors.transparent,
       // appBar: new AppBar(
@@ -34,32 +32,27 @@ class _HomeScreen extends State<HomeScreen> {
       // ),
       body: _children[_currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
-          index: _currentIndex,
-          key: _bottomNavigationKey,
-          height: 70.0,
-          items: <Widget>[
-            Icon(
-              Icons.home, size: 30
-              ),
-            Icon(Icons.crop_square, size: 30),
-            Icon(Icons.color_lens, size: 30),
-            Icon(Icons.book, size: 30),
-            Icon(Icons.perm_identity, size: 30),
-          ],
-          color: Colors.amber,
-          buttonBackgroundColor: Colors.green,
-          backgroundColor: Colors.black,
-          animationCurve: Curves.easeInOut,
-          animationDuration: Duration(milliseconds: 600),
-        ),
-      );
-
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        index: _currentIndex,
+        key: _bottomNavigationKey,
+        height: 70.0,
+        items: <Widget>[
+          Icon(Icons.home, size: 30),
+          Icon(Icons.crop_square, size: 30),
+          Icon(Icons.color_lens, size: 30),
+          Icon(Icons.book, size: 30),
+          Icon(Icons.perm_identity, size: 30),
+        ],
+        color: Colors.white,
+        buttonBackgroundColor: Colors.white,
+        backgroundColor: Color(0xFFCDCDB8),
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 600),
+      ),
+    );
   }
 }
-
-     

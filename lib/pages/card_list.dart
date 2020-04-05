@@ -60,7 +60,7 @@ class _CardListState extends State<CardList> {
                 SizedBox(height: 40),
               ],
             ),
-            height: 508,
+            height: 482,
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
@@ -108,6 +108,11 @@ class _CardListState extends State<CardList> {
               addAutomaticKeepAlives: true,
               cacheExtent: 1000.0,
             ),
+          ),
+          SizedBox(height: 44),
+          Container(
+            height: 20.0,
+            color: Color(0xFFCDCDB8),
           ),
         ],
       ),
