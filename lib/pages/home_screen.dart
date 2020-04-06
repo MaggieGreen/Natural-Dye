@@ -23,13 +23,6 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.transparent,
-      // appBar: new AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   title: new Text('Home'),
-      //   centerTitle: true,
-      //   elevation: 0,
-      // ),
       body: _children[_currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
         onTap: (index) {
@@ -47,9 +40,9 @@ class _HomeScreen extends State<HomeScreen> {
           Icon(Icons.book, size: 30),
           Icon(Icons.perm_identity, size: 30),
         ],
-        color: Colors.white,
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Color(0xFFCDCDB8),
+        color: Color(0xFFF3CF77),
+        buttonBackgroundColor: Color(0xFFF3CF77),
+        backgroundColor: Colors.white,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
       ),

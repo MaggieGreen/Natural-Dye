@@ -8,16 +8,59 @@ class PlantDetail extends StatefulWidget {
 class _PlantDetailState extends State<PlantDetail> {
   @override
   Widget build(BuildContext context) {
+    Color color = Theme.of(context).primaryColor;
+
+    Column _buildButtonColumn(Color color, IconData icon, String label) {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: color),
+          Container(
+            margin: const EdgeInsets.only(top: 8),
+            child: Text(
+              label,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: color,
+              ),
+            ),
+          ),
+        ],
+      );
+    }
+
+    Widget buttonSection = Container(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 1,
+            child: _buildButtonColumn(color, Icons.kitchen, 'Making Pigment'),
+          ),
+          Expanded(
+            flex: 1,
+            child: _buildButtonColumn(color, Icons.shop, 'Materials'),
+          ),
+          Expanded(
+            flex: 1,
+            child: _buildButtonColumn(color, Icons.colorize, 'Color Change'),
+          ),
+        ],
+      ),
+    );
+
     return new Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-                expandedHeight: 416.0,
+                expandedHeight: 370.0,
                 floating: false,
                 pinned: true,
                 flexibleSpace: new FlexibleSpaceBar(
-                  background: Image.asset('assets/images/background.jpg'),
+                  background: Image.asset('assets/images/blackbeans1.jpg'),
                 ))
           ];
         },
@@ -47,6 +90,17 @@ class _PlantDetailState extends State<PlantDetail> {
                         fontWeight: FontWeight.w400,
                         color: Colors.black),
                   ),
+                  SizedBox(height: 30),
+                  Text(
+                    'Natural Dye Elements',
+                    style: TextStyle(
+                        fontFamily: 'OpenSans',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black),
+                  ),
+                  SizedBox(height: 30),
+                  buttonSection
                 ],
               ),
             ),

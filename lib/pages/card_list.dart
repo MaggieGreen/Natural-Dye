@@ -78,6 +78,7 @@ class _CardListState extends State<CardList> {
                 ),
                 // trailing: Icon(Icons.chevron_right,color: Colors.black,),
               )),
+          SizedBox(height: 10),
           Container(
             height: 210.0,
             padding: EdgeInsets.only(left: 24.0),
@@ -109,11 +110,11 @@ class _CardListState extends State<CardList> {
               cacheExtent: 1000.0,
             ),
           ),
-          SizedBox(height: 44),
-          Container(
-            height: 20.0,
-            color: Color(0xFFCDCDB8),
-          ),
+          // SizedBox(height: 44),
+          // Container(
+          //   height: 20.0,
+          //   color: Color(0xFFCDCDB8),
+          // ),
         ],
       ),
     );
