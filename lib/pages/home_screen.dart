@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-import 'scroll.dart';
 import 'card_list.dart';
+import 'gallery.dart';
+import 'scroll.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _HomeScreen extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     CardList(),
-    new Container(color: Colors.yellow),
+    Gallery(),
     Scroll(),
     new Container(color: Colors.green),
     new Container(color: Colors.blue),
@@ -42,7 +43,7 @@ class _HomeScreen extends State<HomeScreen> {
         ],
         color: Color(0xFFF3CF77),
         buttonBackgroundColor: Color(0xFFF3CF77),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
       ),

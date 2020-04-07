@@ -30,18 +30,18 @@ class TileSimle extends StatelessWidget {
           // elevation: 5,
           // Shadow
           child: new Container(
-            height: 120,
+            height: 100,
             alignment: Alignment.center,
             // ListTile
             child: new ListTile(
-              title: new Text(this.title),
-              subtitle: new Text(this.describe),
               // Plant image
               leading: CircleAvatar(
-                radius: 60.0,
+                radius: 30.0,
                 backgroundImage: AssetImage(
                     this.image), // no matter how big it is, it won't overflow
               ),
+              title: new Text(this.title),
+              subtitle: new Text(this.describe),
 
               // Go to detail page
               trailing: new IconButton(
@@ -118,13 +118,14 @@ class Scroll extends StatelessWidget {
               children: <Widget>[
                 TileSimle(
                   title: "1",
-                  image: "assets/images/feature3.jpg",
+                  image: "assets/images/test.jpg",
                   describe: "Hello",
                 ),
                 TileSimle(
                   title: "2",
                   image: "assets/images/feature1.jpg",
-                  describe: "Hello2",
+                  describe:
+                      "Hello2Hello2Hello2Hello2Hello2Hello2Hello2Hello2Hello2Hello2Hello2Hello2",
                 ),
                 TileSimle(
                   title: "3",

@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
         '/location': (context) => HomeScreen(),
         '/scrolllist': (context) => Scroll(),
         '/gallery': (context) => Gallery(),
-        '/cardlist':(context) => CardList(),
-        '/plantdetail':(context) => PlantDetail(),
+        '/cardlist': (context) => CardList(),
+        '/plantdetail': (context) => PlantDetail(),
       },
     );
   }
@@ -82,4 +82,3 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-
