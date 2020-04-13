@@ -30,13 +30,13 @@ class TileSimle extends StatelessWidget {
           // elevation: 5,
           // Shadow
           child: new Container(
-            height: 100,
+            height: 120,
             alignment: Alignment.center,
             // ListTile
             child: new ListTile(
               // Plant image
               leading: CircleAvatar(
-                radius: 30.0,
+                radius: 60.0,
                 backgroundImage: AssetImage(
                     this.image), // no matter how big it is, it won't overflow
               ),

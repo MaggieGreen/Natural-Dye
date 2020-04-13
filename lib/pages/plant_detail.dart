@@ -51,6 +51,50 @@ class _PlantDetailState extends State<PlantDetail> {
       ),
     );
 
+    Widget buildAddToRow() {
+      return Container(
+        margin: EdgeInsets.only(left: 24),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                child: FlatButton(
+                    onPressed: null,
+                    child: Text(
+                      "Add to shopping list",
+                      style: TextStyle(color: Colors.white),
+                    )),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.pink,
+                      Colors.pinkAccent,
+                      Colors.purpleAccent
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+              ),
+              flex: 3,
+            ),
+            Expanded(
+                child: Container(
+//            margin: EdgeInsets.only(left: 30, right: 20),
+              decoration: ShapeDecoration(
+                  shape: CircleBorder(), color: Color(0xffdddddd)),
+              child: Icon(
+                Icons.favorite_border,
+                color: Colors.black,
+              ),
+              padding: EdgeInsets.all(10),
+            ))
+          ],
+        ),
+      );
+    }
+
     return new Scaffold(
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
@@ -103,6 +147,9 @@ class _PlantDetailState extends State<PlantDetail> {
                   buttonSection
                 ],
               ),
+            ),
+            Expanded(
+              child: buildAddToRow(),
             ),
           ],
         ),
