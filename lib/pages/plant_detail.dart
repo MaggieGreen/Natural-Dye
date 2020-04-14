@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dialog.dart';
 
 class PlantDetail extends StatefulWidget {
   @override
@@ -59,7 +60,17 @@ class _PlantDetailState extends State<PlantDetail> {
             Expanded(
               child: Container(
                 child: FlatButton(
-                    onPressed: null,
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) => Dialog(
+                            // title: "Success",
+                            // description:
+                            //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            // buttonText: "Okay",
+                            ),
+                      );
+                    },
                     child: Text(
                       "Add to shopping list",
                       style: TextStyle(color: Colors.white),
