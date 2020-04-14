@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dialog.dart';
 
 class PlantDetail extends StatefulWidget {
   @override

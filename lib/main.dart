@@ -6,7 +6,7 @@ import 'pages/scroll.dart';
 import 'pages/gallery.dart';
 import 'pages/card_list.dart';
 import 'pages/plant_detail.dart';
-import 'pages/dialog.dart';
+// import 'pages/dialog.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/gallery': (context) => Gallery(),
         '/cardlist': (context) => CardList(),
         '/plantdetail': (context) => PlantDetail(),
-        '/dialog': (context) => Dialog(),
+        // '/dialog': (context) => Dialog(),
       },
     );
   }
