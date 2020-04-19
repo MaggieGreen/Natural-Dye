@@ -25,8 +25,15 @@ class _CardListState extends State<CardList> {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                Chip(
+                  // avatar: CircleAvatar(
+                  //   backgroundColor: Colors.grey,
+                  // ),
+                  backgroundColor: Colors.amber,
+                  label: Text('Seasonal Pick'),
+                ),
                 Text(
-                  'Daily for you',
+                  'Midsummer’s elderberry',
                   style: TextStyle(
                       fontFamily: 'CantataOne',
                       fontSize: 30,
@@ -43,6 +50,7 @@ class _CardListState extends State<CardList> {
                       color: Colors.black),
                 ),
                 SizedBox(height: 30),
+                //old link to detail page buttom style
                 FlatButton(
                   onPressed: () =>
                       {Navigator.pushNamed(context, '/plantdetail')},

@@ -37,7 +37,8 @@ class _PlantDetailState extends State<PlantDetail> {
         children: [
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(color, Icons.kitchen, 'Making Pigment'),
+            child: _buildButtonColumn(color,
+                IconData(0xe633, fontFamily: 'MyIcons'), 'Making Pigment'),
           ),
           Expanded(
             flex: 1,
@@ -58,6 +59,7 @@ class _PlantDetailState extends State<PlantDetail> {
           children: <Widget>[
             Expanded(
               child: Container(
+                height: 50,
                 child: FlatButton(
                     onPressed: () {
                       showDialog(
@@ -71,7 +73,7 @@ class _PlantDetailState extends State<PlantDetail> {
                       );
                     },
                     child: Text(
-                      "Add to shopping list",
+                      "Add to material list",
                       style: TextStyle(color: Colors.white),
                     )),
                 decoration: BoxDecoration(
@@ -91,7 +93,7 @@ class _PlantDetailState extends State<PlantDetail> {
             ),
             Expanded(
                 child: Container(
-//            margin: EdgeInsets.only(left: 30, right: 20),
+              // margin: EdgeInsets.only(left: 30, right: 20),
               decoration: ShapeDecoration(
                   shape: CircleBorder(), color: Color(0xffdddddd)),
               child: Icon(
