@@ -104,6 +104,12 @@
       "languageVersion": "1.12"
     },
     {
+      "name": "navigation_dot_bar",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/navigation_dot_bar-0.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.6.4",
       "packageUri": "lib/",
@@ -206,7 +212,7 @@
       "languageVersion": "2.3"
     }
   ],
-  "generated": "2020-04-14T05:37:20.243681Z",
+  "generated": "2020-04-19T05:33:37.028373Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
