@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:navigation_dot_bar/navigation_dot_bar.dart';
 
 import 'card_list.dart';
 import 'gallery.dart';
