@@ -36,7 +36,7 @@ class TileSimle extends StatelessWidget {
             child: new ListTile(
               // Plant image
               leading: CircleAvatar(
-                radius: 60.0,
+                radius: 30.0,
                 backgroundImage: AssetImage(
                     this.image), // no matter how big it is, it won't overflow
               ),
@@ -47,7 +47,7 @@ class TileSimle extends StatelessWidget {
               trailing: new IconButton(
                 icon: Icon(Icons.chevron_right),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/plantdetail');
+                  Navigator.pushNamed(context, '/colorpicker');
                 },
                 // Icons.chevron_right
               ),

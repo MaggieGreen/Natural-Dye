@@ -36,10 +36,13 @@ class _HomeScreen extends State<HomeScreen> {
                 Icons.home,
                 color: Colors.blue,
               ),
-              title: Text("Blue")),
+              title: Text(
+                "Home",
+                style: TextStyle(color: Colors.brown),
+              )),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.color_lens,
+                IconData(0xe633, fontFamily: 'MyIcons'),
                 color: Colors.blue,
               ),
               title: Text(
@@ -51,19 +54,28 @@ class _HomeScreen extends State<HomeScreen> {
                 Icons.book,
                 color: Colors.blue,
               ),
-              title: Text("Red")),
+              title: Text(
+                "Red",
+                style: TextStyle(color: Colors.brown),
+              )),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.crop_square,
                 color: Colors.blue,
               ),
-              title: Text("Blue")),
+              title: Text(
+                "Green",
+                style: TextStyle(color: Colors.brown),
+              )),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.crop_square,
+                Icons.person,
                 color: Colors.blue,
               ),
-              title: Text("Blue")),
+              title: Text(
+                "Blue",
+                style: TextStyle(color: Colors.brown),
+              )),
         ],
         // onTap: (index) {
         //   setState(() {

@@ -91,7 +91,7 @@ class _PlantDetailState extends State<PlantDetail> {
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
-                color, IconData(0xe60e, fontFamily: 'MyIcons'), 'Pigment'),
+                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Pigment'),
           ),
           Expanded(
             flex: 1,
