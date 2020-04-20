@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_dot_bar/navigation_dot_bar.dart';
 
 class Gallery extends StatefulWidget {
   @override

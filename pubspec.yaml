@@ -34,6 +34,7 @@ flutter:
   - family: MyIcons
     fonts:
     - asset: assets/icons/iconfont.ttf
+    - asset: assets/icons/pigment.ttf
     
 
   uses-material-design: true
