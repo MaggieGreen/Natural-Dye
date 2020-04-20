@@ -1,3 +1,4 @@
+// import 'dart:js';
 import 'package:flutter/material.dart';
 
 class PlantDetail extends StatefulWidget {
@@ -6,16 +7,68 @@ class PlantDetail extends StatefulWidget {
 }
 
 class _PlantDetailState extends State<PlantDetail> {
+  final _scaffoldKey = new GlobalKey<ScaffoldState>();
+  VoidCallback _showPerBottomSheetCallBack;
+
+  @override
+  void initState() {
+    super.initState();
+    _showPerBottomSheetCallBack = _showBottomSheet;
+  }
+
+  void _showBottomSheet() {
+    setState(() {
+      _showPerBottomSheetCallBack = null;
+    });
+
+    _scaffoldKey.currentState
+        .showBottomSheet((context) {
+          return new Container(
+            height: 460.0,
+            color: Colors.purple,
+            child: new Center(
+              child: new Text('step1'),
+            ),
+          );
+        })
+        .closed
+        .whenComplete(() {
+          if (mounted) {
+            setState(() {
+              _showPerBottomSheetCallBack = _showBottomSheet;
+            });
+          }
+        });
+  }
+
+  void _showModalSheet() {
+    showModalBottomSheet(
+        context: context,
+        builder: (builder) {
+          return new Container(
+            color: Colors.greenAccent,
+            child: new Center(
+              child: new Text("Hi ModalSheet"),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
 
     Column _buildButtonColumn(Color color, IconData icon, String label) {
       return Column(
+        // key: _scaffoldKey,
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, color: color),
+          Icon(
+            icon,
+            color: color,
+            size: 55.0,
+          ),
           Container(
             margin: const EdgeInsets.only(top: 8),
             child: Text(
@@ -37,16 +90,18 @@ class _PlantDetailState extends State<PlantDetail> {
         children: [
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(color,
-                IconData(0xe633, fontFamily: 'MyIcons'), 'Making Pigment'),
+            child: _buildButtonColumn(
+                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Pigment'),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(color, Icons.shop, 'Materials'),
+            child: _buildButtonColumn(
+                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Material'),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(color, Icons.colorize, 'Color Change'),
+            child: _buildButtonColumn(
+                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Fixative'),
           ),
         ],
       ),
@@ -61,17 +116,8 @@ class _PlantDetailState extends State<PlantDetail> {
               child: Container(
                 height: 50,
                 child: FlatButton(
-                    onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (BuildContext context) => Dialog(
-                            // title: "Success",
-                            // description:
-                            //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                            // buttonText: "Okay",
-                            ),
-                      );
-                    },
+                    // onPressed: _showPerBottomSheetCallBack,
+                    onPressed: _showModalSheet,
                     child: Text(
                       "Add to material list",
                       style: TextStyle(color: Colors.white),
