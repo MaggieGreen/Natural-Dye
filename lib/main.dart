@@ -8,6 +8,7 @@ import 'pages/card_list.dart';
 import 'pages/plant_detail.dart';
 import 'pages/color_picker.dart';
 import 'pages/dialog.dart';
+import 'pages/material_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/plantdetail': (context) => PlantDetail(),
         '/colorpicker': (context) => ColorPicker(),
         '/dialog': (context) => DialogAppBar(),
+        '/materiallist': (context) => MaterialList(),
       },
     );
   }

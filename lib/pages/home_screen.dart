@@ -46,7 +46,7 @@ class _HomeScreen extends State<HomeScreen> {
                 color: Colors.blue,
               ),
               title: Text(
-                "Orange",
+                "Gallery",
                 style: TextStyle(color: Colors.brown),
               )),
           BottomNavigationBarItem(
@@ -55,7 +55,7 @@ class _HomeScreen extends State<HomeScreen> {
                 color: Colors.blue,
               ),
               title: Text(
-                "Red",
+                "Source",
                 style: TextStyle(color: Colors.brown),
               )),
           BottomNavigationBarItem(

@@ -7,80 +7,86 @@ class PlantDetail extends StatefulWidget {
 }
 
 class _PlantDetailState extends State<PlantDetail> {
-  final _scaffoldKey = new GlobalKey<ScaffoldState>();
-  VoidCallback _showPerBottomSheetCallBack;
+  // final _scaffoldKey = new GlobalKey<ScaffoldState>();
+  // VoidCallback _showPerBottomSheetCallBack;
 
-  @override
-  void initState() {
-    super.initState();
-    _showPerBottomSheetCallBack = _showBottomSheet;
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _showPerBottomSheetCallBack = _showBottomSheet;
+  // }
 
-  void _showBottomSheet() {
-    setState(() {
-      _showPerBottomSheetCallBack = null;
-    });
+  // void _showBottomSheet() {
+  //   setState(() {
+  //     _showPerBottomSheetCallBack = null;
+  //   });
 
-    _scaffoldKey.currentState
-        .showBottomSheet((context) {
-          return new Container(
-            height: 460.0,
-            color: Colors.purple,
-            child: new Center(
-              child: new Text('step1'),
-            ),
-          );
-        })
-        .closed
-        .whenComplete(() {
-          if (mounted) {
-            setState(() {
-              _showPerBottomSheetCallBack = _showBottomSheet;
-            });
-          }
-        });
-  }
+  //   _scaffoldKey.currentState
+  //       .showBottomSheet((context) {
+  //         return new Container(
+  //           height: 460.0,
+  //           color: Colors.purple,
+  //           child: new Center(
+  //             child: new Text('step1'),
+  //           ),
+  //         );
+  //       })
+  //       .closed
+  //       .whenComplete(() {
+  //         if (mounted) {
+  //           setState(() {
+  //             _showPerBottomSheetCallBack = _showBottomSheet;
+  //           });
+  //         }
+  //       });
+  // }
 
-  void _showModalSheet() {
-    showModalBottomSheet(
-        context: context,
-        builder: (builder) {
-          return new Container(
-            color: Colors.greenAccent,
-            child: new Center(
-              child: new Text("Hi ModalSheet"),
-            ),
-          );
-        });
-  }
+  // void _showModalSheet() {
+  //   showModalBottomSheet(
+  //       context: context,
+  //       builder: (builder) {
+  //         return new Container(
+  //           color: Colors.greenAccent,
+  //           child: new Center(
+  //             child: new Text("Hi ModalSheet"),
+  //           ),
+  //         );
+  //       });
+  // }
 
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
 
-    Column _buildButtonColumn(Color color, IconData icon, String label) {
-      return Column(
+    GestureDetector _buildButtonColumn(
+        Color color, IconData icon, String label, dynamic onTap) {
+      return GestureDetector(
         // key: _scaffoldKey,
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            icon,
-            color: color,
-            size: 55.0,
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 8),
-            child: Text(
-              label,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: color,
+        onTap: () {
+          Navigator.pushNamed(context, label);
+        },
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              icon,
+              color: color,
+              size: 55.0,
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 8),
+              child: Text(
+                label,
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: color,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       );
     }
 
@@ -91,17 +97,21 @@ class _PlantDetailState extends State<PlantDetail> {
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
-                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Pigment'),
+                color,
+                IconData(0xe60e, fontFamily: 'Pigment'),
+                'Pigment',
+                () => {Navigator.pushNamed(context, '/colorpicker')}),
+            //链接有问题
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Material'),
+            child: _buildButtonColumn(color,
+                IconData(0xe633, fontFamily: 'MyIcons'), 'Material', () {}),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Fixative'),
+            child: _buildButtonColumn(color,
+                IconData(0xe633, fontFamily: 'MyIcons'), 'Fixative', () {}),
           ),
         ],
       ),
@@ -117,7 +127,8 @@ class _PlantDetailState extends State<PlantDetail> {
                 height: 50,
                 child: FlatButton(
                     // onPressed: _showPerBottomSheetCallBack,
-                    onPressed: _showModalSheet,
+                    onPressed: () =>
+                        {Navigator.pushNamed(context, '/colorpicker')},
                     child: Text(
                       "Add to material list",
                       style: TextStyle(color: Colors.white),
