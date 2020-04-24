@@ -6,6 +6,16 @@ class MaterialList extends StatefulWidget {
 }
 
 class _MaterialListState extends State<MaterialList> {
+  Map<String, bool> values = {
+    'foo': true,
+    'bar': false,
+  };
+
+  void main() {
+    runApp(new MaterialApp(
+        home: new MaterialList(), debugShowCheckedModeBanner: false));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +28,21 @@ class _MaterialListState extends State<MaterialList> {
       ),
       body: Container(
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            new ListView(
+              children: values.keys.map((String key) {
+                return new CheckboxListTile(
+                  title: new Text(key),
+                  value: values[key],
+                  onChanged: (bool value) {
+                    setState(() {
+                      values[key] = value;
+                    });
+                  },
+                );
+              }).toList(),
+            )
+          ],
         ),
       ),
     );
