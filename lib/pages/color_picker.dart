@@ -6,6 +6,8 @@ class ColorPicker extends StatefulWidget {
 }
 
 class _ColorPickerState extends State<ColorPicker> {
+  var _myColor = Colors.blue;
+
   final _scaffoldKey = new GlobalKey<ScaffoldState>();
   VoidCallback _showPerBottomSheetCallBack;
 
@@ -110,7 +112,18 @@ class _ColorPickerState extends State<ColorPicker> {
     GestureDetector _buildButtonColumn(
         Color color, IconData icon, String label, dynamic onTap) {
       return GestureDetector(
-        onTap: onTap,
+        // onTap: onTap,
+        // onTapDown
+        onTapDown: (TapDownDetails details) {
+          setState(() {
+            _myColor = Colors.orange;
+          });
+        },
+        onTapUp: (TapUpDetails details) {
+          setState(() {
+            _myColor = Colors.red;
+          });
+        },
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -206,11 +219,17 @@ class _ColorPickerState extends State<ColorPicker> {
         child: Column(
           children: <Widget>[
             SizedBox(height: 30),
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/images/plantimage00.jpg'),
-              minRadius: 90,
-              maxRadius: 100,
+            Container(
+              padding: EdgeInsets.all(100.0),
+              margin: EdgeInsets.all(20.0),
+              color: _myColor,
+              child: Text('Result color'),
             ),
+            // CircleAvatar(
+            //   backgroundImage: AssetImage('assets/images/plantimage00.jpg'),
+            //   minRadius: 90,
+            //   maxRadius: 100,
+            // ),
             SizedBox(height: 50),
             Text(
               'Choose Fabric',
