@@ -9,6 +9,7 @@ import 'pages/plant_detail.dart';
 import 'pages/color_picker.dart';
 import 'pages/dialog.dart';
 import 'pages/material_list.dart';
+import 'pages/profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/colorpicker': (context) => ColorPicker(),
         '/dialog': (context) => DialogAppBar(),
         '/materiallist': (context) => MaterialList(),
+        '/profile': (context) => Profile(),
       },
     );
   }

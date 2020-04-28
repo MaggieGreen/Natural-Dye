@@ -6,6 +6,13 @@ class ColorPicker extends StatefulWidget {
 }
 
 class _ColorPickerState extends State<ColorPicker> {
+  var colorsArray = [
+    [Colors.blue, Colors.red, Colors.yellow],
+    [Colors.orange, Colors.green, Colors.purple],
+    [Colors.lime, Colors.amberAccent, Colors.pink]
+  ];
+  var _fabricColor = 0;
+  var _fixativeColor = 0;
   var _myColor = Colors.blue;
 
   final _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -116,12 +123,17 @@ class _ColorPickerState extends State<ColorPicker> {
         // onTapDown
         onTapDown: (TapDownDetails details) {
           setState(() {
-            _myColor = Colors.orange;
+            //  _myColor = Colors.orange;
+            onTap();
+            _myColor = colorsArray[_fabricColor][_fixativeColor];
           });
         },
         onTapUp: (TapUpDetails details) {
           setState(() {
-            _myColor = Colors.red;
+            print(_fabricColor);
+            print(_fixativeColor);
+            print(colorsArray[_fabricColor][_fixativeColor]);
+            _myColor = colorsArray[_fabricColor][_fixativeColor];
           });
         },
         child: Column(
@@ -157,21 +169,24 @@ class _ColorPickerState extends State<ColorPicker> {
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe60e, fontFamily: 'Pigment'), 'Cotton', () {
-              print('call1');
+              //print('call1');
+              _fabricColor = 0;
             }),
           ),
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe633, fontFamily: 'MyIcons'), 'Wool', () {
-              print('call2');
+              //print('call2');
+              _fabricColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe633, fontFamily: 'MyIcons'), 'Silk', () {
-              print('call3');
+              //print('call3');
+              _fabricColor = 2;
             }),
           ),
         ],
@@ -186,21 +201,24 @@ class _ColorPickerState extends State<ColorPicker> {
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe60e, fontFamily: 'Pigment'), 'Alum', () {
-              print('calla');
+              //print('calla');
+              _fixativeColor = 0;
             }),
           ),
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe633, fontFamily: 'MyIcons'), 'Copper', () {
-              print('callb');
+              //print('callb');
+              _fixativeColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
                 color, IconData(0xe633, fontFamily: 'MyIcons'), 'Iron', () {
-              print('callc');
+              //print('callc');
+              _fixativeColor = 2;
             }),
           ),
         ],

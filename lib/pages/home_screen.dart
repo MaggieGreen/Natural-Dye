@@ -5,6 +5,7 @@ import 'package:navigation_dot_bar/navigation_dot_bar.dart';
 import 'card_list.dart';
 import 'gallery.dart';
 import 'scroll.dart';
+import 'profile.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _HomeScreen extends State<HomeScreen> {
     Gallery(),
     Scroll(),
     new Container(color: Colors.green),
-    new Container(color: Colors.blue),
+    Profile(),
   ];
   GlobalKey _bottomNavigationKey = GlobalKey();
 
