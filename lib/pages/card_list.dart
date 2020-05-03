@@ -9,13 +9,17 @@ class _CardListState extends State<CardList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.transparent,
-      // appBar: new AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   title: new Text('Home'),
-      //   centerTitle: true,
-      //   elevation: 0,
+      // appBar: PreferredSize(
+      //   child: AppBar(
+      //     leading: new Container(),
+      //     backgroundColor: Colors.white,
+      //     // status bar color
+      //     brightness: Brightness.light,
+      //     elevation: 0.0,
+      //   ),
+      //   preferredSize: Size.fromHeight(10.0),
       // ),
+
       body: Column(
         children: <Widget>[
           Container(
@@ -29,27 +33,27 @@ class _CardListState extends State<CardList> {
                   // avatar: CircleAvatar(
                   //   backgroundColor: Colors.grey,
                   // ),
-                  backgroundColor: Colors.amber,
+                  backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
                   label: Text('Seasonal Pick'),
                 ),
                 Text(
-                  'Midsummer’s elderberry',
+                  'Spring’s Marigold',
                   style: TextStyle(
                       fontFamily: 'CantataOne',
-                      fontSize: 30,
+                      fontSize: 28,
                       fontWeight: FontWeight.w400,
                       color: Colors.black),
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Who knew that those delicious green avocado would produce the most lovely blush pink?',
+                  'Bright and pleasant yellow dye',
                   style: TextStyle(
                       fontFamily: 'OpenSans',
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
                       color: Colors.black),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 //old link to detail page buttom style
                 FlatButton(
                   onPressed: () =>
@@ -65,14 +69,14 @@ class _CardListState extends State<CardList> {
                       side: BorderSide(color: Colors.black, width: 2.0)),
                   // splashColor: Colors.redAccent,
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 30),
               ],
             ),
             height: 482,
             width: double.infinity,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/background.jpg'),
+                    image: AssetImage('assets/images/background.png'),
                     fit: BoxFit.cover)),
           ),
           SizedBox(height: 20),

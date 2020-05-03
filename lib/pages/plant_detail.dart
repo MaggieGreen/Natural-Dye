@@ -187,7 +187,7 @@ class _PlantDetailState extends State<PlantDetail> {
                 children: <Widget>[
                   SizedBox(height: 30),
                   Text(
-                    'Black Bean',
+                    'Marigold',
                     style: TextStyle(
                         fontFamily: 'CantataOne',
                         fontSize: 30,
@@ -196,7 +196,7 @@ class _PlantDetailState extends State<PlantDetail> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'The black beans dye’s pigment has come from the soak the beans, and the remaining beans can continue to cook.',
+                    'Put marigolds blossoms into a jar, poured in simmering water, swirl the mixture until the water turned yellow.',
                     style: TextStyle(
                         fontFamily: 'OpenSans',
                         fontSize: 16,
