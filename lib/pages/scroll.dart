@@ -76,6 +76,13 @@ class Scroll extends StatelessWidget {
           backgroundColor: Color(0xFF777E65),
           elevation: 0,
           bottom: new TabBar(
+            unselectedLabelColor: Colors.redAccent,
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicator: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Colors.redAccent, Colors.orangeAccent]),
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.redAccent),
             tabs: <Widget>[
               new Tab(
                 text: "Inspiration",
