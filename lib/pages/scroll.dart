@@ -47,7 +47,7 @@ class TileSimle extends StatelessWidget {
               trailing: new IconButton(
                 icon: Icon(Icons.chevron_right),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/colorpicker');
+                  Navigator.pushNamed(context, '/dialog');
                 },
                 // Icons.chevron_right
               ),
