@@ -6,6 +6,7 @@ import 'card_list.dart';
 import 'gallery.dart';
 import 'scroll.dart';
 import 'profile.dart';
+import 'dialog.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _HomeScreen extends State<HomeScreen> {
   final List<Widget> _children = [
     CardList(),
     Gallery(),
-    Scroll(),
+    DialogAppBar(),
     new Container(color: Colors.green),
     Profile(),
   ];
@@ -65,7 +66,7 @@ class _HomeScreen extends State<HomeScreen> {
                 color: Colors.blue,
               ),
               title: Text(
-                "Green",
+                "Tutorial",
                 style: TextStyle(color: Colors.brown),
               )),
           BottomNavigationBarItem(
@@ -74,7 +75,7 @@ class _HomeScreen extends State<HomeScreen> {
                 color: Colors.blue,
               ),
               title: Text(
-                "Blue",
+                "Profile",
                 style: TextStyle(color: Colors.brown),
               )),
         ],

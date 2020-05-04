@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:onboarding_flutter/model/Planets.dart';
+import 'package:onboarding_flutter/pages/planets/PlanetRow.dart';
+
+import 'planets/Theme.dart' as Theme;
 
 class DialogAppBar extends StatefulWidget {
   @override
@@ -13,8 +17,8 @@ class _DialogAppBarState extends State<DialogAppBar> {
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         child: AppBar(
-          // leading: new Container(),
-          backgroundColor: Colors.grey[200],
+          leading: new Container(),
+          backgroundColor: Colors.white,
           title: Text('Test'),
           // status bar color
           brightness: Brightness.light,
@@ -32,7 +36,7 @@ class _DialogAppBarState extends State<DialogAppBar> {
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    "Color Source",
+                    "Source",
                     style: TextStyle(
                         fontFamily: 'CantataOne',
                         fontSize: 30,
@@ -43,8 +47,17 @@ class _DialogAppBarState extends State<DialogAppBar> {
               ),
               SizedBox(height: 20),
               Container(
-                padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
+                // padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
+                margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
                 constraints: BoxConstraints.expand(height: 50),
+                decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(25.0),
+                        topRight: Radius.circular(25.0),
+                        bottomLeft: Radius.circular(25.0),
+                        bottomRight: Radius.circular(25.0))),
                 child: new TabBar(
                   unselectedLabelColor: Colors.redAccent,
                   indicatorSize: TabBarIndicatorSize.tab,
@@ -72,7 +85,7 @@ class _DialogAppBarState extends State<DialogAppBar> {
                   child: TabBarView(children: [
                     //inspiration part
                     new StaggeredGridView.countBuilder(
-                      padding: EdgeInsets.fromLTRB(24, 20, 24, 0),
+                      padding: EdgeInsets.fromLTRB(24, 0, 24, 30),
                       crossAxisCount: 4,
                       itemCount: 8,
                       itemBuilder: (BuildContext context, int index) =>
@@ -94,12 +107,15 @@ class _DialogAppBarState extends State<DialogAppBar> {
                       crossAxisSpacing: 6.0,
                     ),
                     //plant list part
-                    Container(
-                      child: Text("Articles Body"),
+                    new Container(
+                      color: Theme.Colors.planetPageBackground,
+                      child: new ListView.builder(
+                        itemExtent: 160.0,
+                        itemCount: PlanetDao.planets.length,
+                        itemBuilder: (_, index) =>
+                            new PlanetRow(PlanetDao.planets[index]),
+                      ),
                     ),
-                    // Container(
-                    //   child: Text("User Body"),
-                    // ),
                   ]),
                 ),
               )

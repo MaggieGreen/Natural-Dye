@@ -93,8 +93,10 @@ class _MaterialListState extends State<MaterialList> {
                     child: Container(
                         height: 50,
                         child: FlatButton(
-                            onPressed: () =>
-                                {Navigator.pushNamed(context, '/profile')},
+                            onPressed: () => {
+                                  Navigator.popUntil(
+                                      context, ModalRoute.withName('/location'))
+                                },
                             child: Text(
                               'To Profile check your list',
                               style: TextStyle(color: Colors.white),

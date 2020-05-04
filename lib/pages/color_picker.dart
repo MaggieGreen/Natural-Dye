@@ -9,11 +9,11 @@ class _ColorPickerState extends State<ColorPicker> {
   var colorsArray = [
     [Colors.blue, Colors.red, Colors.yellow],
     [Colors.orange, Colors.green, Colors.purple],
-    [Colors.lime, Colors.amberAccent, Colors.pink]
+    [Colors.lime, Colors.amber, Colors.pink]
   ];
   var _fabricColor = 0;
   var _fixativeColor = 0;
-  var _myColor = Colors.blue;
+  var _myColor = Color(0xFFE5B436);
 
   final _scaffoldKey = new GlobalKey<ScaffoldState>();
   VoidCallback _showPerBottomSheetCallBack;
