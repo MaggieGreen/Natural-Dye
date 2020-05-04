@@ -12,13 +12,13 @@ class _ProfileState extends State<Profile> {
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         child: AppBar(
-          // leading: new Container(),
+          leading: new Container(),
           backgroundColor: Colors.white,
           // status bar color
           brightness: Brightness.light,
           elevation: 0.0,
         ),
-        preferredSize: Size.fromHeight(30.0),
+        preferredSize: Size.fromHeight(10.0),
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(24.0, 0, 24.0, 30.0),

@@ -17,8 +17,8 @@ class _DialogAppBarState extends State<DialogAppBar> {
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         child: AppBar(
-          // leading: new Container(),
-          backgroundColor: Colors.grey[200],
+          leading: new Container(),
+          backgroundColor: Colors.white,
           title: Text('Test'),
           // status bar color
           brightness: Brightness.light,
@@ -36,7 +36,7 @@ class _DialogAppBarState extends State<DialogAppBar> {
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    "Color Source",
+                    "Source",
                     style: TextStyle(
                         fontFamily: 'CantataOne',
                         fontSize: 30,

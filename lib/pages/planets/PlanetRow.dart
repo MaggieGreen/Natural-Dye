@@ -12,7 +12,7 @@ class PlanetRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final planetThumbnail = new Container(
       alignment: new FractionalOffset(0.0, 0.5),
-      margin: const EdgeInsets.only(left: 24.0),
+      margin: const EdgeInsets.only(left: 14.0),
       child: new Hero(
         tag: 'planet-icon-${planet.id}',
         child: new Image(
@@ -24,16 +24,16 @@ class PlanetRow extends StatelessWidget {
     );
 
     final planetCard = new Container(
-      margin: const EdgeInsets.only(left: 72.0, right: 24.0),
+      margin: const EdgeInsets.only(left: 62.0, right: 10.0),
       decoration: new BoxDecoration(
         color: Theme.Colors.planetCard,
         shape: BoxShape.rectangle,
-        borderRadius: new BorderRadius.circular(8.0),
+        borderRadius: new BorderRadius.circular(15.0),
         boxShadow: <BoxShadow>[
           new BoxShadow(
-              color: Colors.black,
+              color: Color(0xFFDBDDE5),
               blurRadius: 10.0,
-              offset: new Offset(0.0, 10.0))
+              offset: new Offset(3.0, 3.0))
         ],
       ),
       child: new Container(
@@ -51,12 +51,12 @@ class PlanetRow extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 8.0)),
             new Row(
               children: <Widget>[
-                new Icon(Icons.location_on,
+                new Icon(Icons.invert_colors,
                     size: 14.0, color: Theme.Colors.planetDistance),
                 new Text(planet.distance,
                     style: Theme.TextStyles.planetDistance),
                 new Container(width: 24.0),
-                new Icon(Icons.flight_land,
+                new Icon(Icons.pan_tool,
                     size: 14.0, color: Theme.Colors.planetDistance),
                 new Text(planet.gravity,
                     style: Theme.TextStyles.planetDistance),
