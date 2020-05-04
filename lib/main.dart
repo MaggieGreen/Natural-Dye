@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/onboarding_page.dart';
-import 'pages/home_screen.dart';
+import 'pages/navigation.dart';
 import 'pages/scroll.dart';
 import 'pages/gallery.dart';
 import 'pages/card_list.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => OnboardingPage(),
         '/home': (context) => OnboardingPage(),
-        '/location': (context) => HomeScreen(),
+        '/location': (context) => Navigation(),
         '/scrolllist': (context) => Scroll(),
         '/gallery': (context) => Gallery(),
         '/cardlist': (context) => CardList(),

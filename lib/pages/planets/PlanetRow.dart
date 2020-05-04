@@ -1,10 +1,10 @@
 // import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:onboarding_flutter/model/Planet.dart';
+import 'package:onboarding_flutter/model/Plant.dart';
 import 'Theme.dart' as Theme;
 
 class PlanetRow extends StatelessWidget {
-  final Planet planet;
+  final Plant planet;
 
   PlanetRow(this.planet);
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:onboarding_flutter/model/Planets.dart';
+import 'package:onboarding_flutter/model/Plants.dart';
 import 'package:onboarding_flutter/pages/planets/PlanetRow.dart';
 
 import 'planets/Theme.dart' as Theme;
