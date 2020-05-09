@@ -10,6 +10,7 @@ import 'pages/color_picker.dart';
 import 'pages/dialog.dart';
 import 'pages/material_list.dart';
 import 'pages/profile.dart';
+import 'pages/timelinevideo/timeline_video_one.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/dialog': (context) => DialogAppBar(),
         '/materiallist': (context) => MaterialList(),
         '/profile': (context) => Profile(),
+        '/timelinevideo/timeline_video_one': (context) => TimelineVideoOne(),
       },
     );
   }

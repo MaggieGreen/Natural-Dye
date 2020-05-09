@@ -44,6 +44,7 @@ class _GalleryState extends State<Gallery> {
                     itemBuilder: (BuildContext context, int index) {
                       return new Stack(
                         children: <Widget>[
+                          //item
                           new Padding(
                             padding: const EdgeInsets.only(left: 50.0),
                             child: new Card(
@@ -55,6 +56,7 @@ class _GalleryState extends State<Gallery> {
                               ),
                             ),
                           ),
+                          //line
                           new Positioned(
                             top: 0.0,
                             bottom: 0.0,
@@ -65,6 +67,7 @@ class _GalleryState extends State<Gallery> {
                               color: Colors.blue,
                             ),
                           ),
+                          //time
                           new Positioned(
                             top: 100.0,
                             left: 15.0,
@@ -73,7 +76,7 @@ class _GalleryState extends State<Gallery> {
                               width: 40.0,
                               decoration: new BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Colors.white,
+                                color: Colors.amber,
                               ),
                               child: new Container(
                                 margin: new EdgeInsets.all(5.0),
