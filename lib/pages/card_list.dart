@@ -96,9 +96,14 @@ class _CardListState extends State<CardList> {
             padding: EdgeInsets.only(left: 24.0),
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: EdgeInsets.only(right: 30.0, top: 0, bottom: 10.0),
+                return GestureDetector(
+                  onTap: () => {
+                    Navigator.pushNamed(
+                        context, '/timelinevideo/timeline_video_one')
+                  },
                   child: Container(
+                      margin:
+                          EdgeInsets.only(right: 30.0, top: 0, bottom: 10.0),
                       width: 200.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),

@@ -22,7 +22,7 @@ class Dimens {
   const Dimens();
 
   static const planetWidth = 100.0;
-  static const planetHeight = 100.0;
+  static const planetHeight = 120.0;
 }
 
 class TextStyles {

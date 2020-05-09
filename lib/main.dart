@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'pages/onboarding_page.dart';
-import 'pages/home_screen.dart';
+import 'pages/navigation.dart';
 import 'pages/scroll.dart';
 import 'pages/gallery.dart';
 import 'pages/card_list.dart';
@@ -10,6 +10,7 @@ import 'pages/color_picker.dart';
 import 'pages/dialog.dart';
 import 'pages/material_list.dart';
 import 'pages/profile.dart';
+import 'pages/timelinevideo/timeline_video_one.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => OnboardingPage(),
         '/home': (context) => OnboardingPage(),
-        '/location': (context) => HomeScreen(),
+        '/location': (context) => Navigation(),
         '/scrolllist': (context) => Scroll(),
         '/gallery': (context) => Gallery(),
         '/cardlist': (context) => CardList(),
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/dialog': (context) => DialogAppBar(),
         '/materiallist': (context) => MaterialList(),
         '/profile': (context) => Profile(),
+        '/timelinevideo/timeline_video_one': (context) => TimelineVideoOne(),
       },
     );
   }
