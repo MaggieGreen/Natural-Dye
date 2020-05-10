@@ -15,15 +15,26 @@ class _TimelineVideoOneState extends State<TimelineVideoOne> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
-    );
+    // _controller = VideoPlayerController.network(
+    //   'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    // );
 
-    _initializeVideoPlayerFuture = _controller.initialize();
+    // _initializeVideoPlayerFuture = _controller.initialize();
 
-    _controller.setLooping(true);
+    // _controller.setLooping(true);
 
     super.initState();
+
+    _controller = VideoPlayerController.network(
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    )..initialize().then((_) {
+        // Once the video has been loaded we play the video and set looping to true.
+        _controller.play();
+        _controller.setLooping(true);
+        // Ensure the first frame is shown after the video is initialized.
+        setState(() {});
+      });
+
     // // Pointing the video controller to our local asset.
     // _controller = VideoPlayerController.asset("assets/video/sf.mp4")
     //   ..initialize().then((_) {
