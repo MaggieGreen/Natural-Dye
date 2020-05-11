@@ -109,11 +109,11 @@ class _TimelineVideoOneState extends State<TimelineVideoOne> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    FloatingActionButton.extended(
-                      onPressed: () {},
-                      icon: Icon(Icons.favorite_border),
-                      label: Text("Like"),
-                    ),
+                    // FloatingActionButton.extended(
+                    //   onPressed: () {},
+                    //   icon: Icon(Icons.favorite_border),
+                    //   label: Text("Like"),
+                    // ),
                     Container(
                         padding: EdgeInsets.fromLTRB(24, 30, 24, 20),
                         height: 200.0,

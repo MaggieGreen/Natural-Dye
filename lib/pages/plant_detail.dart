@@ -158,7 +158,7 @@ class _PlantDetailState extends State<PlantDetail> {
                 floating: false,
                 pinned: true,
                 flexibleSpace: new FlexibleSpaceBar(
-                  background: Image.asset('assets/images/blackbeans1.jpg'),
+                  background: Image.asset('assets/images/marigoldcover.png'),
                 ))
           ];
         },

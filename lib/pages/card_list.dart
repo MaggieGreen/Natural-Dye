@@ -37,11 +37,25 @@ class _CardListState extends State<CardList> {
                           fontFamily: 'CantataOne',
                           fontSize: 30,
                           fontWeight: FontWeight.w400,
-                          color: Colors.black),
+                          color: Color(0xFF323232)),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 6),
+                Container(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "The beauty of natural dye",
+                      style: TextStyle(
+                          fontFamily: 'Open Sans',
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xFF323232)),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16),
                 Container(
                   padding: EdgeInsets.fromLTRB(20, 0, 100, 0),
                   child: Column(
@@ -62,7 +76,7 @@ class _CardListState extends State<CardList> {
                             fontFamily: 'CantataOne',
                             fontSize: 28,
                             fontWeight: FontWeight.w400,
-                            color: Colors.black),
+                            color: Colors.white),
                       ),
                       // SizedBox(height: 10),
                       // Text(
@@ -83,13 +97,13 @@ class _CardListState extends State<CardList> {
                           style: TextStyle(fontWeight: FontWeight.w700),
                         ),
                         color: Colors.transparent,
-                        textColor: Colors.black,
+                        textColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.black, width: 2.0)),
+                            side: BorderSide(color: Colors.white, width: 2.0)),
                         // splashColor: Colors.redAccent,
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 30),
                     ],
                   ),
                   height: 200,
@@ -101,7 +115,7 @@ class _CardListState extends State<CardList> {
                           bottomLeft: Radius.circular(25.0),
                           bottomRight: Radius.circular(25.0)),
                       image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
+                          image: AssetImage('assets/images/background2.png'),
                           fit: BoxFit.cover)),
                 ),
                 SizedBox(height: 20),
@@ -111,7 +125,7 @@ class _CardListState extends State<CardList> {
                   // margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
                   constraints: BoxConstraints.expand(height: 50),
                   decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Color(0xFFF2F2F2),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(25.0),
@@ -119,11 +133,11 @@ class _CardListState extends State<CardList> {
                           bottomLeft: Radius.circular(25.0),
                           bottomRight: Radius.circular(25.0))),
                   child: new TabBar(
-                    unselectedLabelColor: Colors.redAccent,
+                    unselectedLabelColor: Color(0xFF323232),
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Colors.redAccent, Colors.orangeAccent]),
+                            colors: [Color(0xFFA3CBCD), Color(0xFFB2C251)]),
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.redAccent),
                     tabs: <Widget>[
@@ -179,11 +193,10 @@ class _CardListState extends State<CardList> {
                                     border: Border.all(
                                         color: Colors.grey, width: 2.0)),
                                 child: new Center(
-                                  child: new CircleAvatar(
-                                    backgroundColor: Colors.grey,
-                                    child: new Text('$index'),
-                                  ),
-                                )),
+                                    child: Image(
+                                  image: AssetImage(
+                                      'assets/images/Inspiration${index + 1}.jpg'),
+                                ))),
                         staggeredTileBuilder: (int index) =>
                             new StaggeredTile.count(2, index.isEven ? 3 : 2),
                         mainAxisSpacing: 6.0,
