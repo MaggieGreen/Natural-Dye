@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		f28pE+Qua63dtmzEmUse/9uR2Bg=
+		dTAayTDOYlkoKP2K7r78Se08OQs=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -46,7 +46,39 @@
 		</data>
 		<key>flutter_assets/assets/images/.DS_Store</key>
 		<data>
-		2luQyiXijpze+dEc8Gng1RlFVM8=
+		74cA8Ebe5eI9e51I8VW0J27zK04=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
+		<data>
+		y19eak3CBMzK3NPV/mHkZaOHqG8=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration2.jpg</key>
+		<data>
+		Dg/n0CDRlqeObyELerONSj81sc8=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration3.jpg</key>
+		<data>
+		Py2Z/ewq0LyD57SfMapgFWBb770=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration4.jpg</key>
+		<data>
+		/LpwPuh/Zp31lcYT8fQKSTojDBs=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration5.jpg</key>
+		<data>
+		EGSRzAW0LtmhYAbDKA0X+m+3dsg=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration6.jpg</key>
+		<data>
+		/m9jVgqB8Sp8En07lOeswioUq7k=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration7.jpg</key>
+		<data>
+		GNZzrweYrBhImtAxi3+LTpP31oE=
+		</data>
+		<key>flutter_assets/assets/images/Inspiration8.jpg</key>
+		<data>
+		dRwdJbLNQQgtbTKGb6dKuHGrP5A=
 		</data>
 		<key>flutter_assets/assets/images/Marigold.png</key>
 		<data>
@@ -62,7 +94,11 @@
 		</data>
 		<key>flutter_assets/assets/images/background.png</key>
 		<data>
-		ynGVdefz23s5xDLiGxRFjt2f5jk=
+		WTv+D7XPTAEsmhKO/dEMe3B08O4=
+		</data>
+		<key>flutter_assets/assets/images/background2.png</key>
+		<data>
+		gbk/PtFQbApDKVBQNs2ry55XNyA=
 		</data>
 		<key>flutter_assets/assets/images/blackbeans1.jpg</key>
 		<data>
@@ -87,6 +123,10 @@
 		<key>flutter_assets/assets/images/marigold2.png</key>
 		<data>
 		RaDvhZaqjJHait1D/mzUfREJQnc=
+		</data>
+		<key>flutter_assets/assets/images/marigoldcover.png</key>
+		<data>
+		td+c/TFSmWKjGmbAtjCNL+I/fKU=
 		</data>
 		<key>flutter_assets/assets/images/onboarding1.png</key>
 		<data>
@@ -162,7 +202,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		ofulz8g2WkN2GydD75hDrm3lhnA=
+		NiV9VhqMFPWIsnemN3voiY/99YM=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -179,11 +219,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f28pE+Qua63dtmzEmUse/9uR2Bg=
+			dTAayTDOYlkoKP2K7r78Se08OQs=
 			</data>
 			<key>hash2</key>
 			<data>
-			GXoMQASB1DKU2lsd0UOT3j1A1cMyBmnq8cB9QAvHU8w=
+			n9bA95S8y07Bp4ZxYrXHrFDvNFq7W9Il/+2wMHtu0lM=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -274,6 +314,94 @@
 			klSTuu/9iYYyQ7t46BV7K6+PNWkugfDU0K366BmHiTk=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y19eak3CBMzK3NPV/mHkZaOHqG8=
+			</data>
+			<key>hash2</key>
+			<data>
+			+tvO1de4ImxvFZgsEHKIf17Bdz15DieZaAo4K0Bh8AA=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration2.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Dg/n0CDRlqeObyELerONSj81sc8=
+			</data>
+			<key>hash2</key>
+			<data>
+			leRQnnb5w1uKrf8ov97WPeb4R2O6dK26m8KTtgk55Uo=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration3.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Py2Z/ewq0LyD57SfMapgFWBb770=
+			</data>
+			<key>hash2</key>
+			<data>
+			HeyAq41aQ3xhBkMgguwFj8htU2G6f/J9MY16g6BadsQ=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration4.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/LpwPuh/Zp31lcYT8fQKSTojDBs=
+			</data>
+			<key>hash2</key>
+			<data>
+			2amZSdsBqaxGK2SplH1CvBOcOH/BDF9gTzzVXV4ooFc=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration5.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EGSRzAW0LtmhYAbDKA0X+m+3dsg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZzJmAilYlf4DkkrDJZGWud0SX2QeO+va8qAo4lJE5RI=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration6.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/m9jVgqB8Sp8En07lOeswioUq7k=
+			</data>
+			<key>hash2</key>
+			<data>
+			SZf6zYXY6c3yevs2BTmL6VU0mv4G/gqg3c3zDJ35sM4=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration7.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GNZzrweYrBhImtAxi3+LTpP31oE=
+			</data>
+			<key>hash2</key>
+			<data>
+			/Fmoh3pSbHJlSadf7BOjjY9pVuwAY5hbjJVDdK/fXrk=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/Inspiration8.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dRwdJbLNQQgtbTKGb6dKuHGrP5A=
+			</data>
+			<key>hash2</key>
+			<data>
+			EbbOp8+xe8TvZZlw+jlUSmUi2h7xTcVxPYBvXtDwjyI=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/Marigold.png</key>
 		<dict>
 			<key>hash</key>
@@ -311,11 +439,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ynGVdefz23s5xDLiGxRFjt2f5jk=
+			WTv+D7XPTAEsmhKO/dEMe3B08O4=
 			</data>
 			<key>hash2</key>
 			<data>
-			6HSTPh39JV7hhw9dCJ2IYwIUvBlWQv9Igr2lHhsdR08=
+			tazhilFmXfnefYI9UWUQ7VESgXYPDSIK7KosIEydkzE=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/background2.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			gbk/PtFQbApDKVBQNs2ry55XNyA=
+			</data>
+			<key>hash2</key>
+			<data>
+			yAuw0B1M13lPayH6bP5uBTHMiGbTaHdm3it4z9JkUNo=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/blackbeans1.jpg</key>
@@ -382,6 +521,17 @@
 			<key>hash2</key>
 			<data>
 			a7GVCz2v/XfsNPxeVxXsPmv8J63F+1DwxOAmqs7fmrU=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/marigoldcover.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			td+c/TFSmWKjGmbAtjCNL+I/fKU=
+			</data>
+			<key>hash2</key>
+			<data>
+			GjErUzv8TA7FF5WukR0ggXapyFqhVrfkz12z+oTe7+c=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/onboarding1.png</key>
@@ -586,11 +736,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ofulz8g2WkN2GydD75hDrm3lhnA=
+			NiV9VhqMFPWIsnemN3voiY/99YM=
 			</data>
 			<key>hash2</key>
 			<data>
-			OCUZEnA790rjgrOlquSDvmzag3FqsjJD1aq+Pt0HnHM=
+			7m20NQhKp0A/rbNuIFrZDufCcO3SWA+eMW+X9NUT9iQ=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

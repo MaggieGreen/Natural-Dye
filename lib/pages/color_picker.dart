@@ -15,39 +15,39 @@ class _ColorPickerState extends State<ColorPicker> {
   var _fixativeColor = 0;
   var _myColor = Color(0xFFE5B436);
 
-  final _scaffoldKey = new GlobalKey<ScaffoldState>();
-  VoidCallback _showPerBottomSheetCallBack;
+  // final _scaffoldKey = new GlobalKey<ScaffoldState>();
+  // VoidCallback _showPerBottomSheetCallBack;
 
-  @override
-  void initState() {
-    super.initState();
-    _showPerBottomSheetCallBack = _showBottomSheet;
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _showPerBottomSheetCallBack = _showBottomSheet;
+  // }
 
-  void _showBottomSheet() {
-    setState(() {
-      _showPerBottomSheetCallBack = null;
-    });
+  // void _showBottomSheet() {
+  //   setState(() {
+  //     _showPerBottomSheetCallBack = null;
+  //   });
 
-    _scaffoldKey.currentState
-        .showBottomSheet((context) {
-          return new Container(
-            height: 460.0,
-            color: Colors.purple,
-            child: new Center(
-              child: new Text('step1'),
-            ),
-          );
-        })
-        .closed
-        .whenComplete(() {
-          if (mounted) {
-            setState(() {
-              _showPerBottomSheetCallBack = _showBottomSheet;
-            });
-          }
-        });
-  }
+  //   _scaffoldKey.currentState
+  //       .showBottomSheet((context) {
+  //         return new Container(
+  //           height: 460.0,
+  //           color: Colors.purple,
+  //           child: new Center(
+  //             child: new Text('step1'),
+  //           ),
+  //         );
+  //       })
+  //       .closed
+  //       .whenComplete(() {
+  //         if (mounted) {
+  //           setState(() {
+  //             _showPerBottomSheetCallBack = _showBottomSheet;
+  //           });
+  //         }
+  //       });
+  // }
 
   void _showModalSheet() {
     showModalBottomSheet(
