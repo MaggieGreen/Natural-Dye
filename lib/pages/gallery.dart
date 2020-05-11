@@ -48,13 +48,18 @@ class _GalleryState extends State<Gallery> {
                           new Padding(
                             padding: const EdgeInsets.only(left: 50.0),
                             child: new Card(
-                              margin: new EdgeInsets.all(20.0),
-                              child: new Container(
-                                width: double.infinity,
-                                height: 200.0,
-                                color: Colors.green,
-                              ),
-                            ),
+                                margin: new EdgeInsets.all(20.0),
+                                child: GestureDetector(
+                                  onTap: () => {
+                                    Navigator.pushNamed(context,
+                                        '/timelinevideo/timeline_video_one')
+                                  },
+                                  child: new Container(
+                                    width: double.infinity,
+                                    height: 200.0,
+                                    color: Colors.green,
+                                  ),
+                                )),
                           ),
                           //line
                           new Positioned(
