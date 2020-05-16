@@ -7,7 +7,7 @@ import 'pages/gallery.dart';
 import 'pages/card_list.dart';
 import 'pages/plant_detail.dart';
 import 'pages/color_picker.dart';
-import 'pages/dialog.dart';
+import 'pages/source.dart';
 import 'pages/material_list.dart';
 import 'pages/profile.dart';
 import 'pages/timelinevideo/timeline_video_one.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         '/scrolllist': (context) => Scroll(),
         '/gallery': (context) => Gallery(),
         '/cardlist': (context) => CardList(),
-        '/plantdetail': (context) => PlantDetail(),
+        '/plantdetail': (context) => MainCollapsingToolbar(),
         '/colorpicker': (context) => ColorPicker(),
         '/dialog': (context) => DialogAppBar(),
         '/materiallist': (context) => MaterialList(),
