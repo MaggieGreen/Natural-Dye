@@ -59,7 +59,15 @@ class _TimelineVideoOneState extends State<TimelineVideoOne> {
     // Complete the code in the next step.
     return Scaffold(
         appBar: AppBar(
-          title: Text('Butterfly Video'),
+          title: Text('Story 1'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.favorite_border),
+              onPressed: () {
+                print('saved');
+              },
+            )
+          ],
         ),
         // Use a FutureBuilder to display a loading spinner while waiting for the
         // VideoPlayerController to finish initializing.

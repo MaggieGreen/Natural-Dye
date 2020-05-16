@@ -7,111 +7,13 @@ class ColorPicker extends StatefulWidget {
 
 class _ColorPickerState extends State<ColorPicker> {
   var colorsArray = [
-    [Colors.blue, Colors.red, Colors.yellow],
+    [Color(0xFFF8E4B1), Color(0xFFEECE7C), Colors.yellow],
     [Colors.orange, Colors.green, Colors.purple],
     [Colors.lime, Colors.amber, Colors.pink]
   ];
   var _fabricColor = 0;
   var _fixativeColor = 0;
   var _myColor = Color(0xFFE5B436);
-
-  // final _scaffoldKey = new GlobalKey<ScaffoldState>();
-  // VoidCallback _showPerBottomSheetCallBack;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _showPerBottomSheetCallBack = _showBottomSheet;
-  // }
-
-  // void _showBottomSheet() {
-  //   setState(() {
-  //     _showPerBottomSheetCallBack = null;
-  //   });
-
-  //   _scaffoldKey.currentState
-  //       .showBottomSheet((context) {
-  //         return new Container(
-  //           height: 460.0,
-  //           color: Colors.purple,
-  //           child: new Center(
-  //             child: new Text('step1'),
-  //           ),
-  //         );
-  //       })
-  //       .closed
-  //       .whenComplete(() {
-  //         if (mounted) {
-  //           setState(() {
-  //             _showPerBottomSheetCallBack = _showBottomSheet;
-  //           });
-  //         }
-  //       });
-  // }
-
-  void _showModalSheet() {
-    showModalBottomSheet(
-        context: context,
-        builder: (builder) {
-          return new Container(
-            padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
-            color: Colors.white,
-            child: new Column(
-              children: <Widget>[
-                SizedBox(height: 30),
-                Text(
-                  'Added to Material List',
-                  style: TextStyle(
-                      fontFamily: 'OpenSans',
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black),
-                ),
-                SizedBox(height: 20),
-                Image.asset('assets/images/feature2.jpg'),
-                SizedBox(height: 20),
-                Text(
-                  'Let’s make your artwork',
-                  style: TextStyle(
-                      fontFamily: 'OpenSans',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black),
-                ),
-                SizedBox(height: 30),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                        child: Container(
-                            height: 50,
-                            child: FlatButton(
-                                onPressed: () => {
-                                      Navigator.pushNamed(
-                                          context, '/materiallist')
-                                    },
-                                child: Text(
-                                  'Go to Check',
-                                  style: TextStyle(color: Colors.white),
-                                )),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              gradient: LinearGradient(
-                                colors: [
-                                  Colors.pink,
-                                  Colors.pinkAccent,
-                                  Colors.purpleAccent
-                                ],
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                              ),
-                            ))),
-                  ],
-                ),
-              ],
-            ),
-          );
-        });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -200,7 +102,7 @@ class _ColorPickerState extends State<ColorPicker> {
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
-                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Alum', () {
+                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Copper', () {
               //print('calla');
               _fixativeColor = 0;
             }),
@@ -208,7 +110,7 @@ class _ColorPickerState extends State<ColorPicker> {
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Copper', () {
+                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Alum', () {
               //print('callb');
               _fixativeColor = 1;
             }),
@@ -228,7 +130,7 @@ class _ColorPickerState extends State<ColorPicker> {
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.black,
-        title: new Text('Color Picker'),
+        title: new Text('Color Result Emulator'),
         centerTitle: true,
         elevation: 0,
       ),
@@ -277,7 +179,8 @@ class _ColorPickerState extends State<ColorPicker> {
                     child: Container(
                         height: 50,
                         child: FlatButton(
-                            onPressed: _showModalSheet,
+                            onPressed: () =>
+                                {Navigator.pushNamed(context, '/plantdetail')},
                             child: Text(
                               'Confirm',
                               style: TextStyle(color: Colors.white),

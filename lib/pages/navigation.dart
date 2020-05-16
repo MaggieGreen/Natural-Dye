@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:navigation_dot_bar/navigation_dot_bar.dart';
+// import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+// import 'package:navigation_dot_bar/navigation_dot_bar.dart';
 
 import 'card_list.dart';
 import 'gallery.dart';
-import 'scroll.dart';
+// import 'scroll.dart';
 import 'profile.dart';
-import 'dialog.dart';
+import 'source.dart';
 
 class Navigation extends StatefulWidget {
+  final primaryColor = const Color(0XFF323232);
+
   @override
   _Navigation createState() => _Navigation();
 }
