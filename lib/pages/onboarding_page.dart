@@ -28,53 +28,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  // @override
-  // void initState() {
-  //   _initialize();
-  //   super.initState();
-  // }
-
-  // void _initialize() {
-  //   background = TweenSequence<Color>([
-  //     TweenSequenceItem(
-  //       weight: 1.0,
-  //       tween: ColorTween(
-  //         begin: Colors.amber[600],
-  //         end: Colors.blue[400],
-  //       ),
-  //     ),
-  //     TweenSequenceItem(
-  //       weight: 1.0,
-  //       tween: ColorTween(
-  //         begin: Colors.blue[400],
-  //         end: Colors.red[400],
-  //       ),
-  //     ),
-  //     TweenSequenceItem(
-  //       weight: 1.0,
-  //       tween: ColorTween(
-  //         begin: Colors.red[400],
-  //         end: Colors.orange[400],
-  //       ),
-  //     ),
-  //     TweenSequenceItem(
-  //       weight: 1.0,
-  //       tween: ColorTween(
-  //         begin: Colors.orange[400],
-  //         end: Colors.pink[400],
-  //       ),
-  //     ),
-  //   ]);
-  //   pageController = PageController();
-  // }
-
-  // @override
-  // void reassemble() {
-  //   pageController.dispose();
-  //   _initialize();
-  //   super.reassemble();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
