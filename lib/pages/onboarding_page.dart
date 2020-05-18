@@ -224,8 +224,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 children: <Widget>[
                   FlatButton(
                     onPressed: () {
-                      _pageController.animateToPage(2,
-                          duration: Duration(milliseconds: 400),
+                      _pageController.animateToPage(3,
+                          duration: Duration(milliseconds: 500),
                           curve: Curves.linear);
                       setState(() {});
                     },

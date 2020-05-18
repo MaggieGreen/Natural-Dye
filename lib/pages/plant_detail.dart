@@ -6,6 +6,22 @@ class MainCollapsingToolbar extends StatefulWidget {
 }
 
 class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
+  var _material = [
+    Material('Marigold petals'),
+    Material('Water'),
+    Material('Alum'),
+    Material('Fabric'),
+    Material('Cheese cloth')
+  ];
+
+  var _subtitle = [
+    Material('1111'),
+    Material('222'),
+    Material('333'),
+    Material('444'),
+    Material('555'),
+  ];
+
   void _showModalSheet() {
     showModalBottomSheet(
         context: context,
@@ -20,11 +36,162 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                   color: Colors.white,
                   borderRadius: new BorderRadius.only(
                     topLeft: const Radius.circular(15.0),
-                    topRight: const Radius.circular(50.0),
+                    topRight: const Radius.circular(15.0),
                   ),
                 ),
                 child: Container(
-                  child: Column(),
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.fromLTRB(24.0, 30.0, 0.0, 0.0),
+                        child: Text(
+                          'Shops near you',
+                          style: TextStyle(
+                              fontFamily: 'Open Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF323232)),
+                        ),
+                      ),
+                      Container(
+                        height: 150.0,
+                        padding: EdgeInsets.fromLTRB(24.0, 60.0, 24.0, 0.0),
+                        color: Colors.transparent,
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                                flex: 7,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15.0),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              'assets/images/michaelsSF.png'),
+                                          fit: BoxFit.cover)),
+                                )),
+                            Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                )),
+                            Expanded(
+                              flex: 12,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      'Michaels',
+                                      style: TextStyle(
+                                          fontFamily: 'Open Sans',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color(0xFF323232)),
+                                    ),
+                                    Text(
+                                      '1.8mi, San Francisco',
+                                      style: TextStyle(
+                                          fontFamily: 'Open Sans',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xFF323232)),
+                                    ),
+                                    SizedBox(height: 6),
+                                    Text(
+                                      'Chain retailer carrying art, hobby supplies plus home decor.',
+                                      style: TextStyle(
+                                          fontFamily: 'Open Sans',
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xFF323232)),
+                                    ),
+                                  ],
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  // color: Colors.amber,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(24.0, 170.0, 0.0, 0.0),
+                        child: Text(
+                          'Material List',
+                          style: TextStyle(
+                              fontFamily: 'Open Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xFF323232)),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(24.0, 190.0, 0.0, 0.0),
+                        child: Text(
+                          'Marigold with cotton and alum',
+                          style: TextStyle(
+                              fontFamily: 'Open Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xFF323232)),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(24.0, 220.0, 24.0, 0.0),
+                        child: ListView.builder(
+                            itemCount: _material.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return new Container(
+                                child: new Center(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: <Widget>[
+                                      new Card(
+                                        child: new Container(
+                                          child: CheckboxListTile(
+                                            title: Text(
+                                              _material[index].name,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            subtitle: Text(
+                                              _material[index].subtitle,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                            value: _material[index].selected,
+                                            onChanged: (val) {
+                                              setState(() {
+                                                _material[index].selected = val;
+                                                if (!_material[index]
+                                                    .selected) {
+                                                  print(
+                                                      '${_material[index].name}: i am absent');
+                                                }
+                                                if (_material[index].selected) {
+                                                  print(
+                                                      '${_material[index].name}: i am present');
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          padding: EdgeInsets.all(5),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              );
+                            }),
+                      )
+                    ],
+                  ),
                 ),
               ));
         });
@@ -174,4 +341,12 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
     return false;
   }
+}
+
+class Material {
+  var name = 'Marigold petals';
+  var subtitle = 'Note';
+  var selected = false;
+
+  Material(this.name);
 }

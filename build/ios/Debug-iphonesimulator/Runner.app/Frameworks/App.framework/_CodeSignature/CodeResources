@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		yMxhkZn4YPpRUydQhbupK6GG7WU=
+		0ZiaWTLatP7WEkbN4NSQZcnSSv4=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -118,7 +118,11 @@
 		</data>
 		<key>flutter_assets/assets/images/logo.png</key>
 		<data>
-		x3opRA4D9wzhkX4WHM535KbFm/U=
+		GiXXVxN/jDucXHk0iq/a4HxzqxM=
+		</data>
+		<key>flutter_assets/assets/images/logo.svg</key>
+		<data>
+		5VdstQiVZI376G4q/MrOIG+fam4=
 		</data>
 		<key>flutter_assets/assets/images/marigold2.png</key>
 		<data>
@@ -210,7 +214,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		Kd9U9HeG8MsMCl72uZk7TVzU+E4=
+		XSXysJ5ytogSn7ulY0LnEEPFnt8=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -227,11 +231,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yMxhkZn4YPpRUydQhbupK6GG7WU=
+			0ZiaWTLatP7WEkbN4NSQZcnSSv4=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZNk4tl9NYgbbKWR/z7lwI5rPJ77Hc/DaIKiIueK4PqM=
+			6g60gUlOA+zldZebVyao5DWSkyTmmo5k9uGSd1O9PB0=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -513,11 +517,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x3opRA4D9wzhkX4WHM535KbFm/U=
+			GiXXVxN/jDucXHk0iq/a4HxzqxM=
 			</data>
 			<key>hash2</key>
 			<data>
-			jfJtOfn+92Uzqm/Z+U23Ev2TZm/CtKXiu7GMNlu2xmA=
+			zpzKzJ7Q3wAlgIP4e6Lj4IXP2p1/hJeEpkp7+nywDZI=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/logo.svg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5VdstQiVZI376G4q/MrOIG+fam4=
+			</data>
+			<key>hash2</key>
+			<data>
+			LICBwDZ4X/G3jWQBZKAtgw2zNR9ELZQ712Fxr5m274c=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/marigold2.png</key>
@@ -766,11 +781,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Kd9U9HeG8MsMCl72uZk7TVzU+E4=
+			XSXysJ5ytogSn7ulY0LnEEPFnt8=
 			</data>
 			<key>hash2</key>
 			<data>
-			OF1921Pf8TpkS9n8nLkXg8FZr9T1WXSei1HXWd7Ddvs=
+			YJ37fy5nZFc0FCP0kLSevl+PDmhmqt736JHHAz6ct/4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
