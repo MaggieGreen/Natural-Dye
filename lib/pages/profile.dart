@@ -1,5 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'CustomShapeClipper.dart';
+
+Color firstColor = Color(0xFFF47D15);
+Color secondColor = Color(0xFFEF772C);
+
+List<String> location = ['Boston(Bos)', 'New York City(JFK)'];
+
+const TextStyle dropDownLabeStyle =
+    TextStyle(color: Colors.white, fontSize: 16.0);
+
+const TextStyle dropDownMeunItemStyle =
+    TextStyle(color: Colors.black, fontSize: 16.0);
+
+const TextStyle searchStyle =
+    TextStyle(color: Color(0xFF99A2B0), fontSize: 16.0);
 
 class Profile extends StatefulWidget {
   @override
@@ -7,6 +21,8 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  var selectedLocationIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,179 +37,222 @@ class _ProfileState extends State<Profile> {
         ),
         preferredSize: Size.fromHeight(10.0),
       ),
-      body: DefaultTabController(
-          length: 2,
+      body: Column(
+        children: [
+          HomeScreenTopPart(),
+          homeScreenBottomPart,
+        ],
+      ),
+    );
+  }
+}
+
+class HomeScreenTopPart extends StatefulWidget {
+  @override
+  _HomeScreenTopPartState createState() => _HomeScreenTopPartState();
+}
+
+class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        ClipPath(
+          //cruved background
+          clipper: CustomShapeClipper(),
+          //location and search bar
           child: Container(
-            padding: EdgeInsets.fromLTRB(24.0, 0, 24.0, 0),
+            height: 292.0,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [firstColor, secondColor])),
             child: Column(
-              children: <Widget>[
-                Container(
-                  child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      "Profile",
-                      style: TextStyle(
-                          fontFamily: 'CantataOne',
-                          fontSize: 30,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black),
+              children: [
+                SizedBox(
+                  height: 30.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 16.0,
+                      ),
+                      PopupMenuButton(
+                        onSelected: (index) {
+                          setState(() {
+                            // selectedLocationIndex = index;
+                          });
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              location[0],
+                              style: dropDownLabeStyle,
+                            ),
+                            Icon(
+                              Icons.keyboard_arrow_down,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                        itemBuilder: (BuildContext context) =>
+                            <PopupMenuItem<int>>[
+                          PopupMenuItem(
+                            child: Text(
+                              location[0],
+                              style: dropDownMeunItemStyle,
+                            ),
+                            value: 0,
+                          ),
+                          PopupMenuItem(
+                            child: Text(
+                              location[1],
+                              style: dropDownMeunItemStyle,
+                            ),
+                            value: 1,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 100.0,
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 32.0),
+                  child: Material(
+                    elevation: 5.0,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30.0),
+                    ),
+                    child: TextField(
+                      controller: TextEditingController(
+                          text: 'Search the keywords you want'),
+                      style: searchStyle,
+                      cursorColor: Colors.grey,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                            horizontal: 16.0, vertical: 13.0),
+                        suffixIcon: Material(
+                          elevation: 2.0,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30.0),
+                          ),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                          ),
+                        ),
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  padding: EdgeInsets.fromLTRB(20, 0, 100, 0),
-                  child: Column(
-                    // column position
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Chip(
-                        // avatar: CircleAvatar(
-                        //   backgroundColor: Colors.grey,
-                        // ),
-                        backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
-                        label: Text('Seasonal Pick'),
-                      ),
-                      Text(
-                        'Spring’s Marigold',
-                        style: TextStyle(
-                            fontFamily: 'CantataOne',
-                            fontSize: 28,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black),
-                      ),
-                      // SizedBox(height: 10),
-                      // Text(
-                      //   'Bright and pleasant yellow dye',
-                      //   style: TextStyle(
-                      //       fontFamily: 'OpenSans',
-                      //       fontSize: 16,
-                      //       fontWeight: FontWeight.w400,
-                      //       color: Colors.black),
-                      // ),
-                      SizedBox(height: 10),
-                      //old link to detail page buttom style
-                      FlatButton(
-                        onPressed: () =>
-                            {Navigator.pushNamed(context, '/plantdetail')},
-                        child: Text(
-                          'Get the details',
-                          style: TextStyle(fontWeight: FontWeight.w700),
-                        ),
-                        color: Colors.transparent,
-                        textColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                            side: BorderSide(color: Colors.black, width: 2.0)),
-                        // splashColor: Colors.redAccent,
-                      ),
-                      SizedBox(height: 30),
-                    ],
-                  ),
-                  height: 285,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25.0),
-                          topRight: Radius.circular(25.0),
-                          bottomLeft: Radius.circular(25.0),
-                          bottomRight: Radius.circular(25.0)),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
-                          fit: BoxFit.cover)),
-                ),
-                SizedBox(height: 20),
-                //Tab bar
-                Container(
-                  // padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
-                  // margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
-                  constraints: BoxConstraints.expand(height: 50),
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25.0),
-                          topRight: Radius.circular(25.0),
-                          bottomLeft: Radius.circular(25.0),
-                          bottomRight: Radius.circular(25.0))),
-                  child: new TabBar(
-                    unselectedLabelColor: Colors.redAccent,
-                    indicatorSize: TabBarIndicatorSize.tab,
-                    indicator: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [Colors.redAccent, Colors.orangeAccent]),
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.redAccent),
-                    tabs: <Widget>[
-                      new Tab(
-                        text: "Community",
-                      ),
-                      // new Tab(
-                      //   text: "Modern Art",
-                      // ),
-                      new Tab(
-                        text: "Follow",
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20),
-                Expanded(
-                  child: Container(
-                    child: TabBarView(children: [
-                      //Community part
-                      new StaggeredGridView.countBuilder(
-                        // padding: EdgeInsets.fromLTRB(24, 0, 24, 30),
-                        crossAxisCount: 4,
-                        itemCount: 8,
-                        itemBuilder: (BuildContext context, int index) =>
-                            new Container(
-                                // color: Colors.green,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    border: Border.all(
-                                        color: Colors.grey, width: 2.0)),
-                                child: new Center(
-                                  child: new CircleAvatar(
-                                    backgroundColor: Colors.grey,
-                                    child: new Text('$index'),
-                                  ),
-                                )),
-                        staggeredTileBuilder: (int index) =>
-                            new StaggeredTile.count(2, index.isEven ? 3 : 2),
-                        mainAxisSpacing: 6.0,
-                        crossAxisSpacing: 6.0,
-                      ),
-                      //Follow part
-                      new StaggeredGridView.countBuilder(
-                        // padding: EdgeInsets.fromLTRB(24, 0, 24, 30),
-                        crossAxisCount: 4,
-                        itemCount: 8,
-                        itemBuilder: (BuildContext context, int index) =>
-                            new Container(
-                                // color: Colors.green,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    border: Border.all(
-                                        color: Colors.grey, width: 2.0)),
-                                child: new Center(
-                                  child: new CircleAvatar(
-                                    backgroundColor: Colors.grey,
-                                    child: new Text('$index'),
-                                  ),
-                                )),
-                        staggeredTileBuilder: (int index) =>
-                            new StaggeredTile.count(2, index.isEven ? 3 : 2),
-                        mainAxisSpacing: 6.0,
-                        crossAxisSpacing: 6.0,
-                      ),
-                    ]),
-                  ),
-                )
               ],
             ),
-          )),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+var homeScreenBottomPart = Column(
+  children: [
+    Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text("Seasonal Dye Plant",
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16.0)),
+          Spacer(),
+          Text("VIEW ALL",
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.0)),
+        ],
+      ),
+    ),
+    Container(
+      height: 310.0,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        // children: [
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.red,
+        //   ),
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.green,
+        //   ),
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.black,
+        //   ),
+        // ],
+        children: plantCards,
+      ),
+    )
+  ],
+);
+
+List<PlantCard> plantCards = [
+  PlantCard("assets/images/Inspiration8.jpg", "Marigold", "Easy", "40min"),
+  PlantCard(
+      "assets/images/Inspiration1.jpg", "Elderberry", "Middle", "1h40min"),
+  PlantCard("assets/images/Inspiration4.jpg", "Avocado", "Middle", "1week"),
+];
+
+class PlantCard extends StatelessWidget {
+  final String imagePath, plantName, leavel, time;
+
+  PlantCard(this.imagePath, this.plantName, this.leavel, this.time);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        child: Stack(
+          children: [
+            Container(
+              // height: 190.0,
+              width: 210.0,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned.fill(
+                top: 20.0,
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Text(
+                          plantName,
+                          style: TextStyle(
+                              fontSize: 30,
+                              height: 1.5,
+                              fontFamily: 'OpenSans',
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    )))
+          ],
+        ),
+      ),
     );
   }
 }
