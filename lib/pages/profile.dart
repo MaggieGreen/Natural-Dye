@@ -179,9 +179,26 @@ var homeScreenBottomPart = Column(
       ),
     ),
     Container(
-      height: 210.0,
+      height: 310.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
+        // children: [
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.red,
+        //   ),
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.green,
+        //   ),
+        //   Container(
+        //     height: 310,
+        //     width: 210,
+        //     color: Colors.black,
+        //   ),
+        // ],
         children: plantCards,
       ),
     )
@@ -202,17 +219,40 @@ class PlantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          height: 190.0,
-          width: 312.0,
-          child: Image.asset(
-            imagePath,
-            fit: BoxFit.cover,
-          ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        child: Stack(
+          children: [
+            Container(
+              // height: 190.0,
+              width: 210.0,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned.fill(
+                top: 20.0,
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        Text(
+                          plantName,
+                          style: TextStyle(
+                              fontSize: 30,
+                              height: 1.5,
+                              fontFamily: 'OpenSans',
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700),
+                        )
+                      ],
+                    )))
+          ],
         ),
-      ],
+      ),
     );
   }
 }
