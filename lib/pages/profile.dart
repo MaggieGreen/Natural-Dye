@@ -247,6 +247,28 @@ class PlantCard extends StatelessWidget {
                               fontFamily: 'OpenSans',
                               color: Colors.white,
                               fontWeight: FontWeight.w700),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              time,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  height: 1.5,
+                                  fontFamily: 'OpenSans',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            Text(
+                              leavel,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  height: 1.5,
+                                  fontFamily: 'OpenSans',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                          ],
                         )
                       ],
                     )))
