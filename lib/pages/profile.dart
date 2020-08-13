@@ -179,7 +179,7 @@ var homeScreenBottomPart = Column(
       ),
     ),
     Container(
-      height: 310.0,
+      height: 380.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         // children: [
@@ -213,9 +213,9 @@ List<PlantCard> plantCards = [
 ];
 
 class PlantCard extends StatelessWidget {
-  final String imagePath, plantName, leavel, time;
+  final String imagePath, plantName, level, time;
 
-  PlantCard(this.imagePath, this.plantName, this.leavel, this.time);
+  PlantCard(this.imagePath, this.plantName, this.level, this.time);
 
   @override
   Widget build(BuildContext context) {
@@ -226,7 +226,7 @@ class PlantCard extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              // height: 190.0,
+              height: 380.0,
               width: 210.0,
               child: Image.asset(
                 imagePath,
@@ -248,27 +248,34 @@ class PlantCard extends StatelessWidget {
                               color: Colors.white,
                               fontWeight: FontWeight.w700),
                         ),
-                        Row(
-                          children: [
-                            Text(
-                              time,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  height: 1.5,
-                                  fontFamily: 'OpenSans',
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            Text(
-                              leavel,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  height: 1.5,
-                                  fontFamily: 'OpenSans',
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 40.0, vertical: 4.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                level,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    height: 1.5,
+                                    fontFamily: 'OpenSans',
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              Spacer(),
+                              Text(
+                                time,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    height: 1.5,
+                                    fontFamily: 'OpenSans',
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
                         )
                       ],
                     )))
