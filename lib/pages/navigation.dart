@@ -37,12 +37,16 @@ class _Navigation extends State<Navigation> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.home,
+                IconData(0xe633, fontFamily: 'MyIcons'),
                 color: Colors.blue,
               ),
               title: Text(
                 "Home",
                 style: TextStyle(color: Colors.brown),
+              ),
+              activeIcon: Icon(
+                IconData(0xe633, fontFamily: 'MyIcons'),
+                color: Colors.red,
               )),
           BottomNavigationBarItem(
               icon: Icon(

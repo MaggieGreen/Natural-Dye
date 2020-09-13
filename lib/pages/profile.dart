@@ -73,7 +73,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                   bottomLeft: const Radius.circular(25.0),
                   bottomRight: const Radius.circular(25.0)),
               image: DecorationImage(
-                  image: AssetImage('assets/images/testcity.png'),
+                  image: AssetImage('assets/images/michaelsSF.png'),
                   fit: BoxFit.cover)),
           //location and search bar
           child: Container(
@@ -135,15 +135,26 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                               location[2],
                               style: dropDownMeunItemStyle,
                             ),
-                            value: 1,
+                            value: 2,
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
                 SizedBox(
-                  height: 100.0,
+                  height: 70.0,
+                ),
+                Text(
+                  'Explore the\nnatural dye in Summer',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 24.0,
+                      color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 30.0,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 32.0),

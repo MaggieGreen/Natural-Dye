@@ -1,0 +1,14 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "flare_dart",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    }
+  ],
+  "generated": "2020-08-23T06:17:16.861654Z",
+  "generator": "pub",
+  "generatorVersion": "2.9.0"
+}
