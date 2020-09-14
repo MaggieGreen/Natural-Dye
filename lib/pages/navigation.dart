@@ -18,11 +18,11 @@ class Navigation extends StatefulWidget {
 class _Navigation extends State<Navigation> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    CardList(),
+    Profile(),
     Gallery(),
     DialogAppBar(),
     new Container(color: Colors.green),
-    Profile(),
+    new Container(color: Colors.yellow),
   ];
   GlobalKey _bottomNavigationKey = GlobalKey();
 
@@ -35,54 +35,85 @@ class _Navigation extends State<Navigation> {
         onTap: (index) => setState(() => _currentIndex = index),
         currentIndex: _currentIndex,
         items: [
+          //home
           BottomNavigationBarItem(
               icon: Icon(
-                IconData(0xe633, fontFamily: 'MyIcons'),
-                color: Colors.blue,
+                IconData(0xe604, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFFD8E2C1),
               ),
               title: Text(
                 "Home",
-                style: TextStyle(color: Colors.brown),
+                style: TextStyle(color: Color(0xFF96A97C)),
               ),
               activeIcon: Icon(
-                IconData(0xe633, fontFamily: 'MyIcons'),
-                color: Colors.red,
+                IconData(0xe604, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFF96A97C),
               )),
+          //gallery
           BottomNavigationBarItem(
               icon: Icon(
-                IconData(0xe633, fontFamily: 'MyIcons'),
-                color: Colors.blue,
+                IconData(0xe603, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFFD8E2C1),
               ),
               title: Text(
                 "Gallery",
-                style: TextStyle(color: Colors.brown),
+                style: TextStyle(color: Color(0xFF96A97C)),
+              ),
+              activeIcon: Icon(
+                IconData(0xe603, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFF96A97C),
               )),
+          //source
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.book,
-                color: Colors.blue,
+                IconData(0xe606, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFFD8E2C1),
               ),
               title: Text(
                 "Source",
-                style: TextStyle(color: Colors.brown),
+                style: TextStyle(color: Color(0xFF96A97C)),
+              ),
+              activeIcon: Icon(
+                IconData(0xe606, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFF96A97C),
               )),
+          //tutorial
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.crop_square,
-                color: Colors.blue,
+                IconData(0xe606, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFFD8E2C1),
               ),
               title: Text(
                 "Tutorial",
-                style: TextStyle(color: Colors.brown),
+                style: TextStyle(color: Color(0xFF96A97C)),
+              ),
+              activeIcon: Icon(
+                IconData(0xe606, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFF96A97C),
               )),
+          //profile
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.person,
-                color: Colors.blue,
+                IconData(0xe605, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFFD8E2C1),
               ),
               title: Text(
                 "Profile",
-                style: TextStyle(color: Colors.brown),
+                style: TextStyle(color: Color(0xFF96A97C)),
+              ),
+              activeIcon: Icon(
+                IconData(0xe605, fontFamily: 'Navi'),
+                size: 40.0,
+                color: Color(0xFF96A97C),
               )),
         ],
         // onTap: (index) {

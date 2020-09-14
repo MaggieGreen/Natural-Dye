@@ -42,6 +42,12 @@ flutter:
   - family: Pigment
     fonts:
     - asset: assets/icons/pigment.ttf
+  - family: Navi
+    fonts:
+    - asset: assets/icons/navi.ttf
+  - family: Tutorial
+    fonts:
+    - asset: assets/icons/tutorial.ttf
     
 
   uses-material-design: true
