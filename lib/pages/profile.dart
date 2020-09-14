@@ -41,14 +41,16 @@ class _ProfileState extends State<Profile> {
       //   ),
       //   preferredSize: Size.fromHeight(10.0),
       // ),
-      body: Column(
-        children: [
-          HomeScreenTopPart(),
-          SizedBox(
-            height: 40.0,
-          ),
-          homeScreenBottomPart,
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeScreenTopPart(),
+            SizedBox(
+              height: 30.0,
+            ),
+            homeScreenBottomPart,
+          ],
+        ),
       ),
     );
   }
@@ -73,7 +75,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                   bottomLeft: const Radius.circular(25.0),
                   bottomRight: const Radius.circular(25.0)),
               image: DecorationImage(
-                  image: AssetImage('assets/images/michaelsSF.png'),
+                  image: AssetImage('assets/images/sfcity.png'),
                   fit: BoxFit.cover)),
           //location and search bar
           child: Container(
@@ -85,8 +87,27 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                 SizedBox(
                   height: 30.0,
                 ),
+                //Title
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(1.0),
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Explore",
+                        style: TextStyle(
+                            fontFamily: 'CantataOne',
+                            fontSize: 30,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFF483C30)),
+                      ),
+                    ),
+                  ),
+                ),
+                //Location
+                Padding(
+                  padding: const EdgeInsets.all(18.0),
                   child: Row(
                     children: [
                       Icon(
@@ -142,20 +163,18 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                     ],
                   ),
                 ),
+                // Text(
+                //   'Explore the\nnatural dye in Summer',
+                //   style: TextStyle(
+                //       fontWeight: FontWeight.w700,
+                //       fontSize: 24.0,
+                //       color: Colors.white),
+                //   textAlign: TextAlign.center,
+                // ),
                 SizedBox(
-                  height: 70.0,
+                  height: 80.0,
                 ),
-                Text(
-                  'Explore the\nnatural dye in Summer',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 24.0,
-                      color: Colors.white),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
+                //search
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 32.0),
                   child: Material(
@@ -239,7 +258,7 @@ var homeScreenBottomPart = Column(
 );
 
 List<PlantCard> plantCards = [
-  PlantCard("assets/images/Inspiration8.jpg", "Marigold", "Easy", "40min",
+  PlantCard("assets/images/marigold.jpg", "Marigold", "Easy", "40min",
       "onTap: () => {Navigator.pushNamed(context, '/plantdetail')}"),
   PlantCard(
       "assets/images/Inspiration1.jpg", "Elderberry", "Middle", "1h40min", ""),
@@ -283,7 +302,7 @@ class PlantCard extends StatelessWidget {
                               fontSize: 30,
                               height: 1.5,
                               fontFamily: 'OpenSans',
-                              color: Colors.white,
+                              color: Color(0xFF483C30),
                               fontWeight: FontWeight.w700),
                         ),
                         Padding(
@@ -299,7 +318,7 @@ class PlantCard extends StatelessWidget {
                                     fontSize: 16,
                                     height: 1.5,
                                     fontFamily: 'OpenSans',
-                                    color: Colors.white,
+                                    color: Color(0xFF483C30),
                                     fontWeight: FontWeight.w400),
                               ),
                               Spacer(),
@@ -309,7 +328,7 @@ class PlantCard extends StatelessWidget {
                                     fontSize: 16,
                                     height: 1.5,
                                     fontFamily: 'OpenSans',
-                                    color: Colors.white,
+                                    color: Color(0xFF483C30),
                                     fontWeight: FontWeight.w400),
                               ),
                             ],

@@ -226,7 +226,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 ],
                 flexibleSpace: FlexibleSpaceBar(
                     background: Image.asset(
-                  'assets/images/testplant.png',
+                  'assets/images/marigold_detail.jpg',
                   fit: BoxFit.cover,
                 )),
               ),
@@ -236,7 +236,13 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                     labelColor: Colors.black87,
                     unselectedLabelColor: Colors.grey,
                     tabs: [
-                      Tab(icon: Icon(Icons.info), text: "Overview"),
+                      Tab(
+                          icon: Icon(
+                            IconData(0xe605, fontFamily: 'Navi'),
+                            size: 40.0,
+                            color: Color(0xFF96A97C),
+                          ),
+                          text: "Overview"),
                       Tab(icon: Icon(Icons.lightbulb_outline), text: "Extract"),
                       Tab(
                           icon: Icon(Icons.lightbulb_outline),
