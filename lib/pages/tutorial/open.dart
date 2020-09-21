@@ -185,7 +185,7 @@ class _FormState extends State<FormPage> {
                     height: 64,
                     child: FlatButton(
                         onPressed: () =>
-                            {Navigator.pushNamed(context, '/none')},
+                            {Navigator.pushNamed(context, '/tutorial/level')},
                         child: Text(
                           "Start",
                           style: TextStyle(color: Colors.white),
