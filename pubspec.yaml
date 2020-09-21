@@ -55,6 +55,7 @@ flutter:
   assets:
       - assets/images/
       - assets/video/
+      - assets/flare/
 
       - assets/Articles/
       - assets/Articles/
@@ -94,5 +95,6 @@ flutter:
       - assets/Apes/
       - assets/Constructive_Tools/
       - assets/Fire/
+      
       
 

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'card_list.dart';
 import 'gallery.dart';
 // import 'scroll.dart';
+import 'tutorial/open.dart';
 import 'profile.dart';
 import 'source.dart';
 
@@ -21,7 +22,7 @@ class _Navigation extends State<Navigation> {
     Profile(),
     Gallery(),
     DialogAppBar(),
-    new Container(color: Colors.green),
+    TutorialOpen(),
     new Container(color: Colors.yellow),
   ];
   GlobalKey _bottomNavigationKey = GlobalKey();

@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		P1XiqDnMsDOL2t539Nis2J4Nw+4=
+		z595JFntN8RFyxO32Uj4jgpJNyE=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		ICA0derXF2AIxCCh/RBgwZxL9bk=
+		om9AXKkcU9TgE/8jJkLhInWs08w=
 		</data>
 		<key>flutter_assets/NOTICES</key>
 		<data>
@@ -488,6 +488,14 @@
 		<data>
 		FcU45RfCCjY7JqAuWgrAxsHJ+wE=
 		</data>
+		<key>flutter_assets/assets/flare/waving_golf_flag.flr</key>
+		<data>
+		QzjEYMkMrJ5zR7EiC4gYivvyaA0=
+		</data>
+		<key>flutter_assets/assets/flare/waving_golf_flag_dual_animation.flr</key>
+		<data>
+		XL3V8ZLQ8+GpDgQo+DGDDpu/Wq4=
+		</data>
 		<key>flutter_assets/assets/fonts/CantataOne-Regular.ttf</key>
 		<data>
 		sbenGtJFuHBZLdwRsLDPZ2gZeLE=
@@ -515,6 +523,10 @@
 		<key>flutter_assets/assets/icons/pigment.ttf</key>
 		<data>
 		FBqhV4auOe1PJKvai+sF+B62Prc=
+		</data>
+		<key>flutter_assets/assets/icons/tutorial.ttf</key>
+		<data>
+		4LtyKaXBJuHiH+FT+OAHHzaN9CA=
 		</data>
 		<key>flutter_assets/assets/images/.DS_Store</key>
 		<data>
@@ -598,11 +610,15 @@
 		</data>
 		<key>flutter_assets/assets/images/marigold.jpg</key>
 		<data>
-		VT/Wc+I+iZQRXG50Mbp4sgzNzTQ=
+		7dIVyjEKdhexqrBQPDLY0ImEvG4=
 		</data>
 		<key>flutter_assets/assets/images/marigold2.png</key>
 		<data>
 		RaDvhZaqjJHait1D/mzUfREJQnc=
+		</data>
+		<key>flutter_assets/assets/images/marigold_detail.jpg</key>
+		<data>
+		akBO/kkYJn9s1qZ4paPNV0JHXoM=
 		</data>
 		<key>flutter_assets/assets/images/marigoldcover.png</key>
 		<data>
@@ -664,6 +680,10 @@
 		<data>
 		B5Qj6EX9t8TbswjF9r0f/bwmu9I=
 		</data>
+		<key>flutter_assets/assets/images/sfcity.png</key>
+		<data>
+		lkpSOpCc+WFUcbG5kBLZX4IOE0A=
+		</data>
 		<key>flutter_assets/assets/images/strikethrough.png</key>
 		<data>
 		pjnIV0zLt5Lg4pLd2Zdk18DsXUI=
@@ -698,7 +718,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		4p7RYlMIv2Z+P/29K968r+SLokU=
+		u3J4fr6jgdySofJHLTXxqe+wUdI=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -715,22 +735,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P1XiqDnMsDOL2t539Nis2J4Nw+4=
+			z595JFntN8RFyxO32Uj4jgpJNyE=
 			</data>
 			<key>hash2</key>
 			<data>
-			7q4R0DVZXOKUYuBfijpYMRn/SC7x/pknr1HRnDTYu2I=
+			C2Swfwdsi/9/4MfI7AffCdoxA0PKcrBhSstDWusWBGk=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ICA0derXF2AIxCCh/RBgwZxL9bk=
+			om9AXKkcU9TgE/8jJkLhInWs08w=
 			</data>
 			<key>hash2</key>
 			<data>
-			vHgkUA0BoVXTJjeVchrjwosSdTEWIX4ySbFBUG/q8FI=
+			lyzUeHkVpsG2b7nA9FCWEJkEqdlpNmnvh8h4cfQuZ5I=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES</key>
@@ -2031,6 +2051,28 @@
 			PNeS69PR4LQcXak4+yOKSV4/U7vkE1afhEcOfIaX01w=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/flare/waving_golf_flag.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QzjEYMkMrJ5zR7EiC4gYivvyaA0=
+			</data>
+			<key>hash2</key>
+			<data>
+			fnQt3yHQd3uBdK5pe8VX1mPv6LEDvvb69W/a7vP21FE=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/flare/waving_golf_flag_dual_animation.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XL3V8ZLQ8+GpDgQo+DGDDpu/Wq4=
+			</data>
+			<key>hash2</key>
+			<data>
+			fJ27WDNzMpxuwVa01Sw+pef/uHmj4AkI8iqpy+OwWqI=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/fonts/CantataOne-Regular.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -2106,6 +2148,17 @@
 			<key>hash2</key>
 			<data>
 			klSTuu/9iYYyQ7t46BV7K6+PNWkugfDU0K366BmHiTk=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/icons/tutorial.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4LtyKaXBJuHiH+FT+OAHHzaN9CA=
+			</data>
+			<key>hash2</key>
+			<data>
+			upQPSgw0P5IQPsx2XrqZPpaA9IOQrbCa4rRipnEPIKg=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
@@ -2321,11 +2374,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VT/Wc+I+iZQRXG50Mbp4sgzNzTQ=
+			7dIVyjEKdhexqrBQPDLY0ImEvG4=
 			</data>
 			<key>hash2</key>
 			<data>
-			dLP5liCBF4JT5bh+pvR72ULoCIZyDjsaw2gevON0Urc=
+			5nMsxOLMwihOMBduYV1RIPLKnkm3BXjuRD33qcHchSM=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/marigold2.png</key>
@@ -2337,6 +2390,17 @@
 			<key>hash2</key>
 			<data>
 			a7GVCz2v/XfsNPxeVxXsPmv8J63F+1DwxOAmqs7fmrU=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/marigold_detail.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			akBO/kkYJn9s1qZ4paPNV0JHXoM=
+			</data>
+			<key>hash2</key>
+			<data>
+			Wy56wmInioZJ2Z7LqkNQ99xh6Rtv3AB6hxD2SR/GT0k=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/marigoldcover.png</key>
@@ -2504,6 +2568,17 @@
 			gw84aebDsgoG3VsgU85G1P3wV2yB42Yr49Czmvryg7s=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/sfcity.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lkpSOpCc+WFUcbG5kBLZX4IOE0A=
+			</data>
+			<key>hash2</key>
+			<data>
+			klnPzCgtn94O0J1XviEzXa1R2HjYXejALjxaabnvFzI=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/strikethrough.png</key>
 		<dict>
 			<key>hash</key>
@@ -2596,11 +2671,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4p7RYlMIv2Z+P/29K968r+SLokU=
+			u3J4fr6jgdySofJHLTXxqe+wUdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			P7NXz0gHGLAsbHPCGqv0dszlmv2eQ9FA9SbDVIq9ER8=
+			mo5vz0uEMV2rBsr3xu3QhfD5fOJPaK8lPEGvJDl4ffI=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
