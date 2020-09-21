@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_flutter/pages/tutorial/level.dart';
 
 import 'pages/onboarding_page.dart';
 import 'pages/navigation.dart';
@@ -12,6 +13,7 @@ import 'pages/material_list.dart';
 import 'pages/profile.dart';
 import 'pages/timelinevideo/timeline_video_one.dart';
 import 'pages/tutorial/open.dart';
+import 'pages/tutorial/level.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +23,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Onboarding',
+      // home: new Scaffold(
+      //   backgroundColor: Color(0xFFFBF8F6),
+      // ),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -39,6 +44,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => Profile(),
         '/timelinevideo/timeline_video_one': (context) => TimelineVideoOne(),
         '/tutorial/open': (context) => TutorialOpen(),
+        '/tutorial/level': (context) => Level(),
       },
     );
   }

@@ -129,7 +129,7 @@ class _ColorPickerState extends State<ColorPicker> {
 
     return Scaffold(
       appBar: new AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF96A97C),
         title: new Text('Color Result Emulator'),
         centerTitle: true,
         elevation: 0,
@@ -188,11 +188,7 @@ class _ColorPickerState extends State<ColorPicker> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           gradient: LinearGradient(
-                            colors: [
-                              Colors.pink,
-                              Colors.pinkAccent,
-                              Colors.purpleAccent
-                            ],
+                            colors: [Color(0xFF96A97C), Color(0xFFB8E2C1)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),

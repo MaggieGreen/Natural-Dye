@@ -294,11 +294,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   gradient: LinearGradient(
-                    colors: [
-                      Colors.pink,
-                      Colors.pinkAccent,
-                      Colors.purpleAccent
-                    ],
+                    colors: [Color(0xFF96A97C), Color(0xFFB8E2C1)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
