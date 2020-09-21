@@ -11,6 +11,7 @@ import 'pages/source.dart';
 import 'pages/material_list.dart';
 import 'pages/profile.dart';
 import 'pages/timelinevideo/timeline_video_one.dart';
+import 'pages/tutorial/open.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/materiallist': (context) => MaterialList(),
         '/profile': (context) => Profile(),
         '/timelinevideo/timeline_video_one': (context) => TimelineVideoOne(),
+        '/tutorial/open': (context) => TutorialOpen(),
       },
     );
   }
