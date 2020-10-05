@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_flutter/pages/tutorial/level.dart';
+import 'package:onboarding_flutter/pages/tutorial/select_plants.dart';
 
 import 'pages/onboarding_page.dart';
 import 'pages/navigation.dart';
@@ -14,6 +15,7 @@ import 'pages/profile.dart';
 import 'pages/timelinevideo/timeline_video_one.dart';
 import 'pages/tutorial/open.dart';
 import 'pages/tutorial/level.dart';
+import 'pages/tutorial/select_plants.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/timelinevideo/timeline_video_one': (context) => TimelineVideoOne(),
         '/tutorial/open': (context) => TutorialOpen(),
         '/tutorial/level': (context) => Level(),
+        '/tutorial/select_plants': (context) => SelectPlants(),
       },
     );
   }

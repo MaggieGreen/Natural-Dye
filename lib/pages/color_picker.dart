@@ -38,13 +38,15 @@ class _ColorPickerState extends State<ColorPicker> {
             _myColor = colorsArray[_fabricColor][_fixativeColor];
           });
         },
+        //single icon
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Icon(
               icon,
-              color: color,
+              color: Color(0xFF483C30),
               size: 55.0,
             ),
             Container(
@@ -52,10 +54,9 @@ class _ColorPickerState extends State<ColorPicker> {
               child: Text(
                 label,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: color,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF483C30)),
               ),
             ),
           ],
@@ -128,49 +129,66 @@ class _ColorPickerState extends State<ColorPicker> {
     );
 
     return Scaffold(
+      backgroundColor: Color(0xFFF3ECE3),
       appBar: new AppBar(
-        backgroundColor: Color(0xFF96A97C),
-        title: new Text('Color Result Emulator'),
+        backgroundColor: Color(0xFFF3ECE3),
+        title: new Text(
+          'Emulator',
+          style: TextStyle(
+            color: Color(0xFF483C30),
+            fontFamily: 'Open Sans',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        iconTheme: IconThemeData(color: Color(0xFF483C30)),
         centerTitle: true,
         elevation: 0,
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 30),
+            //Emulator
             Container(
-              padding: EdgeInsets.all(100.0),
-              margin: EdgeInsets.all(20.0),
-              color: _myColor,
-              child: Text('Result color'),
+              width: 368.0,
+              height: 248.0,
+              decoration: BoxDecoration(
+                  color: _myColor,
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Center(
+                child: Text(
+                  'By choosing different options\nchecking your final dyeing color',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF483C30),
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
-            // CircleAvatar(
-            //   backgroundImage: AssetImage('assets/images/plantimage00.jpg'),
-            //   minRadius: 90,
-            //   maxRadius: 100,
-            // ),
-            SizedBox(height: 50),
+            SizedBox(height: 40),
             Text(
-              'Choose Fabric',
+              'Fabric',
               style: TextStyle(
                   fontFamily: 'OpenSans',
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: Colors.black),
+                  color: Color(0xFF483C30)),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             buttonSection,
             SizedBox(height: 30),
             Text(
-              'Choose Fixative',
+              'Fixative',
               style: TextStyle(
                   fontFamily: 'OpenSans',
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: Colors.black),
+                  color: Color(0xFF483C30)),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             buttonSection2,
             SizedBox(height: 50),
             Row(
@@ -188,7 +206,7 @@ class _ColorPickerState extends State<ColorPicker> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           gradient: LinearGradient(
-                            colors: [Color(0xFF96A97C), Color(0xFFB8E2C1)],
+                            colors: [Color(0xFF96A97C), Color(0xFF96A97C)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),

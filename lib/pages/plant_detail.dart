@@ -213,9 +213,10 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 title: Text("Marigold",
                     style: TextStyle(
                       fontFamily: 'CantataOne',
-                      color: Colors.white,
+                      color: Color(0XFF483C30),
                       fontSize: 24.0,
                     )),
+                iconTheme: IconThemeData(color: Color(0xFF483C30)),
                 actions: <Widget>[
                   IconButton(
                     icon: Icon(Icons.favorite_border),
@@ -236,6 +237,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                     labelColor: Colors.black87,
                     unselectedLabelColor: Colors.grey,
                     tabs: [
+                      //用图片做iconhttps://stackoverflow.com/questions/50198885/how-to-use-an-image-instead-of-an-icon-in-flutter
                       Tab(
                           icon: Icon(
                             IconData(0xe605, fontFamily: 'Navi'),
@@ -294,7 +296,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   gradient: LinearGradient(
-                    colors: [Color(0xFF96A97C), Color(0xFFB8E2C1)],
+                    colors: [Color(0xFF96A97C), Color(0xFF96A97C)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -305,7 +307,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
             Expanded(
               child: FlatButton(
                 onPressed: _showModalSheet,
-                color: Color(0xFF323232),
+                color: Color(0xFF96A97C),
                 child: Icon(
                   Icons.shopping_basket,
                   color: Colors.white,

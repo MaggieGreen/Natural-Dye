@@ -22,7 +22,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       height: isCurrentPage ? 10.0 : 6.0,
       width: isCurrentPage ? 10.0 : 6.0,
       decoration: BoxDecoration(
-        color: isCurrentPage ? Colors.grey : Colors.grey[300],
+        color: isCurrentPage ? Color(0XFF96A97C) : Colors.grey[300],
         borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     );
@@ -59,7 +59,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.'),
               //login page
               Container(
-                color: Colors.white,
+                //sign up page background image
+                decoration: new BoxDecoration(
+                  image: new DecorationImage(
+                      image: new AssetImage("assets/images/signupbg.png"),
+                      fit: BoxFit.fill),
+                ),
                 // padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.center,
@@ -77,34 +82,34 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           Container(
                             padding: EdgeInsets.fromLTRB(24.0, 30.0, 0.0, 0.0),
                             child: Text(
-                              'Welcome',
+                              'Start the',
                               style: TextStyle(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'CantataOne',
                                   fontSize: 30,
-                                  fontWeight: FontWeight.w600,
+                                  // fontWeight: FontWeight.w600,
                                   color: Color(0xFF323232)),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.fromLTRB(24.0, 60.0, 0.0, 0.0),
+                            padding: EdgeInsets.fromLTRB(24.0, 65.0, 0.0, 0.0),
                             child: Text(
-                              'Sign in to continue',
+                              'exploration journey of',
                               style: TextStyle(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'CantataOne',
                                   fontSize: 30,
-                                  fontWeight: FontWeight.w400,
+                                  // fontWeight: FontWeight.w600,
                                   color: Color(0xFF323232)),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.fromLTRB(286.0, 60.0, 0.0, 0.0),
+                            padding: EdgeInsets.fromLTRB(24.0, 100.0, 0.0, 0.0),
                             child: Text(
-                              '.',
+                              'natural dyeing',
                               style: TextStyle(
-                                  fontFamily: 'Open Sans',
+                                  fontFamily: 'CantataOne',
                                   fontSize: 30,
-                                  fontWeight: FontWeight.w400,
-                                  color: Color(0xFFEAB561)),
+                                  // fontWeight: FontWeight.w600,
+                                  color: Color(0xFF323232)),
                             ),
                           ),
                         ],
@@ -117,7 +122,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         children: <Widget>[
                           TextField(
                             decoration: InputDecoration(
-                                labelText: 'EMAIL',
+                                labelText: 'Email',
                                 labelStyle: TextStyle(
                                     fontFamily: 'Open Sans',
                                     fontSize: 16,
@@ -125,12 +130,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                     color: Color(0xFFC4C4C4)),
                                 focusedBorder: UnderlineInputBorder(
                                     borderSide:
-                                        BorderSide(color: Color(0xFFEAB561)))),
+                                        BorderSide(color: Color(0xFF96A97C)))),
                           ),
                           SizedBox(height: 20.0),
                           TextField(
                             decoration: InputDecoration(
-                                labelText: 'PASSWORD',
+                                labelText: 'Password',
                                 labelStyle: TextStyle(
                                     fontFamily: 'Open Sans',
                                     fontSize: 16,
@@ -138,7 +143,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                     color: Color(0xFFC4C4C4)),
                                 focusedBorder: UnderlineInputBorder(
                                     borderSide:
-                                        BorderSide(color: Color(0xFFEAB561)))),
+                                        BorderSide(color: Color(0xFF96A97C)))),
                             obscureText: true,
                           ),
                           SizedBox(height: 5),
@@ -153,7 +158,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                     fontFamily: 'Open Sans',
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
-                                    color: Color(0xFFEAB561),
+                                    color: Color(0xFF96A97C),
                                     decoration: TextDecoration.underline),
                               ),
                             ),
@@ -186,8 +191,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     child: Text(
                       'SKIP',
                       style: TextStyle(
-                          color: Color(0xFFEAB561),
-                          fontWeight: FontWeight.w600),
+                          color: Color(0xFF483C30),
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   Container(
@@ -209,8 +214,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     child: Text(
                       'NEXT',
                       style: TextStyle(
-                          color: Color(0xFFEAB561),
-                          fontWeight: FontWeight.w600),
+                          color: Color(0xFF483C30),
+                          fontWeight: FontWeight.w400),
                     ),
                   )
                 ],
@@ -220,7 +225,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               onTap: () => {Navigator.pushNamed(context, '/location')},
               child: Container(
                 height: Platform.isIOS ? 75 : 60,
-                color: Color(0xFF323232),
+                color: Color(0xFF96A97C),
                 alignment: Alignment.center,
                 child: Text(
                   'GET STARTED NOW',
@@ -238,7 +243,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
     String image,
   }) {
     return Container(
-      color: Colors.white,
+      //onbparding background
+      color: Color(0xFFF3ECE3),
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -252,14 +258,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
             style: TextStyle(
                 fontSize: 30,
                 height: 2.0,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w400,
                 fontFamily: 'CantataOne',
-                color: Color(0xFFEAB561)),
+                color: Color(0xFF483C30)),
           ),
           SizedBox(height: 10),
           Text(
             body,
-            style: TextStyle(fontSize: 16, height: 1.5, fontFamily: 'OpenSans'),
+            style: TextStyle(
+                fontSize: 16,
+                height: 1.5,
+                fontFamily: 'OpenSans',
+                color: Color(0xFF483C30)),
           ),
           SizedBox(height: 30),
           Container(
