@@ -118,6 +118,7 @@ class _WavingFlagDualPageState extends State<WavingFlagDualPage> {
       padding: EdgeInsets.all(25.0),
       child: FlareActor(
         'assets/flare/waving_golf_flag_dual_animation.flr',
+        // 'assets/flare/Select_Plant.flr',
         alignment: Alignment.bottomCenter,
         fit: BoxFit.contain,
         controller: _loopController,

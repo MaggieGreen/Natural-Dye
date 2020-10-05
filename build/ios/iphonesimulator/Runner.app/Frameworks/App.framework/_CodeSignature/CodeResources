@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		lKU9dLG0vBZYo6fGneCkLj+RqE0=
+		A/xymPHvmS36SPz5nu50GgqTYyA=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -488,6 +488,22 @@
 		<data>
 		FcU45RfCCjY7JqAuWgrAxsHJ+wE=
 		</data>
+		<key>flutter_assets/assets/flare/.DS_Store</key>
+		<data>
+		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		</data>
+		<key>flutter_assets/assets/flare/House.flr</key>
+		<data>
+		5udtygmQJ1WU+bqirv0FBqzv6pE=
+		</data>
+		<key>flutter_assets/assets/flare/Resizing_House.flr</key>
+		<data>
+		PVjqLy9xmifZ2FvnrsB3LwvezTY=
+		</data>
+		<key>flutter_assets/assets/flare/Select_Plant.flr</key>
+		<data>
+		y8b9DUKduGe7wBUFS9sHZcnbXb8=
+		</data>
 		<key>flutter_assets/assets/flare/waving_golf_flag.flr</key>
 		<data>
 		QzjEYMkMrJ5zR7EiC4gYivvyaA0=
@@ -530,7 +546,7 @@
 		</data>
 		<key>flutter_assets/assets/images/.DS_Store</key>
 		<data>
-		fo9BMFT0urCDvzi0ddBWfpg6xrI=
+		ICKNP5rzjFAtiCHRnxKKVmeA7F4=
 		</data>
 		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
 		<data>
@@ -602,7 +618,7 @@
 		</data>
 		<key>flutter_assets/assets/images/logo.png</key>
 		<data>
-		GiXXVxN/jDucXHk0iq/a4HxzqxM=
+		PyPFTAWiM3wmdLCZvbayyTNJdXs=
 		</data>
 		<key>flutter_assets/assets/images/logo.svg</key>
 		<data>
@@ -688,6 +704,10 @@
 		<data>
 		lkpSOpCc+WFUcbG5kBLZX4IOE0A=
 		</data>
+		<key>flutter_assets/assets/images/signupbg.png</key>
+		<data>
+		/KcRmApG8JpgrMstT4ycKV+VJgM=
+		</data>
 		<key>flutter_assets/assets/images/strikethrough.png</key>
 		<data>
 		pjnIV0zLt5Lg4pLd2Zdk18DsXUI=
@@ -726,7 +746,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		L3HIsKRJFZmuIMlPAdSRK0eciF8=
+		T67Za/cejC8GvNlhRdV+n1M5ljQ=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -743,11 +763,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lKU9dLG0vBZYo6fGneCkLj+RqE0=
+			A/xymPHvmS36SPz5nu50GgqTYyA=
 			</data>
 			<key>hash2</key>
 			<data>
-			hVSpJ6yPwQx7onzhgoNXSRcVXw52AqwVZRc1+Pt33dI=
+			VwvddIU1P345+0vCFP4eLUh2JhLec5Jwo2ei1gmLCTk=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -2059,6 +2079,39 @@
 			PNeS69PR4LQcXak4+yOKSV4/U7vkE1afhEcOfIaX01w=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/flare/House.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5udtygmQJ1WU+bqirv0FBqzv6pE=
+			</data>
+			<key>hash2</key>
+			<data>
+			op8fBIwmp0kkJkHqtDft36ZEZjmS+tyMM2ExdS3/AVI=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/flare/Resizing_House.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PVjqLy9xmifZ2FvnrsB3LwvezTY=
+			</data>
+			<key>hash2</key>
+			<data>
+			KWp3WT4wcYANMEkT+1bxB6bHpUCRgdmGdhoAetFux4w=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/flare/Select_Plant.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y8b9DUKduGe7wBUFS9sHZcnbXb8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Brfrbt+ZCILX4O2pIgIS4Nha/H6aQ/7poRL301UEr6o=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/flare/waving_golf_flag.flr</key>
 		<dict>
 			<key>hash</key>
@@ -2360,11 +2413,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GiXXVxN/jDucXHk0iq/a4HxzqxM=
+			PyPFTAWiM3wmdLCZvbayyTNJdXs=
 			</data>
 			<key>hash2</key>
 			<data>
-			zpzKzJ7Q3wAlgIP4e6Lj4IXP2p1/hJeEpkp7+nywDZI=
+			Vb1lWhqsLUuxnn5QcyCnhP5hgOPuag6xCKBOIclDcD4=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/logo.svg</key>
@@ -2598,6 +2651,17 @@
 			klnPzCgtn94O0J1XviEzXa1R2HjYXejALjxaabnvFzI=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/signupbg.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/KcRmApG8JpgrMstT4ycKV+VJgM=
+			</data>
+			<key>hash2</key>
+			<data>
+			v1eEFQ+JE8IDPj9N+DyEfCgHHQd8m1lag/SVN34Lrj0=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/strikethrough.png</key>
 		<dict>
 			<key>hash</key>
@@ -2701,11 +2765,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L3HIsKRJFZmuIMlPAdSRK0eciF8=
+			T67Za/cejC8GvNlhRdV+n1M5ljQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			r6sOub/iknbIruHiRd6rf75ypwfDeC1gAkg6U/xXTVg=
+			kUbOa1nAPYm1YsiXkqzbiGiFuw6PEwBAKQhuz2AaKVI=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
