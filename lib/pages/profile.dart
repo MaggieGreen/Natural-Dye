@@ -259,7 +259,7 @@ var homeScreenBottomPart = Column(
 
 List<PlantCard> plantCards = [
   PlantCard("assets/images/marigold.jpg", "Marigold", "Easy", "40min",
-      "onTap: () => {Navigator.pushNamed(context, '/plantdetail')}"),
+      '/plantdetail'),
   PlantCard(
       "assets/images/Inspiration1.jpg", "Elderberry", "Middle", "1h40min", ""),
   PlantCard("assets/images/Inspiration4.jpg", "Avocado", "Middle", "1week", ""),
@@ -280,7 +280,7 @@ class PlantCard extends StatelessWidget {
         child: Stack(
           children: [
             InkWell(
-              onTap: () => {Navigator.pushNamed(context, '/plantdetail')},
+              onTap: () => {Navigator.pushNamed(context, dynamic)},
               child: Container(
                 height: 380.0,
                 width: 210.0,

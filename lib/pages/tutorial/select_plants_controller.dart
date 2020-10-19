@@ -92,6 +92,7 @@ class SelectPlantsController extends FlareController {
 
   /// Use the [demoUpdated] callback to relay the current number of rooms
   /// to the [Page] widget, so it can position the slider accordingly.
+  /// 164是原有的动画总帧数
   _checkplant() {
     double demoFrame = _demoAnimation.time * FPS;
     double demoValue = 0.0;

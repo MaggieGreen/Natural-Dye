@@ -46,10 +46,17 @@ class _SelectPlantsState extends State<SelectPlants>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFFFBF8F6),
+        backgroundColor: const Color(0xFFFDF9F3),
         appBar: AppBar(
-          backgroundColor: Color(0xFF96A97C),
-          title: Text('Select Plants'),
+          backgroundColor: Color(0xFFF3ECE3),
+          title: Text("Select Plants",
+              style: TextStyle(
+                fontFamily: 'OpenSans',
+                color: Color(0XFF483C30),
+                fontSize: 16.0,
+                fontWeight: FontWeight.w700,
+              )),
+          iconTheme: IconThemeData(color: Color(0xFF483C30)),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.view_list),
@@ -66,24 +73,24 @@ class _SelectPlantsState extends State<SelectPlants>
               fit: StackFit.expand,
               children: [
                 FlareActor(
-                  // "assets/flare/House.flr",
-                  "assets/flare/Resizing_House.flr",
+                  "assets/flare/Select_Plant.flr",
                   controller: _selectPlantsController,
-                  fit: BoxFit.fill,
+                  // fit: BoxFit.fill,
+                  alignment: Alignment.topCenter,
                 ),
                 Container(
-                  margin: const EdgeInsets.only(left: 40, right: 40),
+                  margin: const EdgeInsets.only(top: 440, left: 40, right: 40),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                          _selectPlantsController.plants.toString() + " PLANTS",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Roboto",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700)),
+                      // Text(
+                      //     _selectPlantsController.plants.toString() + " PLANTS",
+                      //     style: TextStyle(
+                      //         color: Colors.black,
+                      //         fontFamily: "Roboto",
+                      //         fontSize: 14,
+                      //         fontWeight: FontWeight.w700)),
                       Slider(
                           min: 0,
                           max: 3,
@@ -115,6 +122,39 @@ class _SelectPlantsState extends State<SelectPlants>
                           fontSize: 16.0,
                           color: Color(0xFF96A97C),
                         ),
+                      ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 64,
+                              child: FlatButton(
+                                  onPressed: () => {
+                                        Navigator.pushNamed(
+                                            context, '/tutorial/level')
+                                      },
+                                  child: Text(
+                                    "Confirm",
+                                    style: TextStyle(color: Colors.white),
+                                  )),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFF96A97C),
+                                    // Color(0xFFD4C2A3),
+                                    Color(0xFF96A97C),
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),

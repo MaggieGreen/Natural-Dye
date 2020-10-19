@@ -2,6 +2,18 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "archive",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/archive-2.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "async",
       "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.4.2",
       "packageUri": "lib/",
@@ -48,6 +60,12 @@
       "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/convert-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "1.17"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-2.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
     },
     {
       "name": "cupertino_icons",
@@ -108,6 +126,18 @@
       "rootUri": "file:///Users/jiangxuchen/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/logging-0.11.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "lottie",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/lottie-0.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "matcher",
@@ -242,7 +272,7 @@
       "languageVersion": "2.3"
     }
   ],
-  "generated": "2020-09-28T21:01:19.729666Z",
+  "generated": "2020-10-12T21:59:51.863791Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }

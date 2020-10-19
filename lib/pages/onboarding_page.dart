@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class OnboardingPage extends StatefulWidget {
   OnboardingPage({Key key}) : super(key: key);
@@ -43,18 +44,18 @@ class _OnboardingPageState extends State<OnboardingPage> {
             children: <Widget>[
               //onboarding page
               _buildPageContent(
-                  image: 'assets/images/onboarding1.png',
-                  title: 'In Source',
+                  image: 'assets/lottie/testonboarding.json',
+                  title: 'Find natural ink around you',
                   body:
                       'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.'),
               _buildPageContent(
-                  image: 'assets/images/onboarding1.png',
-                  title: 'In Gallery',
+                  image: 'assets/lottie/testonboarding.json',
+                  title: 'Discover various origins in world',
                   body:
                       'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.'),
               _buildPageContent(
-                  image: 'assets/images/onboarding1.png',
-                  title: 'In Tutorial',
+                  image: 'assets/lottie/testonboarding.json',
+                  title: 'To became a\ntie-dyeing master',
                   body:
                       'Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque.'),
               //login page
@@ -253,11 +254,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
           SizedBox(
             height: 100.0,
           ),
+          Container(
+            // color: Colors.amber,
+            child: Lottie.asset(image, repeat: true, reverse: false),
+          ),
+          SizedBox(height: 40),
           Text(
             title,
             style: TextStyle(
                 fontSize: 30,
-                height: 2.0,
+                // height: 2.0,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'CantataOne',
                 color: Color(0xFF483C30)),
@@ -270,11 +276,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 height: 1.5,
                 fontFamily: 'OpenSans',
                 color: Color(0xFF483C30)),
-          ),
-          SizedBox(height: 30),
-          Container(
-            // color: Colors.amber,
-            child: Image.asset(image),
           ),
         ],
       ),

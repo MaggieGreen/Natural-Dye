@@ -117,6 +117,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                           ],
                         ),
                       ),
+                      //material list
                       Container(
                         padding: EdgeInsets.fromLTRB(24.0, 170.0, 0.0, 0.0),
                         child: Text(
@@ -172,11 +173,11 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                                                 if (!_material[index]
                                                     .selected) {
                                                   print(
-                                                      '${_material[index].name}: i am absent');
+                                                      '${_material[index].name}: i am present');
                                                 }
                                                 if (_material[index].selected) {
                                                   print(
-                                                      '${_material[index].name}: i am present');
+                                                      '${_material[index].name}: none');
                                                 }
                                               });
                                             },
@@ -200,12 +201,14 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFFDF9F3),
       body: DefaultTabController(
         length: 3,
         child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
+                backgroundColor: Color(0xFFF3ECE3),
                 expandedHeight: 370.0,
                 floating: false,
                 pinned: true,
@@ -234,16 +237,19 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
               SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
                   TabBar(
-                    labelColor: Colors.black87,
+                    labelColor: Color(0XFF96A97C),
                     unselectedLabelColor: Colors.grey,
                     tabs: [
                       //用图片做iconhttps://stackoverflow.com/questions/50198885/how-to-use-an-image-instead-of-an-icon-in-flutter
+                      // Tab(
+                      //     icon: Icon(
+                      //       IconData(0xe605, fontFamily: 'Navi'),
+                      //       size: 40.0,
+                      //       color: Color(0xFF96A97C),
+                      //     ),
+                      //     text: "Overview"),
                       Tab(
-                          icon: Icon(
-                            IconData(0xe605, fontFamily: 'Navi'),
-                            size: 40.0,
-                            color: Color(0xFF96A97C),
-                          ),
+                          icon: Icon(Icons.lightbulb_outline),
                           text: "Overview"),
                       Tab(icon: Icon(Icons.lightbulb_outline), text: "Extract"),
                       Tab(
@@ -259,9 +265,75 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
           body: Center(
             child: TabBarView(
               children: <Widget>[
-                new Container(
-                  height: 20.0,
-                  color: Colors.white,
+                SingleChildScrollView(
+                  padding: EdgeInsets.only(top: 20.0, left: 24.0, right: 24.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "01",
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0XFFC4C4C4),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(width: 20.0),
+                          Text(
+                            "Plant Infomation",
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0XFF483C30),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(height: 20.0),
+                          Text(
+                            "Marigolds are one of the easiest flowers to experiment with due to accessibility and a simple dye process.",
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0XFF483C30),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(height: 10.0),
+                          Image.asset('assets/images/marigolddetail1.jpg'),
+                          SizedBox(height: 20.0),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "02",
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0XFFC4C4C4),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(width: 20.0),
+                          Text(
+                            "How to find or planting?",
+                            style: TextStyle(
+                              fontFamily: 'OpenSans',
+                              color: Color(0XFF483C30),
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 new Container(
                   height: 20.0,
@@ -269,7 +341,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 ),
                 new Container(
                   height: 20.0,
-                  color: Colors.white,
+                  color: Colors.blue,
                 ),
               ],
             ),
@@ -337,6 +409,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
+      color: Color(0xFFFDF9F3), //Add a color to Avoid overlapping
       child: _tabBar,
     );
   }
