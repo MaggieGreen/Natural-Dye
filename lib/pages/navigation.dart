@@ -23,7 +23,7 @@ class _Navigation extends State<Navigation> {
     Gallery(),
     DialogAppBar(),
     TutorialOpen(),
-    new Container(color: Colors.yellow),
+    CardList(),
   ];
   GlobalKey _bottomNavigationKey = GlobalKey();
 

@@ -141,6 +141,14 @@ class _ColorPickerState extends State<ColorPicker> {
           ),
         ),
         iconTheme: IconThemeData(color: Color(0xFF483C30)),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.not_listed_location),
+            onPressed: () {
+              print('saved');
+            },
+          )
+        ],
         centerTitle: true,
         elevation: 0,
       ),
