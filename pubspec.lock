@@ -180,9 +180,9 @@ packages:
   nima:
     dependency: "direct main"
     description:
-      path: "lib/pages/dependencies/Nima-Flutter"
-      relative: true
-    source: path
+      name: nima
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.0.5"
   path:
     dependency: transitive

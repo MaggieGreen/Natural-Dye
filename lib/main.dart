@@ -16,6 +16,9 @@ import 'pages/timelinevideo/timeline_video_one.dart';
 import 'pages/tutorial/open.dart';
 import 'pages/tutorial/level.dart';
 import 'pages/tutorial/select_plants.dart';
+import 'pages/tutorial/puzzle.dart';
+import 'pages/tutorial/useful_part.dart';
+import 'pages/tutorial/formula.dart';
 
 void main() => runApp(MyApp());
 
@@ -48,6 +51,9 @@ class MyApp extends StatelessWidget {
         '/tutorial/open': (context) => TutorialOpen(),
         '/tutorial/level': (context) => Level(),
         '/tutorial/select_plants': (context) => SelectPlants(),
+        '/tutorial/puzzle': (context) => Puzzle(),
+        '/tutorial/useful_part': (context) => UsefulPart(),
+        '/tutorial/formula': (context) => Formula(),
       },
     );
   }

@@ -9,10 +9,17 @@ class _LevelState extends State<Level> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFBF8F6),
+      backgroundColor: const Color(0xFFF3ECE3),
       appBar: AppBar(
-        backgroundColor: Color(0xFF96A97C),
-        title: Text('Tie-dye studio'),
+        backgroundColor: Color(0xFFF3ECE3),
+        title: Text(
+          'Tie-dye studio',
+          style: TextStyle(
+            color: Color(0xFF483C30),
+            fontFamily: 'Open Sans',
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.view_list),
@@ -21,6 +28,8 @@ class _LevelState extends State<Level> {
             },
           )
         ],
+        iconTheme: IconThemeData(color: Color(0xFF483C30)),
+        elevation: 0,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,

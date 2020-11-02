@@ -18,8 +18,7 @@ dependencies:
   video_player: ^0.10.9+2
   flare_flutter: ^2.0.6
   lottie: ^0.6.0
-  nima:
-    path: lib/pages/dependencies/Nima-Flutter
+  nima: ^1.0.0
   
 
 dev_dependencies:
@@ -59,6 +58,7 @@ flutter:
       - assets/video/
       - assets/flare/
       - assets/lottie/
+      - assets/nima/
       - assets/flare/Select_Plant.flr
 
       

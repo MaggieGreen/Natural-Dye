@@ -46,7 +46,7 @@ class _SelectPlantsState extends State<SelectPlants>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFFFDF9F3),
+        backgroundColor: const Color(0xFFF3ECE3),
         appBar: AppBar(
           backgroundColor: Color(0xFFF3ECE3),
           title: Text("Select Plants",
@@ -65,6 +65,7 @@ class _SelectPlantsState extends State<SelectPlants>
               },
             )
           ],
+          elevation: 0,
         ),
         body: Container(
           child: Listener(
@@ -134,7 +135,7 @@ class _SelectPlantsState extends State<SelectPlants>
                               child: FlatButton(
                                   onPressed: () => {
                                         Navigator.pushNamed(
-                                            context, '/tutorial/level')
+                                            context, '/tutorial/puzzle')
                                       },
                                   child: Text(
                                     "Confirm",

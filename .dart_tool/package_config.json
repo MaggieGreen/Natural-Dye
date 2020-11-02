@@ -159,7 +159,7 @@
     },
     {
       "name": "nima",
-      "rootUri": "../lib/pages/dependencies/Nima-Flutter",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/nima-1.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -272,7 +272,7 @@
       "languageVersion": "2.3"
     }
   ],
-  "generated": "2020-10-12T21:59:51.863791Z",
+  "generated": "2020-10-26T21:09:04.129080Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }
