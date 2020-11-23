@@ -142,7 +142,7 @@ class GridCards extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () =>
-                    {Navigator.pushNamed(context, '/tutorial/select_plants')},
+                    {Navigator.pushNamed(context, '/tutorial/pick_plant')},
                 child: ActiveProjectsCard(
                   cardColor: Color(0xFFB4C2B3),
                   title: 'Step 1',

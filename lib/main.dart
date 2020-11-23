@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_flutter/pages/tutorial/level.dart';
+import 'package:onboarding_flutter/pages/tutorial/pick_plant.dart';
 import 'package:onboarding_flutter/pages/tutorial/select_plants.dart';
 
 import 'pages/onboarding_page.dart';
@@ -16,9 +17,11 @@ import 'pages/timelinevideo/timeline_video_one.dart';
 import 'pages/tutorial/open.dart';
 import 'pages/tutorial/level.dart';
 import 'pages/tutorial/select_plants.dart';
+import 'pages/tutorial/pick_plant.dart';
 import 'pages/tutorial/puzzle.dart';
 import 'pages/tutorial/useful_part.dart';
 import 'pages/tutorial/formula.dart';
+import 'pages/tutorial/boil_method.dart';
 
 void main() => runApp(MyApp());
 
@@ -51,9 +54,11 @@ class MyApp extends StatelessWidget {
         '/tutorial/open': (context) => TutorialOpen(),
         '/tutorial/level': (context) => Level(),
         '/tutorial/select_plants': (context) => SelectPlants(),
+        '/tutorial/pick_plant': (context) => PickPlant(),
         '/tutorial/puzzle': (context) => Puzzle(),
         '/tutorial/useful_part': (context) => UsefulPart(),
         '/tutorial/formula': (context) => Formula(),
+        '/tutorial/boil_method': (context) => BoilMethod(),
       },
     );
   }

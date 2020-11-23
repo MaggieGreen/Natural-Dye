@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ColorPicker extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _ColorPickerState extends State<ColorPicker> {
     [Colors.orange, Colors.green, Colors.purple],
     [Colors.lime, Colors.amber, Colors.pink]
   ];
-  var _fabricColor = 0;
+  var _fabricColor = 1;
   var _fixativeColor = 0;
   var _myColor = Color(0xFFE5B436);
 
@@ -19,7 +20,7 @@ class _ColorPickerState extends State<ColorPicker> {
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
     GestureDetector _buildButtonColumn(
-        Color color, IconData icon, String label, dynamic onTap) {
+        Color color, String icon, String label, dynamic onTap) {
       return GestureDetector(
         // onTap: onTap,
         // onTapDown
@@ -44,11 +45,12 @@ class _ColorPickerState extends State<ColorPicker> {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              icon,
-              color: Color(0xFF483C30),
-              size: 55.0,
-            ),
+            SvgPicture.asset(icon, width: 55.0),
+            // Icon(
+            //   icon,
+            //   color: Color(0xFF483C30),
+            //   size: 55.0,
+            // ),
             Container(
               margin: const EdgeInsets.only(top: 8),
               child: Text(
@@ -71,23 +73,26 @@ class _ColorPickerState extends State<ColorPicker> {
           Expanded(
             flex: 1,
             child: _buildButtonColumn(
-                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Cotton', () {
-              //print('call1');
+                color,
+                // 'assets/pngs/cotton.svg',
+                '''assets/pngs/cotton${_fabricColor == 0 ? '_active' : ''}.svg''',
+                'Cotton', () {
+              //print('call2');
               _fabricColor = 0;
             }),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Wool', () {
+            child:
+                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Wool', () {
               //print('call2');
               _fabricColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Silk', () {
+            child:
+                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Silk', () {
               //print('call3');
               _fabricColor = 2;
             }),
@@ -102,24 +107,24 @@ class _ColorPickerState extends State<ColorPicker> {
         children: [
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe60e, fontFamily: 'Pigment'), 'Copper', () {
+            child: _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Copper',
+                () {
               //print('calla');
               _fixativeColor = 0;
             }),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Alum', () {
+            child:
+                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Alum', () {
               //print('callb');
               _fixativeColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(
-                color, IconData(0xe633, fontFamily: 'MyIcons'), 'Iron', () {
+            child:
+                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Iron', () {
               //print('callc');
               _fixativeColor = 2;
             }),

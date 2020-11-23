@@ -30,7 +30,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFDF9F3),
+      backgroundColor: Color(0xFFF3ECE3),
       // appBar: PreferredSize(
       //   child: AppBar(
       //     leading: new Container(),
@@ -258,7 +258,7 @@ var homeScreenBottomPart = Column(
 );
 
 List<PlantCard> plantCards = [
-  PlantCard("assets/images/marigold.jpg", "Marigold", "Easy", "40min",
+  PlantCard("assets/images/ink_loop.gif", "Marigold", "Easy", "40min",
       '/plantdetail'),
   PlantCard(
       "assets/images/Inspiration1.jpg", "Elderberry", "Middle", "1h40min", ""),
@@ -282,13 +282,22 @@ class PlantCard extends StatelessWidget {
             InkWell(
               onTap: () => {Navigator.pushNamed(context, dynamic)},
               child: Container(
-                height: 380.0,
-                width: 210.0,
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  height: 380.0,
+                  width: 210.0,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 20,
+                        offset: Offset(3, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                  )),
             ),
             Positioned.fill(
                 top: 20.0,
