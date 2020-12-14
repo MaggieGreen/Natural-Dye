@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:onboarding_flutter/pages/tutorial/pick_info.dart';
 
 class PickPlant extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class _PickPlantState extends State<PickPlant> {
                 padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
                 child: Column(
                   children: [
-                    Text('Title',
+                    Text(pickInfo[0].name,
                         style: TextStyle(
                           fontFamily: 'OpenSans',
                           color: Color(0XFF483C30),
@@ -45,7 +46,7 @@ class _PickPlantState extends State<PickPlant> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    Text('description',
+                    Text(pickInfo[0].description,
                         style: TextStyle(
                           height: 1.4,
                           fontFamily: 'OpenSans',
@@ -66,8 +67,8 @@ class _PickPlantState extends State<PickPlant> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    SvgPicture.asset('assets/icons/mic.svg',
-                        semanticsLabel: 'Acme Logo'),
+                    // SvgPicture.asset('assets/icons/mic.svg',
+                    //     semanticsLabel: 'Acme Logo'),
                     Row(
                       children: [
                         Expanded(

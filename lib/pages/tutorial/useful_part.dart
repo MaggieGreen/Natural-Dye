@@ -163,7 +163,7 @@ class _UsefulPartState extends State<UsefulPart> {
                 children: [
                   Expanded(
                     child: Container(
-                      height: 64,
+                      height: 50,
                       child: FlatButton(
                           // enabled: _choice == 0 ? false : true,
                           onPressed: (_confirmbutton)
@@ -172,13 +172,18 @@ class _UsefulPartState extends State<UsefulPart> {
                                         context, '/tutorial/formula')
                                   }
                               : null,
-                          color: Color(0XFF96A97C),
+                          color: Color(0XFF866A50),
                           disabledColor: Color(0XFFF3ECE3),
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(8)),
                           child: Text(
                             "Confirm",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.6,
+                                fontFamily: 'OpenSans',
+                                color: Colors.white),
                           )),
                       // decoration: BoxDecoration(
                       //   borderRadius: BorderRadius.circular(20),

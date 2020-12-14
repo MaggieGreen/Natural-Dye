@@ -39,7 +39,7 @@ class PickInfo {
   String id;
   String name;
   String description;
-  String color;
+  Color color;
 
   // PickInfo({this.id, this.name, this.description, this.color});
 }

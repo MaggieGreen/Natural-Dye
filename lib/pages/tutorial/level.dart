@@ -9,17 +9,9 @@ class _LevelState extends State<Level> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3ECE3),
+      backgroundColor: Color(0xffFDF9F3),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF3ECE3),
-        title: Text(
-          'Tie-dye studio',
-          style: TextStyle(
-            color: Color(0xFF483C30),
-            fontFamily: 'Open Sans',
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+        backgroundColor: Color(0xFFFDF9F3),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.view_list),
@@ -38,22 +30,24 @@ class _LevelState extends State<Level> {
           Container(
             padding: EdgeInsets.fromLTRB(24, 20, 0, 0),
             child: Text(
-              'Tie-Dye studio',
+              'Craft studio',
               style: TextStyle(
-                  fontFamily: 'Open Sans',
-                  fontSize: 30,
+                  fontFamily: 'OpenSans',
                   fontWeight: FontWeight.w700,
+                  letterSpacing: 0.6,
+                  fontSize: 32.0,
                   color: Color(0xFF483C30)),
             ),
           ),
           Container(
             padding: EdgeInsets.fromLTRB(24, 10, 24, 0),
             child: Text(
-              'Legible graphics and the interactive animation tutorial makes learning easy and fun.',
+              'Whether you are planning to dye fabric or yarn, follow our tutorial steps to become a tie-dye master.',
               style: TextStyle(
-                  fontFamily: 'Open Sans',
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
+                  letterSpacing: 0.6,
+                  fontFamily: 'OpenSans',
                   color: Color(0xFF483C30)),
             ),
           ),
@@ -106,10 +100,11 @@ class ActiveProjectsCard extends StatelessWidget {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      fontFamily: 'Open Sans',
-                      fontSize: 16.0,
-                      color: Colors.white54,
+                      fontSize: 16,
                       fontWeight: FontWeight.w400,
+                      letterSpacing: 0.6,
+                      fontFamily: 'OpenSans',
+                      color: Colors.white54,
                     ),
                   ),
                   SizedBox(
@@ -142,17 +137,17 @@ class GridCards extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () =>
-                    {Navigator.pushNamed(context, '/tutorial/pick_plant')},
+                    {Navigator.pushNamed(context, '/tutorial/choose_avocado')},
                 child: ActiveProjectsCard(
-                  cardColor: Color(0xFFB4C2B3),
+                  cardColor: Color(0xFF866A50),
                   title: 'Step 1',
-                  subtitle: 'Collect plants color',
+                  subtitle: 'Extract Dye',
                   img: 'assets/images/todo.png',
                 ),
               ),
               SizedBox(width: 20.0),
               ActiveProjectsCard(
-                cardColor: Color(0xFFB4C2C3),
+                cardColor: Color(0xFFDEC6A3),
                 title: 'Step 2',
                 subtitle: 'Tie fabric',
                 img: 'assets/images/todo.png',
@@ -162,18 +157,18 @@ class GridCards extends StatelessWidget {
           Row(
             children: <Widget>[
               ActiveProjectsCard(
-                cardColor: Color(0xFFB4C2A3),
+                cardColor: Color(0xFFDEC6A3),
                 title: 'Step 3',
-                subtitle: 'Dyebath your work',
+                subtitle: 'Dyebath',
                 img: 'assets/images/todo.png',
               ),
               SizedBox(width: 20.0),
               GestureDetector(
                 onTap: () => {Navigator.pushNamed(context, '/none')},
                 child: ActiveProjectsCard(
-                  cardColor: Color(0xFFB4C2D3),
+                  cardColor: Color(0xFFDEC6A3),
                   title: 'Step 4',
-                  subtitle: 'Fixative your color',
+                  subtitle: 'Fixative color',
                   img: 'assets/images/todo.png',
                 ),
               ),

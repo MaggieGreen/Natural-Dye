@@ -9,7 +9,7 @@ class ColorPicker extends StatefulWidget {
 class _ColorPickerState extends State<ColorPicker> {
   var colorsArray = [
     [Color(0xFFF8E4B1), Color(0xFFEECE7C), Colors.yellow],
-    [Colors.orange, Colors.green, Colors.purple],
+    [Colors.orange, Color(0XFFFDC973), Colors.purple],
     [Colors.lime, Colors.amber, Colors.pink]
   ];
   var _fabricColor = 1;
@@ -58,6 +58,8 @@ class _ColorPickerState extends State<ColorPicker> {
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
+                    letterSpacing: 0.6,
+                    fontFamily: 'OpenSans',
                     color: Color(0xFF483C30)),
               ),
             ),
@@ -83,16 +85,20 @@ class _ColorPickerState extends State<ColorPicker> {
           ),
           Expanded(
             flex: 1,
-            child:
-                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Wool', () {
+            child: _buildButtonColumn(
+                color,
+                'assets/pngs/cotton${_fabricColor == 1 ? '_active' : ''}.svg',
+                'Wool', () {
               //print('call2');
               _fabricColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
-            child:
-                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Silk', () {
+            child: _buildButtonColumn(
+                color,
+                'assets/pngs/cotton${_fabricColor == 2 ? '_active' : ''}.svg',
+                'Silk', () {
               //print('call3');
               _fabricColor = 2;
             }),
@@ -107,24 +113,30 @@ class _ColorPickerState extends State<ColorPicker> {
         children: [
           Expanded(
             flex: 1,
-            child: _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Copper',
-                () {
+            child: _buildButtonColumn(
+                color,
+                'assets/pngs/cotton${_fixativeColor == 0 ? '_active' : ''}.svg',
+                'Copper', () {
               //print('calla');
               _fixativeColor = 0;
             }),
           ),
           Expanded(
             flex: 1,
-            child:
-                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Alum', () {
+            child: _buildButtonColumn(
+                color,
+                'assets/pngs/cotton${_fixativeColor == 1 ? '_active' : ''}.svg',
+                'Alum', () {
               //print('callb');
               _fixativeColor = 1;
             }),
           ),
           Expanded(
             flex: 1,
-            child:
-                _buildButtonColumn(color, 'assets/pngs/cotton.svg', 'Iron', () {
+            child: _buildButtonColumn(
+                color,
+                'assets/pngs/cotton${_fixativeColor == 2 ? '_active' : ''}.svg',
+                'Iron', () {
               //print('callc');
               _fixativeColor = 2;
             }),
@@ -134,9 +146,9 @@ class _ColorPickerState extends State<ColorPicker> {
     );
 
     return Scaffold(
-      backgroundColor: Color(0xFFF3ECE3),
+      backgroundColor: Color(0xFFFDF9F3),
       appBar: new AppBar(
-        backgroundColor: Color(0xFFF3ECE3),
+        backgroundColor: Color(0xFFFDF9F3),
         title: new Text(
           'Emulator',
           style: TextStyle(
@@ -166,15 +178,18 @@ class _ColorPickerState extends State<ColorPicker> {
             //Emulator
             Container(
               width: 368.0,
-              height: 248.0,
+              height: 290.0,
               decoration: BoxDecoration(
                   color: _myColor,
                   borderRadius: BorderRadius.all(Radius.circular(20))),
               child: Center(
                 child: Text(
-                  'By choosing different options\nchecking your final dyeing color',
+                  'Here is your fabric’s final dyeing color\nwith added fixative.',
                   style: TextStyle(
                     fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 0.6,
+                    fontFamily: 'OpenSans',
                     color: Color(0xFF483C30),
                   ),
                   textAlign: TextAlign.center,
@@ -185,9 +200,10 @@ class _ColorPickerState extends State<ColorPicker> {
             Text(
               'Fabric',
               style: TextStyle(
-                  fontFamily: 'OpenSans',
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
+                  letterSpacing: 0.6,
+                  fontFamily: 'OpenSans',
                   color: Color(0xFF483C30)),
             ),
             SizedBox(height: 20),
@@ -196,30 +212,38 @@ class _ColorPickerState extends State<ColorPicker> {
             Text(
               'Fixative',
               style: TextStyle(
-                  fontFamily: 'OpenSans',
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
+                  letterSpacing: 0.6,
+                  fontFamily: 'OpenSans',
                   color: Color(0xFF483C30)),
             ),
             SizedBox(height: 20),
             buttonSection2,
-            SizedBox(height: 50),
+            SizedBox(height: 92),
             Row(
               children: <Widget>[
                 Expanded(
                     child: Container(
                         height: 50,
                         child: FlatButton(
-                            onPressed: () =>
-                                {Navigator.pushNamed(context, '/plantdetail')},
+                            onPressed: () => {
+                                  Navigator.pushNamed(
+                                      context, '/new_plant_detail')
+                                },
                             child: Text(
                               'Confirm',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 0.6,
+                                  fontFamily: 'OpenSans',
+                                  color: Colors.white),
                             )),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           gradient: LinearGradient(
-                            colors: [Color(0xFF96A97C), Color(0xFF96A97C)],
+                            colors: [Color(0xFF866A50), Color(0xFF866A50)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),

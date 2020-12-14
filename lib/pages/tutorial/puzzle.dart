@@ -29,19 +29,19 @@ class _PuzzleState extends State<Puzzle> {
         child: Column(
           children: [
             SizedBox(
-              height: 74.0,
+              height: 40.0,
             ),
-            Text("Avocado",
+            Text("Intro",
                 style: TextStyle(
-                  fontFamily: 'OpenSans',
-                  color: Color(0XFF483C30),
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w700,
-                )),
+                    fontFamily: 'OpenSans',
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.6,
+                    fontSize: 32.0,
+                    color: Color(0xFF483C30))),
             Padding(
-              padding: EdgeInsets.fromLTRB(40.0, 20.0, 40.0, 0.0),
+              padding: EdgeInsets.fromLTRB(34.0, 20.0, 34.0, 0.0),
               child: Text(
-                  "Raise your hand if you love pink and avocados. Combine those loves with this super easy DIY!",
+                  "Avocado is a prevalent ingredient. You can buy it at any local market or store.\n\nComplete all the processes and explore how to extract the pink pigment from the green fruit.",
                   style: TextStyle(
                     fontFamily: 'OpenSans',
                     color: Color(0XFF483C30),
@@ -50,49 +50,58 @@ class _PuzzleState extends State<Puzzle> {
                   )),
             ),
             SizedBox(
-              height: 30.0,
+              height: 50.0,
             ),
-            Container(
-              width: 300,
-              child: Lottie.asset("assets/lottie/testonboarding.json",
-                  repeat: true, reverse: false),
+            GestureDetector(
+              onTap: () =>
+                  {Navigator.pushNamed(context, '/tutorial/useful_part')},
+              child: Container(
+                width: 300,
+                child: Lottie.asset("assets/lottie/testonboarding.json",
+                    repeat: true, reverse: false),
+              ),
             ),
             SizedBox(
               height: 110.0,
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 64,
-                      child: FlatButton(
-                          onPressed: () => {
-                                Navigator.pushNamed(
-                                    context, '/tutorial/useful_part')
-                              },
-                          child: Text(
-                            "Confirm",
-                            style: TextStyle(color: Colors.white),
-                          )),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
-                          colors: [
-                            Color(0xFF96A97C),
-                            // Color(0xFFD4C2A3),
-                            Color(0xFF96A97C),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 0.0),
+            //   child: Row(
+            //     children: [
+            //       Expanded(
+            //         child: Container(
+            //           height: 50,
+            //           child: FlatButton(
+            //               onPressed: () => {
+            //                     Navigator.pushNamed(
+            //                         context, '/tutorial/useful_part')
+            //                   },
+            //               child: Text(
+            //                 "Confirm",
+            //                 style: TextStyle(
+            //                     fontSize: 16,
+            //                     fontWeight: FontWeight.w700,
+            //                     letterSpacing: 0.6,
+            //                     fontFamily: 'OpenSans',
+            //                     color: Colors.white),
+            //               )),
+            //           decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(8),
+            //             gradient: LinearGradient(
+            //               colors: [
+            //                 Color(0xFF866A50),
+            //                 // Color(0xFFD4C2A3),
+            //                 Color(0xFF866A50),
+            //               ],
+            //               begin: Alignment.topLeft,
+            //               end: Alignment.bottomRight,
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),

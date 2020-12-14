@@ -201,6 +201,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
 
   @override
   Widget build(BuildContext context) {
+    var _activeTab = 0;
     return Scaffold(
       backgroundColor: Color(0xFFFDF9F3),
       body: DefaultTabController(
@@ -227,42 +228,61 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                     onPressed: () {
                       print('saved');
                     },
-                  )
+                  ),
+                  // Builder(builder: (context) {
+                  //   activeTab = DefaultTabController.of(context).index;
+                  //   return;
+                  // })
                 ],
                 flexibleSpace: FlexibleSpaceBar(
                     background: Image.asset(
-                  'assets/images/marigold_detail_hero.png',
+                  'assets/images/marigold_detail.png',
                   fit: BoxFit.cover,
                 )),
               ),
-              SliverPersistentHeader(
+              new SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
-                  TabBar(
-                    labelColor: Color(0XFFBFCCA0),
+                  new TabBar(
+                    labelStyle: TextStyle(
+                      fontFamily: 'OpenSans',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    labelColor: Color(0XFF5A4F43),
                     unselectedLabelColor: Colors.grey,
+                    indicatorColor: Color(0XFF866A50),
+                    indicatorWeight: 2.0,
+                    //indicatorPadding: EdgeInsets.only(bottom: 20.0),
                     tabs: [
-                      //用图片做iconhttps://stackoverflow.com/questions/50198885/how-to-use-an-image-instead-of-an-icon-in-flutter
-                      // Tab(
-                      //     icon: Icon(
-                      //       IconData(0xe605, fontFamily: 'Navi'),
-                      //       size: 40.0,
-                      //       color: Color(0xFF96A97C),
-                      //     ),
-                      //     text: "Overview"),
-                      Tab(
-                          // child: SvgPicture.asset('assets/pngs/cotton.svg'),
-                          icon: SvgPicture.asset('assets/pngs/cotton.svg',
-                              width: 40.0),
-
-                          // icon: Icon(Icons.lightbulb_outline),
-                          text: "Overview"),
-                      Tab(
-                          icon: SvgPicture.asset('assets/pngs/cotton.svg',
-                              width: 40.0),
-                          text: "Extract"),
-                      Tab(
-                          icon: SvgPicture.asset('assets/pngs/cotton.svg',
-                              width: 40.0),
+                      GestureDetector(
+                          child: new Tab(
+                              // child: SvgPicture.asset('assets/pngs/cotton.svg'),
+                              icon: SvgPicture.asset(
+                                  'assets/pngs/information_active.svg',
+                                  width: 44.0),
+                              iconMargin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                              // icon: Icon(Icons.lightbulb_outline),
+                              text: "Overview")),
+                      GestureDetector(
+                          child: new Tab(
+                              icon: SvgPicture.asset(
+                                  'assets/pngs/extract${_activeTab == 1 ? '_active' : '_deactive'}.svg',
+                                  width: 44.0),
+                              // icon: SvgPicture.asset(
+                              //     _activeTab == 1
+                              //         ? 'assets/pngs/extract_deactive.svg'
+                              //         : 'assets/pngs/extract_active.svg',
+                              //     width: 44.0),
+                              iconMargin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                              text: "Extract"),
+                          onTap: () {
+                            _activeTab = 1;
+                          }),
+                      new Tab(
+                          icon: SvgPicture.asset(
+                              'assets/pngs/materials_deactive.svg',
+                              width: 44.0),
+                          iconMargin: EdgeInsets.fromLTRB(0, 5, 0, 0),
                           text: "Materials"),
                     ],
                   ),
@@ -317,8 +337,8 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                           Image.asset('assets/images/marigolddetail1.jpg'),
                           SizedBox(height: 20.0),
                           Image.asset('assets/pngs/cotton_active.png'),
-                          SizedBox(height: 20.0),
-                          Image.asset('assets/icons/mic.svg'),
+                          // SizedBox(height: 20.0),
+                          // Image.asset('assets/icons/mic.svg'),
                           SvgPicture.asset('assets/pngs/cotton.svg'),
                           SvgPicture.string(
                               '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -368,8 +388,8 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
       ),
       //Add to material list
       bottomNavigationBar: Container(
-        height: 56,
-        padding: EdgeInsets.only(left: 20.0),
+        height: 60,
+        padding: EdgeInsets.only(left: 20.0, bottom: 10.0),
         margin: EdgeInsets.symmetric(vertical: 20, horizontal: 12),
         child: Row(
           children: <Widget>[
@@ -378,15 +398,21 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
                 height: 50,
                 child: FlatButton(
                     onPressed: () =>
-                        {Navigator.pushNamed(context, '/colorpicker')},
+                        // {Navigator.pushNamed(context, '/colorpicker')},
+                        {Navigator.pushNamed(context, '/emulator_intro')},
                     child: Text(
                       "Add to material list",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.6,
+                          fontFamily: 'OpenSans',
+                          color: Colors.white),
                     )),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   gradient: LinearGradient(
-                    colors: [Color(0xFF96A97C), Color(0xFF96A97C)],
+                    colors: [Color(0xFF866A50), Color(0xFF866A50)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -397,7 +423,7 @@ class _MainCollapsingToolbarState extends State<MainCollapsingToolbar> {
             Expanded(
               child: FlatButton(
                 onPressed: _showModalSheet,
-                color: Color(0xFF96A97C),
+                color: Color(0xFFDEC6A3),
                 child: Icon(
                   Icons.shopping_basket,
                   color: Colors.white,
@@ -420,17 +446,29 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   double get minExtent => _tabBar.preferredSize.height;
+  //double get minExtent => 74.0;
   @override
-  double get maxExtent => _tabBar.preferredSize.height;
+  double get maxExtent => 100.0;
+  //double get maxExtent => _tabBar.preferredSize.height;
 
   @override
   Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+    // Action action
+  ) {
     return Container(
+      height: maxExtent,
       color: Color(0xFFFDF9F3), //Add a color to Avoid overlapping
       child: _tabBar,
     );
   }
+
+  // Builder(builder: (context) {
+  //   activeTab = DefaultTabController.of(context).index;
+  //   return;
+  // })
 
   @override
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
