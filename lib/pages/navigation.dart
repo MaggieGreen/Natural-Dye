@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'card_list.dart';
 import 'gallery.dart';
 // import 'scroll.dart';
-import 'tutorial/open.dart';
+import 'tutorial/tutorial_open.dart';
 import 'profile.dart';
 import 'source.dart';
 
@@ -22,7 +22,7 @@ class _Navigation extends State<Navigation> {
     Profile(),
     Gallery(),
     DialogAppBar(),
-    TutorialOpen(),
+    NewOpen(),
     CardList(),
   ];
   GlobalKey _bottomNavigationKey = GlobalKey();

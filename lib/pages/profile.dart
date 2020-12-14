@@ -4,20 +4,24 @@ import 'CustomShapeClipper.dart';
 Color firstColor = Color.fromRGBO(255, 255, 255, 0.5);
 Color secondColor = Color.fromRGBO(255, 255, 255, 0.2);
 
-List<String> location = [
-  'San Francisco(SF)',
-  'Texas(TX)',
-  'New York City(JFK)'
-];
+List<String> location = ['San Francisco', 'Texas', 'New York City'];
 
 const TextStyle dropDownLabeStyle =
-    TextStyle(color: Colors.black, fontSize: 16.0);
+    TextStyle(color: Color(0XFF5A4F43), fontSize: 16.0);
 
-const TextStyle dropDownMeunItemStyle =
-    TextStyle(color: Colors.black, fontSize: 16.0);
+const TextStyle dropDownMeunItemStyle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.6,
+    fontFamily: 'OpenSans',
+    color: Color(0xFF483C30));
 
-const TextStyle searchStyle =
-    TextStyle(color: Color(0xFF99A2B0), fontSize: 16.0);
+const TextStyle searchStyle = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.6,
+    fontFamily: 'OpenSans',
+    color: Color(0xFFC4C4C4));
 
 class Profile extends StatefulWidget {
   @override
@@ -75,13 +79,13 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                   bottomLeft: const Radius.circular(25.0),
                   bottomRight: const Radius.circular(25.0)),
               image: DecorationImage(
-                  image: AssetImage('assets/images/sfcity.png'),
+                  image: AssetImage('assets/images/locationbg.png'),
                   fit: BoxFit.cover)),
           //location and search bar
           child: Container(
-            height: 292.0,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [firstColor, secondColor])),
+            height: 340.0,
+            // decoration: BoxDecoration(
+            //     gradient: LinearGradient(colors: [firstColor, secondColor])),
             child: Column(
               children: [
                 SizedBox(
@@ -91,31 +95,35 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                 Padding(
                   padding: const EdgeInsets.all(1.0),
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
+                    padding: EdgeInsets.fromLTRB(24.0, 30.0, 24.0, 0),
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: Text(
                         "Explore",
                         style: TextStyle(
-                            fontFamily: 'CantataOne',
-                            fontSize: 30,
+                            fontSize: 32,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xFF483C30)),
+                            letterSpacing: 0.6,
+                            fontFamily: 'CantataOne',
+                            color: Color(0xFF5A4F43)),
                       ),
                     ),
                   ),
                 ),
                 //Location
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: 10.0,
+                      ),
                       Icon(
                         Icons.location_on,
-                        color: Colors.black,
+                        color: Color(0XFF5A4F43),
                       ),
                       SizedBox(
-                        width: 16.0,
+                        width: 10.0,
                       ),
                       PopupMenuButton(
                         onSelected: (index) {
@@ -129,9 +137,12 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                               location[0],
                               style: dropDownLabeStyle,
                             ),
+                            SizedBox(
+                              width: 5.0,
+                            ),
                             Icon(
                               Icons.keyboard_arrow_down,
-                              color: Colors.black,
+                              color: Color(0XFF5A4F43),
                             )
                           ],
                         ),
@@ -163,16 +174,8 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                     ],
                   ),
                 ),
-                // Text(
-                //   'Explore the\nnatural dye in Summer',
-                //   style: TextStyle(
-                //       fontWeight: FontWeight.w700,
-                //       fontSize: 24.0,
-                //       color: Colors.white),
-                //   textAlign: TextAlign.center,
-                // ),
                 SizedBox(
-                  height: 80.0,
+                  height: 126.0,
                 ),
                 //search
                 Padding(
@@ -191,7 +194,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                         contentPadding: EdgeInsets.symmetric(
                             horizontal: 16.0, vertical: 13.0),
                         suffixIcon: Material(
-                          elevation: 2.0,
+                          elevation: 1.0,
                           borderRadius: BorderRadius.all(
                             Radius.circular(30.0),
                           ),
@@ -225,8 +228,8 @@ var homeScreenBottomPart = Column(
           Text("Seasonal Dye Plant",
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16.0)),
           Spacer(),
-          Text("VIEW ALL",
-              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.0)),
+          // Text("VIEW ALL",
+          //     style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.0)),
         ],
       ),
     ),
@@ -258,11 +261,11 @@ var homeScreenBottomPart = Column(
 );
 
 List<PlantCard> plantCards = [
-  PlantCard("assets/images/marigold.jpg", "Marigold", "Easy", "40min",
+  PlantCard("assets/images/newmarigold.png", "Marigold", "Easy", "40min",
       '/plantdetail'),
   PlantCard(
-      "assets/images/Inspiration1.jpg", "Elderberry", "Middle", "1h40min", ""),
-  PlantCard("assets/images/Inspiration4.jpg", "Avocado", "Middle", "1week", ""),
+      "assets/images/elderberry.png", "Elderberry", "Middle", "1h40min", ""),
+  PlantCard("assets/images/elderberry.png", "Avocado", "Middle", "1week", ""),
 ];
 
 class PlantCard extends StatelessWidget {
@@ -282,60 +285,69 @@ class PlantCard extends StatelessWidget {
             InkWell(
               onTap: () => {Navigator.pushNamed(context, dynamic)},
               child: Container(
-                height: 380.0,
-                width: 210.0,
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  height: 380.0,
+                  width: 252.0,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(1),
+                        spreadRadius: 5,
+                        blurRadius: 20,
+                        offset: Offset(3, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                  )),
             ),
             Positioned.fill(
                 top: 20.0,
                 child: Align(
                     alignment: Alignment.center,
                     child: Column(
-                      children: [
-                        Text(
-                          plantName,
-                          style: TextStyle(
-                              fontSize: 30,
-                              height: 1.5,
-                              fontFamily: 'OpenSans',
-                              color: Color(0xFF483C30),
-                              fontWeight: FontWeight.w700),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 40.0, vertical: 4.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                level,
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    height: 1.5,
-                                    fontFamily: 'OpenSans',
-                                    color: Color(0xFF483C30),
-                                    fontWeight: FontWeight.w400),
-                              ),
-                              Spacer(),
-                              Text(
-                                time,
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    height: 1.5,
-                                    fontFamily: 'OpenSans',
-                                    color: Color(0xFF483C30),
-                                    fontWeight: FontWeight.w400),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    )))
+                        // children: [
+                        //   Text(
+                        //     plantName,
+                        //     style: TextStyle(
+                        //         fontSize: 30,
+                        //         height: 1.5,
+                        //         fontFamily: 'OpenSans',
+                        //         color: Color(0xFF483C30),
+                        //         fontWeight: FontWeight.w700),
+                        //   ),
+                        //   Padding(
+                        //     padding: const EdgeInsets.symmetric(
+                        //         horizontal: 40.0, vertical: 4.0),
+                        //     child: Row(
+                        //       mainAxisSize: MainAxisSize.max,
+                        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //       children: [
+                        //         Text(
+                        //           level,
+                        //           style: TextStyle(
+                        //               fontSize: 16,
+                        //               height: 1.5,
+                        //               fontFamily: 'OpenSans',
+                        //               color: Color(0xFF483C30),
+                        //               fontWeight: FontWeight.w400),
+                        //         ),
+                        //         Spacer(),
+                        //         Text(
+                        //           time,
+                        //           style: TextStyle(
+                        //               fontSize: 16,
+                        //               height: 1.5,
+                        //               fontFamily: 'OpenSans',
+                        //               color: Color(0xFF483C30),
+                        //               fontWeight: FontWeight.w400),
+                        //         ),
+                        //       ],
+                        //     ),
+                        //   )
+                        // ],
+                        )))
           ],
         ),
       ),

@@ -10,6 +10,8 @@ class UsefulPart extends StatefulWidget {
 
 class _UsefulPartState extends State<UsefulPart> {
   String _currentAnimationName = "idle";
+  bool _confirmbutton = false;
+  // int _choice = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,85 +75,119 @@ class _UsefulPartState extends State<UsefulPart> {
             }),
           ),
           Positioned.fill(
-            top: 350,
-            left: 24,
-            right: 24,
-            child: Row(
-              // crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                    margin: const EdgeInsets.all(5.0),
-                    child: FlatButton(
-                        child: Text("Skin"),
-                        textColor: Colors.white,
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        onPressed: () {
-                          setState(() {
-                            _currentAnimationName = "jump";
-                          });
-                        })),
-                Container(
-                    margin: const EdgeInsets.all(5.0),
-                    child: FlatButton(
-                        child: Text("Meat"),
-                        textColor: Colors.white,
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        onPressed: () {
-                          setState(() {
-                            _currentAnimationName = "attack";
-                          });
-                        })),
-                Container(
-                    margin: const EdgeInsets.all(5.0),
-                    child: FlatButton(
-                        child: Text("Pits"),
-                        textColor: Colors.white,
-                        color: Colors.blue,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        onPressed: () {
-                          setState(() {
-                            _currentAnimationName = "attack";
-                          });
-                        })),
-              ],
+            top: 550,
+            // left: 24,
+            // right: 24,
+            child: Container(
+              color: Colors.transparent,
+              child: new Container(
+                decoration: new BoxDecoration(
+                    color: Color(0XFFFEF8F2),
+                    borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(40.0),
+                      topRight: const Radius.circular(40.0),
+                    )),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                    Container(
+                      child: Text("Choose the most useful dye part",
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            color: Color(0XFF483C30),
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w400,
+                          )),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            margin: const EdgeInsets.all(15.0),
+                            child: FlatButton(
+                                child: Text("Skin"),
+                                textColor: Color(0XFF483C30),
+                                color: Color(0XFFD8E2C1),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                onPressed: () {
+                                  setState(() {
+                                    _currentAnimationName = "jump";
+                                    _confirmbutton = false;
+                                  });
+                                })),
+                        Container(
+                            margin: const EdgeInsets.all(15.0),
+                            child: FlatButton(
+                                child: Text("Meat"),
+                                textColor: Color(0XFF483C30),
+                                color: Color(0XFFD8E2C1),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                onPressed: () {
+                                  setState(() {
+                                    _currentAnimationName = "attack";
+                                    _confirmbutton = false;
+                                  });
+                                })),
+                        Container(
+                            margin: const EdgeInsets.all(15.0),
+                            child: FlatButton(
+                                child: Text("Pits"),
+                                textColor: Color(0XFF483C30),
+                                color: Color(0XFFD8E2C1),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                onPressed: () {
+                                  setState(() {
+                                    // _choice = 3;
+                                    _currentAnimationName = "attack";
+                                    _confirmbutton = true;
+                                  });
+                                })),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
           Positioned.fill(
-              top: 550,
+              top: 620,
               left: 24,
               right: 24,
               child: Row(
                 children: [
                   Expanded(
                     child: Container(
-                      height: 64,
+                      height: 50,
                       child: FlatButton(
-                          onPressed: () => {
-                                Navigator.pushNamed(
-                                    context, '/tutorial/formula')
-                              },
+                          // enabled: _choice == 0 ? false : true,
+                          onPressed: (_confirmbutton)
+                              ? () => {
+                                    Navigator.pushNamed(
+                                        context, '/tutorial/formula')
+                                  }
+                              : null,
+                          color: Color(0XFF866A50),
+                          disabledColor: Color(0XFFF3ECE3),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
                           child: Text(
                             "Confirm",
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.6,
+                                fontFamily: 'OpenSans',
+                                color: Colors.white),
                           )),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
-                          colors: [
-                            Color(0xFF96A97C),
-                            // Color(0xFFD4C2A3),
-                            Color(0xFF96A97C),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
+                      // decoration: BoxDecoration(
+                      //   borderRadius: BorderRadius.circular(20),
+                      // ),
                     ),
                   )
                 ],

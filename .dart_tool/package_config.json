@@ -111,7 +111,7 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.17.4",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.19.1",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
@@ -171,7 +171,7 @@
     },
     {
       "name": "path_drawing",
-      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.4.1",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.4.1+1",
       "packageUri": "lib/",
       "languageVersion": "1.19"
     },
@@ -183,9 +183,9 @@
     },
     {
       "name": "petitparser",
-      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-2.4.0",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-3.0.4",
       "packageUri": "lib/",
-      "languageVersion": "2.4"
+      "languageVersion": "2.7"
     },
     {
       "name": "sky_engine",
@@ -261,9 +261,9 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/xml-3.6.1",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/xml-4.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.6"
+      "languageVersion": "2.7"
     },
     {
       "name": "onboarding_flutter",
@@ -272,7 +272,7 @@
       "languageVersion": "2.3"
     }
   ],
-  "generated": "2020-10-26T21:09:04.129080Z",
+  "generated": "2020-11-23T05:12:45.582343Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }

@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Formula extends StatefulWidget {
   Formula({Key key}) : super(key: key);
@@ -10,22 +9,6 @@ class Formula extends StatefulWidget {
 }
 
 class _FormulaState extends State<Formula> {
-  //Map to keep score
-  final Map<String, bool> score = {};
-
-  //choice for game
-  final Map choices = {
-    '🍏': Colors.green,
-    '🍋': Colors.yellow,
-    '🍅': Colors.red,
-    '🍇': Colors.purple,
-    '🥥': Colors.brown,
-    '🥕': Colors.orange
-  };
-
-  // Random seed to shuffle order of items.
-  int seed = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,40 +57,59 @@ class _FormulaState extends State<Formula> {
                   ),
                 )),
             Positioned.fill(
-                top: -100,
-                left: 24,
-                right: 24,
-                child: (Image.asset("assets/images/balance.png"))),
-            Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: Container(
-                padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
-                child: Row(
-                  children: [
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: choices.keys.map((emoji) {
-                          return Draggable<String>(
-                            data: emoji,
-                            child: Emoji(
-                                emoji: score[emoji] == true ? '✅' : emoji),
-                            feedback: Emoji(emoji: emoji),
-                            childWhenDragging: Emoji(emoji: '🌱'),
-                          );
-                        }).toList()),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: choices.keys
-                          .map((emoji) => _buildDragTarget(emoji))
-                          .toList()
-                            ..shuffle(Random(seed)),
-                    )
-                  ],
+              top: -100,
+              left: 24,
+              right: 24,
+              child: GestureDetector(
+                onTap: () =>
+                    {Navigator.pushNamed(context, '/tutorial/boil_method')},
+                child: Container(
+                  width: 300,
+                  child: Lottie.asset("assets/lottie/testonboarding.json",
+                      repeat: true, reverse: false),
                 ),
               ),
-            )
+            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(0),
+            //   child: Container(
+            //     height: 600,
+            //     padding: EdgeInsets.fromLTRB(24.0, 200.0, 24.0, 0),
+            //     // child: ColorGame(),
+            //   ),
+            // ),
+            // Positioned.fill(
+            //     top: 550,
+            //     left: 24,
+            //     right: 24,
+            //     child: Row(
+            //       children: [
+            //         Expanded(
+            //           child: Container(
+            //             height: 64,
+            //             child: FlatButton(
+            //                 onPressed: () =>
+            //                     {Navigator.pushNamed(context, '..')},
+            //                 child: Text(
+            //                   "Next Step",
+            //                   style: TextStyle(color: Colors.white),
+            //                 )),
+            //             decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(20),
+            //               gradient: LinearGradient(
+            //                 colors: [
+            //                   Color(0xFF96A97C),
+            //                   // Color(0xFFD4C2A3),
+            //                   Color(0xFF96A97C),
+            //                 ],
+            //                 begin: Alignment.topLeft,
+            //                 end: Alignment.bottomRight,
+            //               ),
+            //             ),
+            //           ),
+            //         )
+            //       ],
+            //     ))
           ],
         ));
   }
@@ -135,56 +137,6 @@ class ProgressBar2 extends StatelessWidget {
           width: 40,
         )
       ],
-    );
-  }
-}
-
-
-  Widget _buildDragTarget(emoji) {
-    return DragTarget<String>(
-      builder: (BuildContext context, List<String> incoming, List rejected) {
-        if (score[emoji] == true) {
-          return Container(
-            color: Colors.white,
-            child: Text('Correct!'),
-            alignment: Alignment.center,
-            height: 80,
-            width: 200,
-          );
-        } else {
-          return Container(color: choices[emoji], height: 80, width: 200);
-        }
-      },
-      onWillAccept: (data) => data == emoji,
-      // onAccept: (data) {
-      //   setState(() {
-      //     score[emoji] = true;
-      //     plyr.play('success.mp3');
-      //   });
-      // },
-      onLeave: (data) {},
-    );
-  }
-}
-
-class Emoji extends StatelessWidget {
-  Emoji({Key key, this.emoji}) : super(key: key);
-
-  final String emoji;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      child: Container(
-        alignment: Alignment.center,
-        height: 50,
-        padding: EdgeInsets.all(10),
-        child: Text(
-          emoji,
-          style: TextStyle(color: Colors.black, fontSize: 50),
-        ),
-      ),
     );
   }
 }
