@@ -11,13 +11,14 @@ class UsefulPart extends StatefulWidget {
 class _UsefulPartState extends State<UsefulPart> {
   String _currentAnimationName = "idle";
   bool _confirmbutton = false;
+  bool _hasBeenPressed = false;
   // int _choice = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3ECE3),
+      backgroundColor: const Color(0xFFFFFDFA),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF3ECE3),
+        backgroundColor: Color(0xFFFFFDFA),
         title: ProgressBar2(),
         iconTheme: IconThemeData(color: Color(0xFF483C30)),
         actions: <Widget>[
@@ -32,35 +33,35 @@ class _UsefulPartState extends State<UsefulPart> {
       ),
       body: Stack(
         children: [
-          Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: Container(
-                padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
-                child: Column(
-                  children: [
-                    Text("Useful Part",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          color: Color(0XFF483C30),
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w700,
-                        )),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                        "Although the avocado is delicious, if you select the wrong part, you can’t make the beautiful natural dye work.",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          color: Color(0XFF483C30),
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w400,
-                        )),
-                  ],
-                ),
-              )),
+          // Padding(
+          //     padding: const EdgeInsets.all(1.0),
+          //     child: Container(
+          //       padding: EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0),
+          //       child: Column(
+          //         children: [
+          //           Text("Useful Part",
+          //               style: TextStyle(
+          //                 fontFamily: 'OpenSans',
+          //                 color: Color(0XFF483C30),
+          //                 fontSize: 30.0,
+          //                 fontWeight: FontWeight.w700,
+          //               )),
+          //           SizedBox(
+          //             height: 20.0,
+          //           ),
+          //           Text(
+          //               "Although the avocado is delicious, if you select the wrong part, you can’t make the beautiful natural dye work.",
+          //               style: TextStyle(
+          //                 fontFamily: 'OpenSans',
+          //                 color: Color(0XFF483C30),
+          //                 fontSize: 16.0,
+          //                 fontWeight: FontWeight.w400,
+          //               )),
+          //         ],
+          //       ),
+          //     )),
           Positioned.fill(
-            top: -100,
+            top: -250,
             left: 24,
             right: 24,
             child: new NimaActor("assets/nima/avocado.nma",
@@ -75,14 +76,14 @@ class _UsefulPartState extends State<UsefulPart> {
             }),
           ),
           Positioned.fill(
-            top: 550,
+            top: 500,
             // left: 24,
             // right: 24,
             child: Container(
               color: Colors.transparent,
               child: new Container(
                 decoration: new BoxDecoration(
-                    color: Color(0XFFFEF8F2),
+                    color: Color(0XFFE5DCD2),
                     borderRadius: new BorderRadius.only(
                       topLeft: const Radius.circular(40.0),
                       topRight: const Radius.circular(40.0),
@@ -93,7 +94,7 @@ class _UsefulPartState extends State<UsefulPart> {
                       height: 30.0,
                     ),
                     Container(
-                      child: Text("Choose the most useful dye part",
+                      child: Text("Choose the color you want to dye",
                           style: TextStyle(
                             fontFamily: 'OpenSans',
                             color: Color(0XFF483C30),
@@ -106,27 +107,50 @@ class _UsefulPartState extends State<UsefulPart> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                            margin: const EdgeInsets.all(15.0),
+                            height: 90,
+                            width: 90,
+                            margin: const EdgeInsets.fromLTRB(15, 26, 15, 35),
                             child: FlatButton(
-                                child: Text("Skin"),
+                                child: Text(
+                                  "Avocado\nPink",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.6,
+                                  ),
+                                ),
                                 textColor: Color(0XFF483C30),
-                                color: Color(0XFFD8E2C1),
+                                color: _hasBeenPressed
+                                    ? Color(0xFFDBA99D)
+                                    : Color(0xFFFDF9F3),
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
+                                    borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
                                     _currentAnimationName = "jump";
-                                    _confirmbutton = false;
+                                    _confirmbutton = true;
+                                    _hasBeenPressed = !_hasBeenPressed;
                                   });
                                 })),
                         Container(
-                            margin: const EdgeInsets.all(15.0),
+                            height: 90,
+                            width: 90,
+                            margin: const EdgeInsets.fromLTRB(15, 26, 15, 35),
                             child: FlatButton(
-                                child: Text("Meat"),
+                                child: Text(
+                                  "Marigold\nYellow",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.6,
+                                  ),
+                                ),
                                 textColor: Color(0XFF483C30),
-                                color: Color(0XFFD8E2C1),
+                                color: Color(0XFFFDF9F3),
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
+                                    borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
                                     _currentAnimationName = "attack";
@@ -134,18 +158,28 @@ class _UsefulPartState extends State<UsefulPart> {
                                   });
                                 })),
                         Container(
-                            margin: const EdgeInsets.all(15.0),
+                            height: 90,
+                            width: 90,
+                            margin: const EdgeInsets.fromLTRB(15, 26, 15, 35),
                             child: FlatButton(
-                                child: Text("Pits"),
+                                child: Text(
+                                  "Indigo\nBlue",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.6,
+                                  ),
+                                ),
                                 textColor: Color(0XFF483C30),
-                                color: Color(0XFFD8E2C1),
+                                color: Color(0XFFFDF9F3),
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
+                                    borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
                                     // _choice = 3;
                                     _currentAnimationName = "attack";
-                                    _confirmbutton = true;
+                                    _confirmbutton = false;
                                   });
                                 })),
                       ],
@@ -156,7 +190,7 @@ class _UsefulPartState extends State<UsefulPart> {
             ),
           ),
           Positioned.fill(
-              top: 620,
+              top: 670,
               left: 24,
               right: 24,
               child: Row(
@@ -169,15 +203,15 @@ class _UsefulPartState extends State<UsefulPart> {
                           onPressed: (_confirmbutton)
                               ? () => {
                                     Navigator.pushNamed(
-                                        context, '/tutorial/formula')
+                                        context, '/tutorial/processing')
                                   }
                               : null,
                           color: Color(0XFF866A50),
-                          disabledColor: Color(0XFFF3ECE3),
+                          disabledColor: Color(0XFFC7BCB2),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                           child: Text(
-                            "Confirm",
+                            "Next",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
@@ -205,19 +239,10 @@ class ProgressBar2 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center, // centers horizontally
       crossAxisAlignment: CrossAxisAlignment.center, // centers vertically
       children: [
-        Text("Progress",
-            style: TextStyle(
-              fontFamily: 'OpenSans',
-              color: Color(0XFF483C30),
-              fontSize: 16.0,
-              fontWeight: FontWeight.w400,
-            )),
-        SizedBox(
-          width: 3,
-        ), // The size box provides an immediate spacing between the widgets
+        // The size box provides an immediate spacing between the widgets
         Image.asset(
-          "assets/images/logo.png",
-          width: 40,
+          "assets/images/process1.png",
+          width: 240,
         )
       ],
     );

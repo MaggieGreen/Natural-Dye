@@ -56,10 +56,20 @@ class _PuzzleState extends State<Puzzle> {
               onTap: () =>
                   {Navigator.pushNamed(context, '/tutorial/useful_part')},
               child: Container(
-                width: 300,
-                child: Lottie.asset("assets/lottie/testonboarding.json",
-                    repeat: true, reverse: false),
+                height: 380.0,
+                width: 330.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/intro.png'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
+              // child: Container(
+              //   width: 300,
+              //   child: Lottie.asset("assets/lottie/testonboarding.json",
+              //       repeat: true, reverse: false),
+              // ),
             ),
             SizedBox(
               height: 110.0,

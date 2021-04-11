@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_flutter/pages/tutorial/Constants.dart';
 
 class ChooseAvocado extends StatefulWidget {
   @override
@@ -14,12 +15,23 @@ class _ChooseAvocadoState extends State<ChooseAvocado> {
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Color(0xFF483C30)),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.view_list),
-            onPressed: () {
-              print('TutorialMenu');
+          PopupMenuButton<String>(
+            onSelected: choiceAction,
+            itemBuilder: (BuildContext context) {
+              return Constants.choices.map((String choice) {
+                // return PopupMenuButton<String>(
+                //   value: choice,
+                //   child: Text(choice),
+                // );
+              }).toList();
             },
           )
+          // IconButton(
+          //   icon: Icon(Icons.view_list),
+          //   onPressed: () {
+          //     print('TutorialMenu');
+          //   },
+          // )
         ],
         elevation: 0,
       ),
@@ -101,18 +113,26 @@ class _ChooseAvocadoState extends State<ChooseAvocado> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          // color: Colors.amber,
-                          child: Center(
-                            child: GestureDetector(
-                              onTap: () => {
-                                Navigator.pushNamed(context, '/tutorial/puzzle')
-                              },
-                              child: ClipOval(
-                                child: Container(
-                                  width: 77,
-                                  height: 77,
-                                  color: Color(0XFFDBA99D),
+                        Center(
+                          child: GestureDetector(
+                            onTap: () => {
+                              Navigator.pushNamed(context, '/tutorial/puzzle')
+                            },
+                            child: ClipOval(
+                              child: Container(
+                                color: Color(0XFFE4C5B8),
+                                height: 77,
+                                width: 77,
+                                child: Center(
+                                  child: Text(
+                                    'Pink',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0.6,
+                                        fontFamily: 'OpenSans',
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -121,16 +141,24 @@ class _ChooseAvocadoState extends State<ChooseAvocado> {
                         SizedBox(
                           width: 40.0,
                         ),
-                        Container(
-                          // color: Colors.amber,
-                          child: Center(
-                            child: GestureDetector(
-                              onTap: () => {Navigator.pushNamed(context, '..')},
-                              child: ClipOval(
-                                child: Container(
-                                  width: 77,
-                                  height: 77,
-                                  color: Color(0XFFFDC973),
+                        Center(
+                          child: GestureDetector(
+                            onTap: () => {},
+                            child: ClipOval(
+                              child: Container(
+                                color: Color(0XFFFDC973),
+                                height: 77,
+                                width: 77,
+                                child: Center(
+                                  child: Text(
+                                    'Yellow',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0.6,
+                                        fontFamily: 'OpenSans',
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -139,21 +167,29 @@ class _ChooseAvocadoState extends State<ChooseAvocado> {
                         SizedBox(
                           width: 40.0,
                         ),
-                        Container(
-                          // color: Colors.amber,
-                          child: Center(
-                            child: GestureDetector(
-                              onTap: () => {Navigator.pushNamed(context, '..')},
-                              child: ClipOval(
-                                child: Container(
-                                  width: 77,
-                                  height: 77,
-                                  color: Color(0XFF9FAEB5),
+                        Center(
+                          child: GestureDetector(
+                            onTap: () => {},
+                            child: ClipOval(
+                              child: Container(
+                                color: Color(0XFF9FAEB5),
+                                height: 77,
+                                width: 77,
+                                child: Center(
+                                  child: Text(
+                                    'Blue',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0.6,
+                                        fontFamily: 'OpenSans',
+                                        color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                     // Padding(
@@ -205,5 +241,13 @@ class _ChooseAvocadoState extends State<ChooseAvocado> {
         ],
       )),
     );
+  }
+}
+
+void choiceAction(String choice) {
+  if (choice == Constants.Actions) {
+    print('Actions');
+  } else if (choice == Constants.Subscribe) {
+    print('Actions');
   }
 }

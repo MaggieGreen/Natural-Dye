@@ -54,20 +54,69 @@ class _BoilMethodState extends State<BoilMethod> {
                   ],
                 ),
               )),
-          Positioned.fill(
-            top: 100,
-            left: 24,
-            right: 24,
-            child: GestureDetector(
-              onTap: () =>
-                  {Navigator.pushNamed(context, '/tutorial/boil_method')},
-              child: Container(
-                width: 300,
-                child: Lottie.asset("assets/lottie/testonboarding.json",
-                    repeat: true, reverse: false),
+          Padding(
+            padding: const EdgeInsets.all(1.0),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(34.0, 240.0, 34.0, 0),
+              child: GestureDetector(
+                onTap: () => {Navigator.pushNamed(context, '..')},
+                child: Container(
+                  height: 380.0,
+                  width: 330.0,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/dyebath.png'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
+          // Positioned.fill(
+          //   top: 100,
+          //   left: 24,
+          //   right: 24,
+          //   child: GestureDetector(
+          //     onTap: () =>
+          //         {Navigator.pushNamed(context, '/tutorial/boil_method')},
+          //     child: Container(
+          //       width: 300,
+          //       child: Lottie.asset("assets/lottie/testonboarding.json",
+          //           repeat: true, reverse: false),
+          //     ),
+          //   ),
+          // ),
+          Padding(
+            padding: const EdgeInsets.all(1),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(34.0, 570.0, 34.0, 0),
+              child: Center(
+                child: GestureDetector(
+                  onTap: () =>
+                      {Navigator.pushNamed(context, '/tutorial/knocking')},
+                  child: ClipOval(
+                    child: Container(
+                      color: Color(0XFF866A50),
+                      height: 77,
+                      width: 77,
+                      child: Center(
+                        child: Text(
+                          'Heat',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 0.6,
+                              fontFamily: 'OpenSans',
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
