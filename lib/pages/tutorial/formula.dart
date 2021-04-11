@@ -56,17 +56,37 @@ class _FormulaState extends State<Formula> {
                     ],
                   ),
                 )),
-            Positioned.fill(
-              top: -100,
-              left: 24,
-              right: 24,
-              child: GestureDetector(
-                onTap: () =>
-                    {Navigator.pushNamed(context, '/tutorial/boil_method')},
-                child: Container(
-                  width: 300,
-                  child: Lottie.asset("assets/lottie/testonboarding.json",
-                      repeat: true, reverse: false),
+            // Positioned.fill(
+            //   top: -100,
+            //   left: 24,
+            //   right: 24,
+            //   child: GestureDetector(
+            //     onTap: () =>
+            //         {Navigator.pushNamed(context, '/tutorial/boil_method')},
+            //     child: Container(
+            //       width: 300,
+            //       child: Lottie.asset("assets/lottie/testonboarding.json",
+            //           repeat: true, reverse: false),
+            //     ),
+            //   ),
+            // ),
+            Padding(
+              padding: const EdgeInsets.all(1.0),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(34.0, 240.0, 34.0, 0),
+                child: GestureDetector(
+                  onTap: () =>
+                      {Navigator.pushNamed(context, '/tutorial/boil_method')},
+                  child: Container(
+                    height: 380.0,
+                    width: 330.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/formula.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),

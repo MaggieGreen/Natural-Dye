@@ -33,6 +33,10 @@ class _ProfileState extends State<Profile> {
 
   @override
   Widget build(BuildContext context) {
+    // var screenSize = MediaQuery.of(context).size;
+    // if (screenSize.width > ) {
+
+    // }
     return Scaffold(
       backgroundColor: Color(0xFFFDF9F3),
       // appBar: PreferredSize(
