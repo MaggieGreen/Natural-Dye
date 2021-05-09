@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:slide_to_confirm/slide_to_confirm.dart';
 
 class Prepare extends StatefulWidget {
+  Prepare({Key key}) : super(key: key);
   @override
   _PrepareState createState() => _PrepareState();
 }
 
 class _PrepareState extends State<Prepare> {
+  var _necessary = [
+    Necessary('Marigold petals', 'Fresh 4 cups or Dried 2 cups'),
+    Necessary('Water', 'Enough to submerge petals'),
+    Necessary('Alum', '2 tbsb'),
+    Necessary('Fabric', 'colored cotton fabric'),
+    Necessary('Cheese cloth', '50’’*50’’')
+  ];
+
+  var _optional = [
+    Necessary('Gloves', 'Keep hands clean'),
+    Necessary('Scales', 'Calculate weight accurately'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,32 +45,36 @@ class _PrepareState extends State<Prepare> {
           child: Column(
             children: [
               Container(
+                width: 304,
+                height: 290,
+                decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                        image: AssetImage("assets/images/prepare.png"))),
+              ),
+              Container(
                 // padding: EdgeInsets.fromLTRB(24, 0, 24, 0),
-                margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
-                constraints: BoxConstraints.expand(height: 50),
+                margin: EdgeInsets.fromLTRB(38, 0, 38, 0),
+                constraints: BoxConstraints.expand(height: 40),
                 decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Color(0xFFE5DCD2),
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25.0),
-                        topRight: Radius.circular(25.0),
-                        bottomLeft: Radius.circular(25.0),
-                        bottomRight: Radius.circular(25.0))),
+                        topLeft: Radius.circular(10.0),
+                        topRight: Radius.circular(10.0),
+                        bottomLeft: Radius.circular(10.0),
+                        bottomRight: Radius.circular(10.0))),
                 child: new TabBar(
-                  unselectedLabelColor: Colors.redAccent,
+                  unselectedLabelColor: Color(0xFF483C30),
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicator: BoxDecoration(
                       gradient: LinearGradient(
-                          colors: [Colors.redAccent, Colors.orangeAccent]),
-                      borderRadius: BorderRadius.circular(50),
+                          colors: [Color(0xFF866A50), Color(0xFF866A50)]),
+                      borderRadius: BorderRadius.circular(10),
                       color: Colors.redAccent),
                   tabs: <Widget>[
                     new Tab(
                       text: "Necessary",
                     ),
-                    // new Tab(
-                    //   text: "Modern Art",
-                    // ),
                     new Tab(
                       text: "Optional",
                     ),
@@ -68,26 +87,143 @@ class _PrepareState extends State<Prepare> {
                   child: TabBarView(
                     children: [
                       //Necessary part
-                      new Container(
-                        width: 20,
-                        height: 30,
-                        color: Colors.amber,
-                      ),
+                      Container(
+                          padding: EdgeInsets.fromLTRB(24.0, 10.0, 24.0, 0.0),
+                          child: ListView.builder(
+                            itemCount: _necessary.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return new Container(
+                                child: Center(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: <Widget>[
+                                      new Card(
+                                        child: new Container(
+                                          child: CheckboxListTile(
+                                            title: Text(
+                                              _necessary[index].name,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            subtitle: Text(
+                                              _necessary[index].subtitle,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                            value: _necessary[index].selected,
+                                            onChanged: (bool value) {
+                                              setState(() {
+                                                _necessary[index].selected =
+                                                    value;
+                                                if (!_necessary[index]
+                                                    .selected) {
+                                                  print(
+                                                      '${_necessary[index].name}: i am present');
+                                                }
+                                                if (_necessary[index]
+                                                    .selected) {
+                                                  print(
+                                                      '${_necessary[index].name}: none');
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          padding: EdgeInsets.all(5),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          )),
                       //Optional part
                       new Container(
-                        width: 20,
-                        height: 30,
-                        color: Colors.black,
-                      ),
+                          padding: EdgeInsets.fromLTRB(24.0, 10.0, 24.0, 0.0),
+                          child: ListView.builder(
+                            itemCount: _optional.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return new Container(
+                                child: Center(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: <Widget>[
+                                      new Card(
+                                        child: new Container(
+                                          // decoration: BoxDecoration(
+                                          //     border: Border.all(
+                                          //         color: Colors.teal)),
+                                          child: CheckboxListTile(
+                                            title: Text(
+                                              _optional[index].name,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            subtitle: Text(
+                                              _optional[index].subtitle,
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                            value: _optional[index].selected,
+                                            onChanged: (bool value) {
+                                              setState(() {
+                                                _optional[index].selected =
+                                                    value;
+                                                if (!_optional[index]
+                                                    .selected) {
+                                                  print(
+                                                      '${_optional[index].name}: i am present');
+                                                }
+                                                if (_optional[index].selected) {
+                                                  print(
+                                                      '${_optional[index].name}: none');
+                                                }
+                                              });
+                                            },
+                                          ),
+                                          padding: EdgeInsets.all(5),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          )),
                     ],
                   ),
                 ),
               ),
-              new Container(
-                width: 20,
-                height: 100,
-                color: Colors.red,
-              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 34, 24, 34),
+                child: ConfirmationSlider(
+                  height: 50,
+                  width: 327,
+                  backgroundColor: Color(0xFFE5DCD2),
+                  backgroundShape: BorderRadius.circular(10.0),
+                  foregroundColor: Color(0xFF866A50),
+                  foregroundShape: BorderRadius.circular(10.0),
+                  icon: Icons.arrow_forward,
+                  shadow: BoxShadow(
+                    color: Color(0xFFE5DCD2),
+                  ),
+                  text: 'Slide to start',
+                  textStyle: TextStyle(
+                    fontFamily: 'OpenSans',
+                    color: Color(0XFF483C30),
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  onConfirmation: () =>
+                      Navigator.pushNamed(context, '/tutorial/boil_method'),
+                ),
+              )
             ],
           ),
         ),
@@ -111,4 +247,12 @@ class ProgressBar2 extends StatelessWidget {
       ],
     );
   }
+}
+
+class Necessary {
+  var name = 'Marigold petals';
+  var subtitle = 'Note';
+  bool selected = false;
+
+  Necessary(this.name, this.subtitle);
 }

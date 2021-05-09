@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/rendering.dart';
 import 'package:nima/nima_actor.dart';
+import 'package:onboarding_flutter/pages/tutorial/processing.dart';
 
 class UsefulPart extends StatefulWidget {
   @override
@@ -202,10 +203,20 @@ class _UsefulPartState extends State<UsefulPart> {
                           // enabled: _choice == 0 ? false : true,
                           onPressed: (_confirmbutton)
                               ? () => {
-                                    Navigator.pushNamed(
-                                        context, '/tutorial/processing')
+                                    // Navigator.pushNamed(
+                                    //     context, '/tutorial/processing')
+                                    Navigator.pushReplacement(
+                                      context,
+                                      PageRouteBuilder(
+                                        pageBuilder:
+                                            (context, animation1, animation2) =>
+                                                Processing(),
+                                        transitionDuration:
+                                            Duration(seconds: 0),
+                                      ),
+                                    )
                                   }
-                              : null,
+                              : () => {},
                           color: Color(0XFF866A50),
                           disabledColor: Color(0XFFC7BCB2),
                           shape: RoundedRectangleBorder(

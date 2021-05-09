@@ -140,7 +140,7 @@ class GridCards extends StatelessWidget {
                     {Navigator.pushNamed(context, '/tutorial/choose_avocado')},
                 child: ActiveProjectsCard(
                   cardColor: Color(0xFF866A50),
-                  title: 'Step 1',
+                  title: 'Step One',
                   subtitle: 'Extract Dye',
                   img: 'assets/images/todo.png',
                 ),

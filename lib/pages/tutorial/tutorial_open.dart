@@ -9,14 +9,14 @@ class _NewOpenState extends State<NewOpen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF3ECE3),
+      backgroundColor: Color(0xFFFFFDFA),
       body: Stack(
         children: [
           SingleChildScrollView(
             child: Container(
               decoration: new BoxDecoration(
                 image: new DecorationImage(
-                    image: new AssetImage("assets/images/tutorial_open.png"),
+                    image: new AssetImage("assets/images/tutorialbg.png"),
                     fit: BoxFit.fill),
               ),
               child: Column(
@@ -73,7 +73,7 @@ class ActiveProjectsCard extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.symmetric(vertical: 10.0),
-          padding: EdgeInsets.all(22.0),
+          padding: EdgeInsets.all(20.0),
           height: 250,
           decoration: BoxDecoration(
             color: cardColor,
@@ -86,11 +86,9 @@ class ActiveProjectsCard extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Image.asset(
-                    img,
-                  ),
+                  Image.asset(img, width: 136, height: 110, fit: BoxFit.fill),
                   SizedBox(
-                    height: 10.0,
+                    height: 20.0,
                   ),
                   Text(
                     title,
@@ -112,7 +110,7 @@ class ActiveProjectsCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 30.0,
                   ),
                   Container(
                     color: Color(0xFFC9C0B5),
@@ -148,7 +146,7 @@ class GridCards extends StatelessWidget {
                   cardColor: Color(0xFFE5DCD2),
                   title: 'Step One',
                   subtitle: 'Extract Dye',
-                  img: 'assets/images/todo.png',
+                  img: 'assets/images/StepOne.png',
                 ),
               ),
               SizedBox(width: 20.0),
@@ -156,7 +154,7 @@ class GridCards extends StatelessWidget {
                 cardColor: Color(0xFFE5DCD2),
                 title: 'Step Two',
                 subtitle: 'Tie fabric',
-                img: 'assets/images/todo.png',
+                img: 'assets/images/StepTwo.png',
               ),
             ],
           ),
@@ -166,7 +164,7 @@ class GridCards extends StatelessWidget {
                 cardColor: Color(0xFFE5DCD2),
                 title: 'Step Three',
                 subtitle: 'Dyebath',
-                img: 'assets/images/todo.png',
+                img: 'assets/images/StepThree.png',
               ),
               SizedBox(width: 20.0),
               GestureDetector(
@@ -175,7 +173,7 @@ class GridCards extends StatelessWidget {
                   cardColor: Color(0xFFE5DCD2),
                   title: 'Step Four',
                   subtitle: 'Fixative color',
-                  img: 'assets/images/todo.png',
+                  img: 'assets/images/StepFour.png',
                 ),
               ),
             ],

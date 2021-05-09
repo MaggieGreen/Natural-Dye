@@ -94,7 +94,7 @@ class _NewPlantDetail extends State<NewPlantDetail> {
                                           color: Color(0xFF323232)),
                                     ),
                                     Text(
-                                      '1.8mi, San Francisco',
+                                      '1.9mi, San Francisco',
                                       style: TextStyle(
                                           fontFamily: 'Open Sans',
                                           fontSize: 16,
@@ -165,15 +165,15 @@ class _NewPlantDetail extends State<NewPlantDetail> {
                                               ),
                                             ),
                                             subtitle: Text(
-                                              _material[index].subtitle,
+                                              _subtitle[index].name,
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                               ),
                                             ),
                                             value: _material[index].selected,
                                             onChanged: (val) {
+                                              _material[index].selected = val;
                                               setState(() {
-                                                _material[index].selected = val;
                                                 if (!_material[index]
                                                     .selected) {
                                                   print(

@@ -194,6 +194,12 @@
       "languageVersion": "1.11"
     },
     {
+      "name": "slide_to_confirm",
+      "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/slide_to_confirm-0.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///Users/jiangxuchen/development/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.7.0",
       "packageUri": "lib/",
@@ -272,7 +278,7 @@
       "languageVersion": "2.3"
     }
   ],
-  "generated": "2020-11-23T05:12:45.582343Z",
+  "generated": "2021-04-11T18:47:13.088284Z",
   "generator": "pub",
   "generatorVersion": "2.9.0"
 }

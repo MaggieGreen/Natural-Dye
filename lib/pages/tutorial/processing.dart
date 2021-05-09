@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/rendering.dart';
 import 'package:nima/nima_actor.dart';
+import 'package:onboarding_flutter/pages/tutorial/prepare.dart';
 
 class Processing extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class Processing extends StatefulWidget {
 class _ProcessingState extends State<Processing> {
   String _currentAnimationName = "idle";
   bool _confirmbutton = false;
+  bool _hasBeenPressed = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,13 +94,16 @@ class _ProcessingState extends State<Processing> {
                                   ),
                                 ),
                                 textColor: Color(0XFF483C30),
-                                color: Color(0XFFFDF9F3),
+                                color: _hasBeenPressed
+                                    ? Color(0xFFDEC6A3)
+                                    : Color(0xFFFDF9F3),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
                                     _currentAnimationName = "jump";
                                     _confirmbutton = true;
+                                    _hasBeenPressed = !_hasBeenPressed;
                                   });
                                 })),
                         Container(
@@ -145,10 +150,20 @@ class _ProcessingState extends State<Processing> {
                           // enabled: _choice == 0 ? false : true,
                           onPressed: (_confirmbutton)
                               ? () => {
-                                    Navigator.pushNamed(
-                                        context, '/tutorial/prepare')
+                                    // Navigator.pushNamed(
+                                    //     context, '/tutorial/prepare')
+                                    Navigator.pushReplacement(
+                                      context,
+                                      PageRouteBuilder(
+                                        pageBuilder:
+                                            (context, animation1, animation2) =>
+                                                Prepare(),
+                                        transitionDuration:
+                                            Duration(seconds: 0),
+                                      ),
+                                    )
                                   }
-                              : null,
+                              : () => {},
                           color: Color(0XFF866A50),
                           disabledColor: Color(0XFFC7BCB2),
                           shape: RoundedRectangleBorder(
