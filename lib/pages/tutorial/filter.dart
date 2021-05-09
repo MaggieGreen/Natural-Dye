@@ -10,10 +10,10 @@ class _FilterOutState extends State<FilterOut> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3ECE3),
+      backgroundColor: const Color(0xFFFFFDFA),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF3ECE3),
-        // title: ProgressBar2(),
+        backgroundColor: Color(0xFFFFFDFA),
+        title: ProgressBar2(),
         iconTheme: IconThemeData(color: Color(0xFF483C30)),
         actions: <Widget>[
           IconButton(
@@ -28,38 +28,11 @@ class _FilterOutState extends State<FilterOut> {
       body: Stack(
         children: [
           Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: Container(
-                padding: EdgeInsets.fromLTRB(34.0, 24.0, 34.0, 0),
-                child: Column(
-                  children: [
-                    Text("Filter out",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          color: Color(0XFF483C30),
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w700,
-                        )),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                        "Harvest moment has arrived. Filter out the dye plants in the liquid. Let it steep overnight, then slowly filter out the avocado pits.Let it steep overnight, then slowly filter out the avocado pits.",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: 0.6,
-                            fontFamily: 'OpenSans',
-                            color: Color(0xFF483C30))),
-                  ],
-                ),
-              )),
-          Padding(
             padding: const EdgeInsets.all(1.0),
             child: Container(
               padding: EdgeInsets.fromLTRB(34.0, 240.0, 34.0, 0),
               child: GestureDetector(
-                onTap: () => {Navigator.pushNamed(context, '..')},
+                onTap: () => {Navigator.pushNamed(context, '/tutorial/puzzle')},
                 child: Container(
                   height: 380.0,
                   width: 330.0,
@@ -87,48 +60,64 @@ class _FilterOutState extends State<FilterOut> {
           //     ),
           //   ),
           // ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 720, 0, 0),
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 24.0,
-                ),
-                Expanded(
-                  child: Container(
-                    height: 50,
-                    child: FlatButton(
-                        onPressed: () => {
-                              Navigator.pushNamed(
-                                  context, '/tutorial/unlocked_puzzle')
-                            },
-                        child: Text(
-                          "Finish",
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 0.6,
-                              fontFamily: 'OpenSans',
-                              color: Colors.white),
-                        )),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      gradient: LinearGradient(
-                        colors: [Color(0xFF866A50), Color(0xFF866A50)],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 24.0,
-                ),
-              ],
-            ),
-          )
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(0, 720, 0, 0),
+          //   child: Row(
+          //     children: [
+          //       SizedBox(
+          //         width: 24.0,
+          //       ),
+          //       Expanded(
+          //         child: Container(
+          //           height: 50,
+          //           child: FlatButton(
+          //               onPressed: () => {
+          //                     Navigator.pushNamed(
+          //                         context, '/tutorial/unlocked_puzzle')
+          //                   },
+          //               child: Text(
+          //                 "Finish",
+          //                 style: TextStyle(
+          //                     fontSize: 16,
+          //                     fontWeight: FontWeight.w700,
+          //                     letterSpacing: 0.6,
+          //                     fontFamily: 'OpenSans',
+          //                     color: Colors.white),
+          //               )),
+          //           decoration: BoxDecoration(
+          //             borderRadius: BorderRadius.circular(8),
+          //             gradient: LinearGradient(
+          //               colors: [Color(0xFF866A50), Color(0xFF866A50)],
+          //               begin: Alignment.topLeft,
+          //               end: Alignment.bottomRight,
+          //             ),
+          //           ),
+          //         ),
+          //       ),
+          //       SizedBox(
+          //         width: 24.0,
+          //       ),
+          //     ],
+          //   ),
+          // )
         ],
       ),
+    );
+  }
+}
+
+class ProgressBar2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center, // centers horizontally
+      crossAxisAlignment: CrossAxisAlignment.center, // centers vertically
+      children: [
+        Image.asset(
+          "assets/images/process5.png",
+          width: 240,
+        )
+      ],
     );
   }
 }

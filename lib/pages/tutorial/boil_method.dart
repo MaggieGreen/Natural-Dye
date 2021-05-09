@@ -7,114 +7,52 @@ class BoilMethod extends StatefulWidget {
 }
 
 class _BoilMethodState extends State<BoilMethod> {
+  Image img;
+  Image imgUp = Image.asset(
+    'assets/images/ink_loop.gif',
+  );
+  Image imgDown = Image.asset(
+    'assets/images/avocado.png',
+  );
   @override
+  void initState() {
+    super.initState();
+    img = imgUp;
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF3ECE3),
+      backgroundColor: const Color(0xFFFFFDFA),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF3ECE3),
+        backgroundColor: Color(0xFFFFFDFA),
         title: ProgressBar2(),
         iconTheme: IconThemeData(color: Color(0xFF483C30)),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.view_list),
+            icon: Icon(Icons.skip_next),
             onPressed: () {
-              print('TutorialMenu');
+              Navigator.pushNamed(context, '/tutorial/filter');
             },
           )
         ],
         elevation: 0,
       ),
       body: Stack(
+        alignment: Alignment.center,
         children: [
-          Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: Container(
-                padding: EdgeInsets.fromLTRB(34.0, 24.0, 34.0, 0),
-                child: Column(
-                  children: [
-                    Text("Boil Method",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          color: Color(0XFF483C30),
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w700,
-                        )),
-                    SizedBox(
-                      height: 20.0,
-                    ),
-                    Text(
-                        "Put all martials in a suitable pot filled with enough water, boil them. When seeds dance around the liquid, slowly knocking into each other.",
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: 0.6,
-                            fontFamily: 'OpenSans',
-                            color: Color(0xFF483C30))),
-                  ],
-                ),
-              )),
-          Padding(
-            padding: const EdgeInsets.all(1.0),
-            child: Container(
-              padding: EdgeInsets.fromLTRB(34.0, 240.0, 34.0, 0),
-              child: GestureDetector(
-                onTap: () => {Navigator.pushNamed(context, '..')},
-                child: Container(
-                  height: 380.0,
-                  width: 330.0,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/dyebath.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          // Positioned.fill(
-          //   top: 100,
-          //   left: 24,
-          //   right: 24,
-          //   child: GestureDetector(
-          //     onTap: () =>
-          //         {Navigator.pushNamed(context, '/tutorial/boil_method')},
-          //     child: Container(
-          //       width: 300,
-          //       child: Lottie.asset("assets/lottie/testonboarding.json",
-          //           repeat: true, reverse: false),
-          //     ),
-          //   ),
-          // ),
-          Padding(
-            padding: const EdgeInsets.all(1),
-            child: Container(
-              padding: EdgeInsets.fromLTRB(34.0, 570.0, 34.0, 0),
-              child: Center(
-                child: GestureDetector(
-                  onTap: () =>
-                      {Navigator.pushNamed(context, '/tutorial/knocking')},
-                  child: ClipOval(
-                    child: Container(
-                      color: Color(0XFF866A50),
-                      height: 77,
-                      width: 77,
-                      child: Center(
-                        child: Text(
-                          'Heat',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 0.6,
-                              fontFamily: 'OpenSans',
-                              color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+          Container(
+            child: GestureDetector(
+              child: img,
+              onTapDown: (tap) {
+                setState(() {
+                  img = imgDown;
+                });
+              },
+              onTapUp: (tap) {
+                setState(() {
+                  img = imgUp;
+                });
+              },
             ),
           )
         ],
@@ -130,19 +68,9 @@ class ProgressBar2 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center, // centers horizontally
       crossAxisAlignment: CrossAxisAlignment.center, // centers vertically
       children: [
-        Text("Progress",
-            style: TextStyle(
-              fontFamily: 'OpenSans',
-              color: Color(0XFF483C30),
-              fontSize: 16.0,
-              fontWeight: FontWeight.w400,
-            )),
-        SizedBox(
-          width: 3,
-        ), // The size box provides an immediate spacing between the widgets
         Image.asset(
-          "assets/images/logo.png",
-          width: 40,
+          "assets/images/process4.png",
+          width: 240,
         )
       ],
     );
