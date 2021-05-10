@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		YJlWN+HyI2G1PQeEQ8WldlhSXwc=
+		WD3ijeqlIi2W0k6LGNYqUlbwKb0=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -23,6 +23,10 @@
 		<key>flutter_assets/assets/flare/.DS_Store</key>
 		<data>
 		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		</data>
+		<key>flutter_assets/assets/flare/3plants.flr</key>
+		<data>
+		J2Kqdr/x3LNICVh1a4UVsP1UvIQ=
 		</data>
 		<key>flutter_assets/assets/flare/House.flr</key>
 		<data>
@@ -91,6 +95,10 @@
 		<key>flutter_assets/assets/images/.DS_Store</key>
 		<data>
 		9RpDAjrSnuAalSNGThLXkpL2N1A=
+		</data>
+		<key>flutter_assets/assets/images/3plants_marigold.gif</key>
+		<data>
+		nCnWA+PCJ8SiCatUhSW0717NMxA=
 		</data>
 		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
 		<data>
@@ -332,6 +340,14 @@
 		<data>
 		7CiP0kAfNJWqb7uy4M7+8k6Z1ko=
 		</data>
+		<key>flutter_assets/assets/images/process5.png</key>
+		<data>
+		XobsjPVhBhbivHrm1/4ApN4u1Ss=
+		</data>
+		<key>flutter_assets/assets/images/process6.png</key>
+		<data>
+		8mEOOoUOZh8jzeOEK5FMjLy/je8=
+		</data>
 		<key>flutter_assets/assets/images/sfcity.png</key>
 		<data>
 		lkpSOpCc+WFUcbG5kBLZX4IOE0A=
@@ -486,7 +502,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		NU0f6pN0oxY9LE2fNV0XQLPjWBc=
+		0KIsc1zm29buIgg6znElZvWJCeY=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -503,11 +519,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YJlWN+HyI2G1PQeEQ8WldlhSXwc=
+			WD3ijeqlIi2W0k6LGNYqUlbwKb0=
 			</data>
 			<key>hash2</key>
 			<data>
-			1BrcVccnP76amPH783jwak0PJEIIjBMO7PCO4ftsx+Y=
+			TkLBRyMlWwjLemNG84E7LjxJrxOQp62BbDxLds6ZZSM=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -530,6 +546,17 @@
 			<key>hash2</key>
 			<data>
 			aq9Lzeh+auT+mXXzUrKEbR6tWh3pB/Da+p8+xC1TI50=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/flare/3plants.flr</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			J2Kqdr/x3LNICVh1a4UVsP1UvIQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			/CPdGgvYxkTygtv9Od0x9iqU708eDr463lTyK9ss7zc=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/flare/House.flr</key>
@@ -695,6 +722,17 @@
 			<key>hash2</key>
 			<data>
 			upQPSgw0P5IQPsx2XrqZPpaA9IOQrbCa4rRipnEPIKg=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/3plants_marigold.gif</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nCnWA+PCJ8SiCatUhSW0717NMxA=
+			</data>
+			<key>hash2</key>
+			<data>
+			tqv0opdUgX7xSmDOUUdX+Mu2zH76oQ0H2AboeIqXEa4=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/Inspiration1.jpg</key>
@@ -1357,6 +1395,28 @@
 			0Mh/eoHGgfBpJzuF23zd9E/GrJpfnHWjcWVWwBir4GM=
 			</data>
 		</dict>
+		<key>flutter_assets/assets/images/process5.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XobsjPVhBhbivHrm1/4ApN4u1Ss=
+			</data>
+			<key>hash2</key>
+			<data>
+			BTC+jZZ5kd7SnusutkXsSkOjkxXmai01PexN8D90Foc=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/process6.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8mEOOoUOZh8jzeOEK5FMjLy/je8=
+			</data>
+			<key>hash2</key>
+			<data>
+			/M43CjZ2rv1t4+TItHoCKXAW35/LAfUU5PHCltANA/o=
+			</data>
+		</dict>
 		<key>flutter_assets/assets/images/sfcity.png</key>
 		<dict>
 			<key>hash</key>
@@ -1746,11 +1806,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NU0f6pN0oxY9LE2fNV0XQLPjWBc=
+			0KIsc1zm29buIgg6znElZvWJCeY=
 			</data>
 			<key>hash2</key>
 			<data>
-			NMUyoLfW8QYNDPoo8NcLOBxkqmU0Hrh93SyEfss1rCI=
+			b9z5Bcz5eh9EaIO+uik21Vnwxs+RUnsMGocgXpJgBhs=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

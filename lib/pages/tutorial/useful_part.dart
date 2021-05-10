@@ -72,7 +72,7 @@ class _UsefulPartState extends State<UsefulPart> {
                 mixSeconds: 0.5, completed: (String currentAnimationName) {
               setState(() {
                 // Return to idle.
-                _currentAnimationName = "idle";
+                _currentAnimationName = "marigold";
               });
             }),
           ),

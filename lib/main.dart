@@ -24,6 +24,7 @@ import 'pages/timelinevideo/timeline_video_one.dart';
 import 'pages/tutorial/open.dart';
 import 'pages/tutorial/tutorial_open.dart';
 import 'pages/tutorial/level.dart';
+import 'pages/tutorial/stackorder.dart';
 import 'pages/tutorial/choose_avocado.dart';
 import 'pages/tutorial/select_plants.dart';
 import 'pages/tutorial/pick_plant.dart';
@@ -73,6 +74,7 @@ class MyApp extends StatelessWidget {
         '/tutorial/processing': (context) => Processing(),
         '/tutorial/prepare': (context) => Prepare(),
         '/tutorial/level': (context) => Level(),
+        '/tutorial/stackorder': (context) => StackOrder(),
         '/tutorial/choose_avocado': (context) => ChooseAvocado(),
         '/tutorial/select_plants': (context) => SelectPlants(),
         '/tutorial/pick_plant': (context) => PickPlant(),

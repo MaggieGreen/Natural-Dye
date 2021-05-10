@@ -141,7 +141,7 @@ class GridCards extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () =>
-                    {Navigator.pushNamed(context, '/tutorial/useful_part')},
+                    {Navigator.pushNamed(context, '/tutorial/stackorder')},
                 child: ActiveProjectsCard(
                   cardColor: Color(0xFFE5DCD2),
                   title: 'Step One',

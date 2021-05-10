@@ -10,9 +10,29 @@ class Processing extends StatefulWidget {
 }
 
 class _ProcessingState extends State<Processing> {
-  String _currentAnimationName = "idle";
-  bool _confirmbutton = false;
   bool _hasBeenPressed = false;
+
+  var _itemImage = [
+    Image.asset(
+      "assets/images/process1.png",
+    ),
+    Image.asset(
+      "assets/images/3plants_marigold.gif",
+    ),
+    Image.asset(
+      "assets/images/process2.png",
+    )
+  ];
+
+  int index = 0;
+
+  tmpFunction() {
+    Container(
+      child: _itemImage[index],
+      width: 328,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,20 +54,13 @@ class _ProcessingState extends State<Processing> {
       body: Stack(
         children: [
           Positioned.fill(
-            top: -250,
-            left: 24,
-            right: 24,
-            child: new NimaActor("assets/nima/avocado.nma",
-                alignment: Alignment.center,
-                fit: BoxFit.contain,
-                animation: _currentAnimationName,
-                mixSeconds: 0.5, completed: (String currentAnimationName) {
-              setState(() {
-                // Return to idle.
-                _currentAnimationName = "idle";
-              });
-            }),
-          ),
+              top: -250,
+              left: 24,
+              right: 24,
+              child: Container(
+                child: _itemImage[index],
+                width: 328,
+              )),
           Positioned.fill(
             top: 500,
             // left: 24,
@@ -101,8 +114,7 @@ class _ProcessingState extends State<Processing> {
                                     borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
-                                    _currentAnimationName = "jump";
-                                    _confirmbutton = true;
+                                    index = 1;
                                     _hasBeenPressed = !_hasBeenPressed;
                                   });
                                 })),
@@ -126,8 +138,8 @@ class _ProcessingState extends State<Processing> {
                                     borderRadius: BorderRadius.circular(20)),
                                 onPressed: () {
                                   setState(() {
-                                    _currentAnimationName = "attack";
-                                    _confirmbutton = false;
+                                    index = 2;
+                                    _hasBeenPressed = !_hasBeenPressed;
                                   });
                                 })),
                       ],
@@ -148,7 +160,7 @@ class _ProcessingState extends State<Processing> {
                       height: 50,
                       child: FlatButton(
                           // enabled: _choice == 0 ? false : true,
-                          onPressed: (_confirmbutton)
+                          onPressed: (_hasBeenPressed)
                               ? () => {
                                     // Navigator.pushNamed(
                                     //     context, '/tutorial/prepare')
